@@ -73,7 +73,7 @@ class AccountsController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_account
-      @account = Account.where(subdomain: request.subdomain).first
+      @account = Account.new(account_params)
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
