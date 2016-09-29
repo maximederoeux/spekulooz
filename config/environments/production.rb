@@ -87,5 +87,6 @@ Rails.application.configure do
 
   # DEVISE
   config.action_mailer.default_url_options = { host: 'spekulooz.be' }
+  config.action_controller.default_url_options = { host: 'spekulooz.be' }
 
 end
