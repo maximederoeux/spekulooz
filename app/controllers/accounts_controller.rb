@@ -10,11 +10,11 @@ class AccountsController < ApplicationController
   # GET /accounts/1
   # GET /accounts/1.json
   def show
-    @account = if Account.where(subdomain: request.subdomain).any?
-                  Account.where(subdomain: request.subdomain).first
-                else
-                  Account.find(params[:id])
-                end
+    if Account.where(subdomain: request.subdomain).any?
+      @account = Account.where(subdomain: request.subdomain).first
+    else
+      @account = Account.find(params[:id])
+    end
     @items = @account.items
   end
 
