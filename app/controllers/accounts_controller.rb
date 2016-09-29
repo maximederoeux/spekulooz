@@ -29,7 +29,15 @@ class AccountsController < ApplicationController
 
   # GET /accounts/1/edit
   def edit
-    @account = Account.find(params[:id])
+    if Rails.env.production?
+      @account = Account.find(params[:id])
+    else
+      if Account.where(subdomain: request.subdomain).any?
+        @account = Account.where(subdomain: request.subdomain).first
+      else
+        @account = Account.find(params[:id])
+      end
+    end  
   end
 
   # POST /accounts
@@ -51,7 +59,16 @@ class AccountsController < ApplicationController
   # PATCH/PUT /accounts/1
   # PATCH/PUT /accounts/1.json
   def update
-    @account = Account.find(params[:id])    
+    if Rails.env.production?
+      @account = Account.find(params[:id])
+    else
+      if Account.where(subdomain: request.subdomain).any?
+        @account = Account.where(subdomain: request.subdomain).first
+      else
+        @account = Account.find(params[:id])
+      end
+    end
+        
     respond_to do |format|
       if @account.update(account_params)
         format.html { redirect_to @account, notice: 'Account was successfully updated.' }
@@ -76,7 +93,15 @@ class AccountsController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_account
-      @account = Account.find(params[:id])
+      if Rails.env.production?
+        @account = Account.find(params[:id])
+      else
+        if Account.where(subdomain: request.subdomain).any?
+          @account = Account.where(subdomain: request.subdomain).first
+        else
+          @account = Account.find(params[:id])
+        end
+      end
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
