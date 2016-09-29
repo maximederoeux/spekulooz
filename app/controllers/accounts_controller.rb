@@ -10,13 +10,16 @@ class AccountsController < ApplicationController
   # GET /accounts/1
   # GET /accounts/1.json
   def show
-    @account = Account.find(params[:id])
-    # if Account.where(subdomain: request.subdomain).any?
-    #   @account = Account.where(subdomain: request.subdomain).first
-    # else
-    #   @account = Account.find(params[:id])
-    # end
+    if Rails.env.production?
+      @account = Account.find(params[:id])
+    else
+      if Account.where(subdomain: request.subdomain).any?
+        @account = Account.where(subdomain: request.subdomain).first
+      else
+        @account = Account.find(params[:id])
+      end
     @items = @account.items
+    end
   end
 
   # GET /accounts/new
