@@ -10,4 +10,11 @@ class ApplicationController < ActionController::Base
 
 #   end
 
+  def default_url_options
+    if Rails.env.production?
+      {:host => "spekulooz.be"}
+    else  
+      {}
+    end
+  end
 end
