@@ -1,6 +1,11 @@
 <p id="notice"><%= notice %></p>
 
 <p>
+  <strong>Id:</strong>
+  <%= @account.id %>
+</p>
+
+<p>
   <strong>Subdomain:</strong>
   <%= @account.subdomain %>
 </p>
@@ -12,3 +17,11 @@
 
 <%= link_to 'Edit', edit_account_path(@account) %> |
 <%= link_to 'Back', accounts_path %>
+
+<hr>
+
+<% @items.each do |item| %>
+
+	<%= item.name %>
+
+<% end %>

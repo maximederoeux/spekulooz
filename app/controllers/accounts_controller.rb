@@ -10,7 +10,8 @@ class AccountsController < ApplicationController
   # GET /accounts/1
   # GET /accounts/1.json
   def show
-    @account = Account.find(params[:id])
+    @account = Account.where(subdomain: request.subdomain).first
+    @items = @account.items
   end
 
   # GET /accounts/new
@@ -65,7 +66,7 @@ class AccountsController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_account
-      @account = Account.find(params[:id])
+      @account = Account.where(subdomain: request.subdomain).first
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
