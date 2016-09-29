@@ -10,7 +10,11 @@ class AccountsController < ApplicationController
   # GET /accounts/1
   # GET /accounts/1.json
   def show
-    @account = Account.where(subdomain: request.subdomain).first
+    @account = if Account.where(subdomain: request.subdomain).any?
+                  Account.where(subdomain: request.subdomain).first
+                else
+                  Account.find(params[:id])
+                end
     @items = @account.items
   end
 
@@ -21,6 +25,7 @@ class AccountsController < ApplicationController
 
   # GET /accounts/1/edit
   def edit
+    @account = Account.find(params[:id])
   end
 
   # POST /accounts
@@ -42,6 +47,7 @@ class AccountsController < ApplicationController
   # PATCH/PUT /accounts/1
   # PATCH/PUT /accounts/1.json
   def update
+    @account = Account.find(params[:id])    
     respond_to do |format|
       if @account.update(account_params)
         format.html { redirect_to @account, notice: 'Account was successfully updated.' }
@@ -71,6 +77,6 @@ class AccountsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def account_params
-      params.require(:account).permit(:subdomain, :resto_name)
+      params.require(:account).permit(:subdomain, :resto_name, :user_id)
     end
 end
