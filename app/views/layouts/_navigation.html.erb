@@ -1,0 +1,36 @@
+<% if @sub_accounts.any? %>
+
+true
+
+<%= @sub_account.id %>
+
+<nav class="navbar navbar-dark navbar-fixed-top">
+  <ul class="nav navbar-nav">
+  		<li class="nav-item nav-link"><%= link_to t("menu.home"), root_path %></li>
+	    <li class="nav-item nav-link"><%= link_to t("menu.users"), users_path %></li>
+	    <li class="nav-item nav-link"><%= link_to t("menu.accounts"), edit_account_path(@sub_account) %></li>
+  </ul>
+</nav>
+
+<% else %>
+
+<nav class="navbar navbar-dark navbar-fixed-top">
+  <ul class="nav navbar-nav">
+  		<li class="nav-item nav-link"><%= link_to t("menu.home"), root_path %></li>
+  	<% if user_signed_in? %>
+	    <li class="nav-item nav-link"><%= link_to t("menu.sign_out"), destroy_user_session_path, :method=>'delete' %><span class="sr-only">(current)</span></li>
+	    <li class="nav-item nav-link"><%= link_to t("menu.users"), users_path %></li>
+	    <li class="nav-item nav-link"><%= link_to t("menu.accounts"), accounts_path %></li>
+	  <% else %>
+	  	<li class="nav-item nav-link"><%= link_to t("menu.sign_up"), new_user_registration_path %></li>
+	    <li class="nav-item nav-link"><%= link_to t("menu.sign_in"), new_user_session_path %></li>
+	  <% end %>
+  </ul>
+</nav>
+
+
+<% end %>
+
+
+	
+ 

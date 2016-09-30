@@ -1,20 +1,10 @@
-<% if user_signed_in? %>
-	<%= link_to t("menu.sign_out"), destroy_user_session_path, :method=>'delete' %>
-<% else %>
-	<%= link_to t("menu.sign_up"), new_user_registration_path %>
- 
-<%= link_to t("menu.sign_in"), new_user_session_path %>
+<% if @sub_accounts.any? %>
 
-<% end %>
-<hr>
-
-
-<% if user_signed_in? %>
-
-<%= current_user.id %>
+	<%= render 'resto' %>
 
 <% else %>
 
-User logged out
+	<%= render 'landing' %>
+
 
 <% end %>
