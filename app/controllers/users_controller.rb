@@ -28,7 +28,7 @@ private
    
   # Never trust parameters from the scary internet, only allow the white list through.
   def user_params
-    params.require(:user).permit(:name, :first_name, :email)
+    params.require(:user).permit(:name, :first_name, :email, :resto_name)
   end
 
 end
