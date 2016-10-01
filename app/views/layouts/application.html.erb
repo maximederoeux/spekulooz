@@ -6,12 +6,15 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
 
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Alegreya|Roboto|Roboto+Condensed" rel="stylesheet">
+    
+  </head>
+<%= render 'layouts/navigation' %>
   <body>
-    <%= render 'layouts/navigation' %>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
+    
     <%= yield %>
   </body>
 </html>

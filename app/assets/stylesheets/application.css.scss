@@ -14,18 +14,209 @@
  *= require_self
  */
 
-html {
+
+
+
+
+body {
 	margin: 0;
-	padding: 0;
+	font-family: 'Roboto', sans-serif;
 }
 
-.navbar {
-	background-color: black;
-	margin-top: 0;
-	padding: 0;
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding-left: 2em;
+    padding-right: 2em;
+    overflow: hidden;
+    background-color: #22313F;
+
 }
 
-.nav .navbar-nav {
-	font-size: 20px;
+nav ul li {
+    float: left;
+    position: static;
+}
 
+nav ul li a:link {
+    display: block;
+    font-family: 'Roboto Condensed', sans-serif;
+    color: #C8F7C5;
+    text-align: center;
+    padding: 16px;
+    text-decoration: none;
+    font-size: 1.5em;
+    font-weight: 600;
+}
+
+nav ul li a:visited {
+    display: block;
+    color: #C8F7C5;
+    text-align: center;
+    padding: 16px;
+    text-decoration: none;
+    font-size: 1em;
+}
+
+nav ul li a:hover {
+    background-color: #34495E;
+    text-decoration: none;
+    font-size: 1.7em;
+    color: #F89406;
+
+}
+
+.landing {
+	max-width: 100%;
+	background-color: #DADFE1;
+	display: block;
+	padding-bottom: 2%;
+	padding-left:15%;
+	padding-right:15%;
+
+}
+
+.landing img {
+	max-width:100%;
+	display: block;
+	margin: auto;
+	position: relative;
+
+}
+
+.landing p {
+	margin:0;
+	padding-top: 5%;
+	padding-left: 5%;
+	max-width: 40%;
+	font-size: 3.5em;
+	line-height: 1.1em;
+	position: absolute;
+	font-family: 'Alegreya', serif;
+}
+
+.sign-up {
+	max-width: 100%;
+	background-color: #E9D460;
+	display: block;
+	padding-bottom: 2%;
+	padding-left:15%;
+	padding-right:15%;
+}
+
+.sign-up p {
+	font-size: 4em;
+	line-height: 1.1em;
+	font-family: 'Alegreya', serif;
+	position: relative;
+	padding-top: 5%;
+	padding-left: 5%;
+	letter-spacing: 0.1em;
+	margin: 5%
+}
+
+.selling {
+	max-width: 100%;
+	background-color: #22313F;
+	display: block;
+	padding-bottom: 2%;
+	padding-left:15%;
+	padding-right:15%;
+
+}
+
+.selling h1 {
+  color: #C8F7C5;
+	font-family: 'Alegreya', serif;
+	text-align: center;
+	padding-top:5%;
+}
+
+.selling button {
+  background-color: #C8F7C5;
+  border: none;
+  width: 100%;
+  padding-top: 1%;
+  padding-bottom: 1%;
+  margin-top:5%;
+  border-radius: 0.3rem;
+}
+
+.selling button p {
+  text-align: center;
+  text-decoration: none;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 2.5em;
+  color: #22313F;
+  font-weight: 550;
+}
+
+p.selling-content {
+	max-width: 100%;
+	font-family: 'Roboto', sans-serif;
+	font-size: 1.5em;
+	background-color: #E9D460;
+	color: #22313F;
+	display: none;
+	font-style: italic;
+	padding:3%;
+	margin-top: 5%;
+	margin-left: 0;
+	margin-right: 0;
+	margin-bottom: 0;
+	line-height: 1.2em;
+}
+
+.ingredients {
+	max-width: 100%;
+	background-color: #DADFE1;
+	display: block;
+	padding-bottom: 2%;
+	padding-left:15%;
+	padding-right:15%;
+
+}
+
+.ingredients h2 {
+	margin:auto;
+	padding-top: 5%;
+	padding-left: 5%;
+	font-size: 3.5em;
+	line-height: 1.1em;
+	font-family: 'Alegreya', serif;
+	text-align: center;
+	margin-bottom: 5%;
+}
+
+.btn-ingredients {
+	background-color: #E9D460;
+	margin-top: 5%;
+	margin-bottom: 5%;
+	line-height: 2.2em;
+	font-family: 'Alegreya', serif;
+	text-align: center;
+	color: #22313F;
+	font-size: 2em;
+	font-weight: 500;
+}
+
+.btn-ingredients p {
+	margin:0;
+	font-family: 'Alegreya', serif;
+	text-align: center;
+	color: #22313F;
+	font-size: 1em;
+	font-weight: 500;
+	line-height: 1.2em;
+}
+
+.modal-header {
+
+}
+
+.modal-body {
+	background-color: #E9D460;
+	color: #22313F;
+	font-family: 'Roboto', sans-serif;
+	font-size: 1.5em;
 }
