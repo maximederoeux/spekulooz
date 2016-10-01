@@ -62,7 +62,7 @@ nav ul li a:hover {
     background-color: #34495E;
     text-decoration: none;
     font-size: 1.7em;
-    color: #F89406;
+    color: #E9D460;
 
 }
 
@@ -133,7 +133,7 @@ nav ul li a:hover {
 }
 
 .selling button {
-  background-color: #C8F7C5;
+  background-color: #DADFE1;
   border: none;
   width: 100%;
   padding-top: 1%;
@@ -210,13 +210,44 @@ p.selling-content {
 	line-height: 1.2em;
 }
 
-.modal-header {
+.modal {
+	margin-top:5%;
+}
 
+.modal-content {
+	border-style: solid;
+	border-color: #DADFE1;
+	border-width: 5px;
+
+}
+.modal-header {
+	background-color: #E9D460;
+	font-family: 'Alegreya', serif;
+	border-radius: 0.3rem;
+	font-size: 1.6em;
 }
 
 .modal-body {
-	background-color: #E9D460;
+	background-color: #DADFE1;
 	color: #22313F;
 	font-family: 'Roboto', sans-serif;
-	font-size: 1.5em;
+	font-size: 1.4em;
+
+}
+
+.modal-footer {
+	background-color: #DADFE1;
+}
+
+.modal-close {
+	font-family: 'Roboto Condensed', sans-serif;
+}
+
+.btn-close {
+	background-color: #34495E;
+	font-family: 'Alegreya', serif;
+	text-align: center;
+	color: #DADFE1;
+	font-size: 1.6em;
+	font-weight: 500;
 }
