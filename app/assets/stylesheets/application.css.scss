@@ -46,7 +46,6 @@ nav ul li a:link {
     padding: 16px;
     text-decoration: none;
     font-size: 1.5em;
-    font-weight: 600;
 }
 
 nav ul li a:visited {
@@ -62,7 +61,7 @@ nav ul li a:hover {
     background-color: #34495E;
     text-decoration: none;
     font-size: 1.7em;
-    color: #E9D460;
+    color: #F89406;
 
 }
 
@@ -73,6 +72,7 @@ nav ul li a:hover {
 	padding-bottom: 2%;
 	padding-left:15%;
 	padding-right:15%;
+	min-height:100vh;
 
 }
 
@@ -100,19 +100,30 @@ nav ul li a:hover {
 	background-color: #E9D460;
 	display: block;
 	padding-bottom: 2%;
-	padding-left:15%;
+	padding-left:5%;
 	padding-right:15%;
 }
 
+.sign-up h1 {
+	font-size: 2.5em;
+	line-height: 1.1em;
+	font-family: 'Alegreya', serif;
+	position: relative;
+	padding-top: 5%;
+	padding-left: 5%;
+	margin: 2%;
+	width: 100%;
+}
+
 .sign-up p {
-	font-size: 4em;
+	font-size: 2em;
 	line-height: 1.1em;
 	font-family: 'Alegreya', serif;
 	position: relative;
 	padding-top: 5%;
 	padding-left: 5%;
 	letter-spacing: 0.1em;
-	margin: 5%
+	margin: 2%;
 }
 
 .selling {
@@ -132,60 +143,73 @@ nav ul li a:hover {
 	padding-top:5%;
 }
 
-.selling button {
-  background-color: #DADFE1;
-  border: none;
-  width: 100%;
-  padding-top: 1%;
-  padding-bottom: 1%;
-  margin-top:5%;
-  border-radius: 0.3rem;
+.selling h3 {
+  color: #C8F7C5;
+	font-family: 'Alegreya', serif;
+	text-align: left;
+	padding-top:1.5em;
+	padding-bottom: 0;
+	margin-top: 0;
+	margin-bottom: 0;
+	line-height: 1.5em;
 }
 
-.selling button p {
-  text-align: center;
-  text-decoration: none;
-  font-family: 'Roboto Condensed', sans-serif;
-  font-size: 2.5em;
-  color: #22313F;
-  font-weight: 550;
-}
-
-p.selling-content {
+.selling p {
 	max-width: 100%;
 	font-family: 'Roboto', sans-serif;
-	font-size: 1.5em;
-	background-color: #E9D460;
-	color: #22313F;
-	display: none;
+	font-size: 1.3em;
+	color: #C8F7C5;
 	font-style: italic;
-	padding:3%;
-	margin-top: 5%;
-	margin-left: 0;
-	margin-right: 0;
-	margin-bottom: 0;
 	line-height: 1.2em;
+	padding-top: 1em;
+	padding-bottom: 0;
+	margin-top: 0;
+	margin-bottom: 0;
+	text-align: left;
 }
+
 
 .ingredients {
 	max-width: 100%;
 	background-color: #DADFE1;
 	display: block;
 	padding-bottom: 2%;
-	padding-left:15%;
-	padding-right:15%;
+	padding-left: 15%;
+	padding-right: 15%;
 
 }
 
-.ingredients h2 {
-	margin:auto;
-	padding-top: 5%;
-	padding-left: 5%;
-	font-size: 3.5em;
-	line-height: 1.1em;
+.ingredients h1 {
 	font-family: 'Alegreya', serif;
 	text-align: center;
-	margin-bottom: 5%;
+	padding-top:1em;
+	padding-bottom: 0;
+	margin-top: 0;
+	margin-bottom: 0;
+	line-height: 1.5em;
+}
+
+.ingredients h2 {
+	font-family: 'Alegreya', serif;
+	text-align: left;
+	padding-top:1em;
+	padding-bottom: 0;
+	margin-top: 0;
+	margin-bottom: 0;
+	line-height: 1.5em;
+}
+
+.ingredients p {
+	max-width: 100%;
+	font-size: 1.3em;
+	font-family: 'Roboto', sans-serif;
+	font-style: italic;
+	line-height: 1.2em;
+	padding-top: 1em;
+	padding-bottom: 0;
+	margin-top: 0;
+	margin-bottom: 0;
+
 }
 
 .btn-ingredients {
