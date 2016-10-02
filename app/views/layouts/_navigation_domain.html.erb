@@ -8,6 +8,9 @@
       <% else %>
 			  <li class="pull-right"><%= link_to "Inscription", new_user_registration_path %></li>
 			  <li class="pull-right"><%= link_to "Connexion", new_user_session_path %></li>
+        <li class="pull-right"><%= link_to_unless_current "EN", locale: "en" %></li>
+        <li class="pull-right"><%= link_to_unless_current "FR", locale: "fr" %></li>
+        <li class="pull-right"><%= link_to_unless_current "NL", locale: "nl" %></li>
       <% end %>
 	</ul>	
 </nav>

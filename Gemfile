@@ -35,6 +35,8 @@ gem 'simple_form'
 gem 'devise'
 gem 'bootstrap', '~> 4.0.0.alpha4'
 gem 'rails-i18n', '~> 5.0.0'
+gem 'devise-i18n'
+
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
