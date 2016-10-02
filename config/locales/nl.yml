@@ -1,4 +1,6 @@
 nl:
+  menu:
+
   user:
     minimum: karakters minimum
   account:
@@ -11,3 +13,8 @@ nl:
     your_subdomain: "Uw subdomein"
     back_subdomain: "Nee ik wil teruggaan en veranderen"
     validate_subdomain: "Ja, ik ga ermee akkoord and bevistig"
+    is_already_open: "Is uw restaurant al in activiteit?"
+    already_open: "Ja, het is al open"
+    not_open: "Nee, nog niet."
+    open_on: "Voorziene opening op"
+    go_on: "Doorgaan"

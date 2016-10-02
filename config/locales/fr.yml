@@ -1,4 +1,6 @@
 fr:
+  menu:
+
   user:
     minimum: caractères minimum
   account:
@@ -11,3 +13,8 @@ fr:
     your_subdomain: "Votre sous-domaine"
     back_subdomain: "Non, je veux revenir et changer"
     validate_subdomain: "Oui, je suis d'accord et je confirme"
+    is_already_open: "Est-ce que votre restaurant est déjà en activité?"
+    already_open: "Oui, il est déjà ouvert"
+    not_open: "Non, pas encore."
+    open_on: "Ouverture prévue pour le "
+    go_on: "Continuer"

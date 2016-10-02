@@ -1,4 +1,4 @@
-<h2 class="validate-top-title">Votre restaurant est-il déjà ouvert?</h2>
+<h2 class="validate-top-title"><%= t("account.is_already_open") %></h2>
 
 <div class="container-fluid">
 		<div class="row">
@@ -8,8 +8,9 @@
 			<div class="col-md-6">
 				<%= simple_form_for(@account) do |f| %>
 					<%= f.error_notification %>
-						<%= f.hidden_field :validate_sub, :value => true %>
-					<%= f.submit t('account.validate_subdomain'), class: "btn btn-block btn-validate-subdomain" %>
+						<%= f.hidden_field :already_open, :value => true %>
+						<%= f.hidden_field :open_check, :value => true %>
+					<%= f.submit t('account.already_open'), class: "btn btn-block btn-already-open" %>
 				<% end %>	
 			</div>
 			<div class="col-md-3">
@@ -20,23 +21,18 @@
 
 		<div class="row">
 			<div class="col-md-6">
-				
+				<h2 class="open-date"><%= t("account.not_open") %> <%= t("account.open_on") %></h2>
 			</div>
-			<div class="col-md-3">
-				<%= simple_form_for(@account) do |f| %>
-					<%= f.error_notification %>
-						<%= f.hidden_field :prevalidate_sub, :value => false %>
-					<%= f.submit t('account.back_subdomain'), class: "btn btn-block btn-back-subdomain" %>
-				<% end %>				
-			</div>
-			<div class="col-md-3">
-				
+			<div class="col-md-6">
+					<%= simple_form_for(@account) do |f| %>
+						<%= f.error_notification %>
+							<%= f.input :open_on, :label => false %>
+							<%= f.hidden_field :open_check, :value => true %>
+						<%= f.submit t('account.go_on'), class: "btn btn-open-date form-inline" %>
+					<% end %>	
+			
 			</div>			
-		</div>	
-</div>
-<div class="bottom-dark">
-	
-</div>
+		</div>
 
 
 

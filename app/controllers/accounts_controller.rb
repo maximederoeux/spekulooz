@@ -81,6 +81,9 @@ class AccountsController < ApplicationController
         elsif @account.prevalidate_sub == true && @account.validate_sub == true && @account.open_check.blank?
           format.html { redirect_to edit_account_path(@account), notice: 'Account was successfully updated.' }
           format.json { render :show, status: :ok, location: @account }
+        elsif @account.prevalidate_sub == true && @account.validate_sub == true && @account.open_check == true
+          format.html { redirect_to @account, notice: 'Account was successfully updated.' }
+          format.json { render :show, status: :ok, location: @account }
         else 
           format.html { redirect_to @account, notice: 'Account was successfully updated.' }
           format.json { render :show, status: :ok, location: @account }
