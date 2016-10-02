@@ -3,8 +3,4 @@ class Account < ApplicationRecord
 	has_many :items
 
 
-  def display_slug
-    ENV['BASE_URL'] + self.subdomain
-  end
-
 end

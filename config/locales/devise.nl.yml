@@ -9,6 +9,7 @@ nl:
         remember_me: Ingelogd blijven
         reset_password_token: 
         unlock_token: 
+        resto_name: Naam van uw restaurant
     models:
       user: Gebruiker
   devise:

@@ -1,25 +1,22 @@
 <div class="container-fluid devise-forms">
 
-    <h2>Votre présence web et mobile en quelques clics gratuitement</h2>
+<h2>Votre présence web et mobile en quelques clics</h2>
 
-      <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-      <%= f.error_notification %>
+  <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+  <%= f.error_notification %>
 
 
   <div class="form-inputs">
     <%= f.input :resto_name, required: true, autofocus: true %>
     <%= f.input :email, required: true %>
-    <%= f.input :password, required: true, hint: ("#{@minimum_password_length} #{t('user.minimum')}" if @minimum_password_length) %>
+    <%= f.input :password, required: true %>
     <%= f.input :password_confirmation, required: true %>
   </div>
 
   <div class="form-actions">
-    <%= f.button :submit, "Sign up" %>
+    <%= f.button :submit, "Sign up", class: "btn btn-devise" %>
   </div>
 <% end %>
-
-<%= render "devise/shared/links" %>
-
 
 </div>
 

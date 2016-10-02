@@ -18,6 +18,49 @@ body {
 .devise-forms h2 {
 	text-align: center;
 	font-family: 'Alegreya', serif;
-	padding-top: 3%;
-	padding-bottom: 2%;
+	padding-top: 5%;
+	padding-bottom: 5%;
+}
+
+.btn-devise {
+  color: #C8F7C5;
+  background-color: #22313F;
+  border-color: #0275d8;
+  float:right;
+  font-size: 1.2em;
+}
+/* line 11, /var/lib/gems/2.3.0/gems/bootstrap-4.0.0.alpha4/assets/stylesheets/bootstrap/mixins/_hover.scss */
+.btn-devise:hover {
+    background-color: #34495E;
+    font-size: 1.3em;
+    color: #F89406;
+}
+/* line 21, /var/lib/gems/2.3.0/gems/bootstrap-4.0.0.alpha4/assets/stylesheets/bootstrap/mixins/_buttons.scss */
+.btn-devise:focus, .btn-devise.focus {
+  color: #fff;
+  background-color: #025aa5;
+  border-color: #01549b;
+}
+/* line 28, /var/lib/gems/2.3.0/gems/bootstrap-4.0.0.alpha4/assets/stylesheets/bootstrap/mixins/_buttons.scss */
+.btn-devise:active, .btn-devise.active, .open > .btn-devise.dropdown-toggle {
+  color: #fff;
+  background-color: #025aa5;
+  border-color: #01549b;
+  background-image: none;
+}
+/* line 38, /var/lib/gems/2.3.0/gems/bootstrap-4.0.0.alpha4/assets/stylesheets/bootstrap/mixins/_buttons.scss */
+.btn-devise:active:hover, .btn-devise:active:focus, .btn-devise:active.focus, .btn-devise.active:hover, .btn-devise.active:focus, .btn-devise.active.focus, .open > .btn-devise.dropdown-toggle:hover, .open > .btn-devise.dropdown-toggle:focus, .open > .btn-devise.dropdown-toggle.focus {
+  color: #fff;
+  background-color: #014682;
+  border-color: #01315a;
+}
+/* line 49, /var/lib/gems/2.3.0/gems/bootstrap-4.0.0.alpha4/assets/stylesheets/bootstrap/mixins/_buttons.scss */
+.btn-devise.disabled:focus, .btn-devise.disabled.focus, .btn-devise:disabled:focus, .btn-devise:disabled.focus {
+  background-color: #0275d8;
+  border-color: #0275d8;
+}
+/* line 11, /var/lib/gems/2.3.0/gems/bootstrap-4.0.0.alpha4/assets/stylesheets/bootstrap/mixins/_hover.scss */
+.btn-devise.disabled:hover, .btn-devise:disabled:hover {
+  background-color: #0275d8;
+  border-color: #0275d8;
 }

@@ -9,6 +9,7 @@ en:
         remember_me: Remember me
         reset_password_token: Reset password token
         unlock_token: Unlock token
+        resto_name: Name of your restaurant
     models:
       user: User
   devise:

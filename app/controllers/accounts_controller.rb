@@ -1,5 +1,6 @@
 class AccountsController < ApplicationController
   before_action :set_account, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!
 
   # GET /accounts
   # GET /accounts.json
@@ -16,6 +17,11 @@ class AccountsController < ApplicationController
       @account = Account.find(params[:id])
     end
     @items = @account.items
+    @user = @acccount.user
+    
+    unless @user == current_user
+      redirect_to root_path, :alert => "Access denied."
+    end
 
   end
 
@@ -26,15 +32,17 @@ class AccountsController < ApplicationController
 
   # GET /accounts/1/edit
   def edit
-    if Rails.env.production?
-      @account = Account.find(params[:id])
+    if Account.where(subdomain: request.subdomain).any?
+      @account = Account.where(subdomain: request.subdomain).first
     else
-      if Account.where(subdomain: request.subdomain).any?
-        @account = Account.where(subdomain: request.subdomain).first
-      else
-        @account = Account.find(params[:id])
-      end
-    end  
+      @account = Account.find(params[:id])
+    end
+    @user = @account.user
+
+    unless @user == current_user
+      redirect_to root_path, :alert => "Access denied."
+    end
+
   end
 
   # POST /accounts

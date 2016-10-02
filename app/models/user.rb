@@ -5,4 +5,15 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :trackable, :validatable
 
   has_many :accounts
+
+	after_create :generate_subdomain
+	after_create :create_account
+
+	def create_account
+		Account.create(:resto_name => resto_name, :user_id => id, :subdomain => generate_subdomain)
+	end
+
+  def generate_subdomain
+  	resto_name.parameterize.gsub(/-/,'')
+  end
 end
