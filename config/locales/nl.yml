@@ -1,4 +1,13 @@
 nl:
   user:
     minimum: karakters minimum
-  
+  account:
+    keep_subdomain: "Ik hou die subdomein"
+    prefer_first: "Ik wil liever de eerste"
+    prefer_second: "Ik wil liever de tweede"
+    prefer_third: "Ik wil liever de derde"
+    prefer_mine: "Ik heb die gewijzigd"
+    allowed_char: "Alleen kleine letters, nummers, koppelteken (-) of onderstrepen (_). Geen spaties of hoofdletters."
+    your_subdomain: "Uw subdomein"
+    back_subdomain: "Nee ik wil teruggaan en veranderen"
+    validate_subdomain: "Ja, ik ga ermee akkoord and bevistig"

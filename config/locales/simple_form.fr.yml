@@ -1,32 +1,30 @@
 fr:
   simple_form:
-    "yes": 'Oui'
-    "no": 'Non'
+    "yes": "Yes"
+    "no": "No"
     required:
-      text: 'obligatoire'
-      mark: '*'
-      # You can uncomment the line below if you need to overwrite the whole required html.
-      # When using html, text and mark won't be used.
-      # html: '<abbr title="required">*</abbr>'
+      text: "Required"
+      mark: "*"
     error_notification:
-      default_message: "Veuillez vérifier les problèmes ci-dessous:"
-    # Examples
-    # labels:
-    #   defaults:
-    #     password: 'Password'
-    #   user:
-    #     new:
-    #       email: 'E-mail to sign in.'
-    #     edit:
-    #       email: 'E-mail.'
-    # hints:
-    #   defaults:
-    #     username: 'User name to sign in.'
-    #     password: 'No special characters, please.'
-    # include_blanks:
-    #   defaults:
-    #     age: 'Rather not say'
-    # prompts:
-    #   defaults:
-    #     age: 'Select your age'
+      default_message: "Some fields are mandatory"
+    date:
+      format:
+        default: "%d-%m-%Y"
+        long: "%d %B, %Y"
+        short: "%d %b"
+    prompts:
+      default:
+        date: "dd-mm-yyyy"
+    labels:
+      user:
+        name: "Nom"
+        first_name: "Prénom"
+        resto_name: "Nom de votre restaurant"
+      account:
+        resto_name: "Nom de votre restaurant"
+        subdomain: "Nom de votre sous-domaine"
+        select_sub_one: "J'aimerais le premier"
+        select_sub_two: "J'aimerais le deuxième"
+        select_sub_three: "J'aimerais le troisième"
+
   

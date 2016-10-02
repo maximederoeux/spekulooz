@@ -17,7 +17,7 @@ class AccountsController < ApplicationController
       @account = Account.find(params[:id])
     end
     @items = @account.items
-    @user = @acccount.user
+    @user = @account.user
     
     unless @user == current_user
       redirect_to root_path, :alert => "Access denied."
@@ -64,20 +64,27 @@ class AccountsController < ApplicationController
   # PATCH/PUT /accounts/1
   # PATCH/PUT /accounts/1.json
   def update
-    if Rails.env.production?
-      @account = Account.find(params[:id])
+    if Account.where(subdomain: request.subdomain).any?
+      @account = Account.where(subdomain: request.subdomain).first
     else
-      if Account.where(subdomain: request.subdomain).any?
-        @account = Account.where(subdomain: request.subdomain).first
-      else
-        @account = Account.find(params[:id])
-      end
+      @account = Account.find(params[:id])
     end
         
     respond_to do |format|
       if @account.update(account_params)
-        format.html { redirect_to @account, notice: 'Account was successfully updated.' }
-        format.json { render :show, status: :ok, location: @account }
+        if @account.prevalidate_sub == false && @account.validate_sub == nil
+          format.html { redirect_to edit_account_path(@account), notice: 'Account was successfully updated.' }
+          format.json { render :show, status: :ok, location: @account }
+        elsif @account.prevalidate_sub == true && @account.validate_sub == nil
+          format.html { redirect_to edit_account_path(@account), notice: 'Account was successfully updated.' }
+          format.json { render :show, status: :ok, location: @account }
+        elsif @account.prevalidate_sub == true && @account.validate_sub == true && @account.open_check.blank?
+          format.html { redirect_to edit_account_path(@account), notice: 'Account was successfully updated.' }
+          format.json { render :show, status: :ok, location: @account }
+        else 
+          format.html { redirect_to @account, notice: 'Account was successfully updated.' }
+          format.json { render :show, status: :ok, location: @account }
+        end        
       else
         format.html { render :edit }
         format.json { render json: @account.errors, status: :unprocessable_entity }
@@ -111,6 +118,8 @@ class AccountsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def account_params
-      params.require(:account).permit(:subdomain, :resto_name, :user_id)
+      params.require(:account).permit(:subdomain, :resto_name, :user_id,
+                                      :select_sub_one, :select_sub_two, :select_sub_three, :prevalidate_sub, :validate_sub,
+                                      :already_open, :open_on, :open_check)
     end
 end

@@ -10,14 +10,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161001195522) do
+ActiveRecord::Schema.define(version: 20161002164457) do
 
   create_table "accounts", force: :cascade do |t|
     t.string   "subdomain"
     t.string   "resto_name"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",       null: false
+    t.datetime "updated_at",       null: false
     t.integer  "user_id"
+    t.boolean  "select_sub_one"
+    t.boolean  "select_sub_two"
+    t.boolean  "select_sub_three"
+    t.boolean  "validate_sub"
+    t.boolean  "prevalidate_sub"
+    t.boolean  "already_open"
+    t.date     "open_on"
+    t.boolean  "open_check"
   end
 
   create_table "items", force: :cascade do |t|

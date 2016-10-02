@@ -1,0 +1,153 @@
+<h1 class="prevalidate-sub-title">Choisissez votre sous-domaine Spekulooz</h1>
+
+
+<ul class="prevalidate-sub-list">
+
+
+			<li class="prevalidate-sub-items">
+				<div class="row">
+					<div class="col-md-1">
+					</div>
+					<div class="col-md-1">
+						<% if @account.subdomain == @account.generate_subdomain_1 %>
+							<i class="fa fa-check fa-lg" style="color:#F89406;padding-left:35%"></i>
+						<% end %>
+					</div>
+					<div class="col-md-4">
+						<%= @account.url_subdomain_1 %>
+							<span class="advised">Conseillé</span>
+					</div>
+					<div class="col-md-4">
+						<% if @account.subdomain == @account.generate_subdomain_1 %>
+
+							<%= simple_form_for(@account) do |f| %>
+		  					<%= f.error_notification %>
+									<%= f.hidden_field :select_sub_one, :value => true %>
+									<%= f.hidden_field :subdomain, :value => @account.generate_subdomain_1 %>
+									<%= f.hidden_field :prevalidate_sub, :value => true %>
+								<%= f.submit t('account.keep_subdomain'), class: "btn btn-block btn-subdomain" %>
+							<% end %>
+
+						<% else %>
+
+							<%= simple_form_for(@account) do |f| %>
+	  						<%= f.error_notification %>
+									<%= f.hidden_field :select_sub_one, :value => true %>
+									<%= f.hidden_field :subdomain, :value => @account.generate_subdomain_1 %>
+									<%= f.hidden_field :prevalidate_sub, :value => true %>
+								<%= f.submit t('account.prefer_first'), class: "btn btn-block btn-subdomain" %>
+							<% end %>
+
+						<% end %>
+					</div>
+					<div class="col-md-2">
+
+					</div>		
+				</div>
+			</li>
+
+			<li class="prevalidate-sub-items">
+				<div class="row">
+					<div class="col-md-1">
+					</div>
+					<div class="col-md-1">
+						<% if @account.subdomain == @account.generate_subdomain_2 %>
+							<i class="fa fa-check fa-lg" style="color:#F89406;padding-left:35%"></i>
+						<% end %>					</div>
+					<div class="col-md-4">
+						<%= @account.url_subdomain_2 %>
+					</div>
+					<div class="col-md-4">
+						<% if @account.subdomain == @account.generate_subdomain_2 %>
+
+							<%= simple_form_for(@account) do |f| %>
+		  					<%= f.error_notification %>
+									<%= f.hidden_field :select_sub_two, :value => true %>
+									<%= f.hidden_field :subdomain, :value => @account.generate_subdomain_2 %>
+									<%= f.hidden_field :prevalidate_sub, :value => true %>
+
+								<%= f.submit t('account.keep_subdomain'), class: "btn btn-block btn-subdomain" %>
+							<% end %>
+
+						<% else %>
+
+							<%= simple_form_for(@account) do |f| %>
+	  						<%= f.error_notification %>
+									<%= f.hidden_field :select_sub_two, :value => true %>
+									<%= f.hidden_field :subdomain, :value => @account.generate_subdomain_2 %>
+									<%= f.hidden_field :prevalidate_sub, :value => true %>
+
+								<%= f.submit t('account.prefer_second'), class: "btn btn-block btn-subdomain" %>
+							<% end %>
+
+						<% end %>
+					</div>
+					<div class="col-md-2">
+
+					</div>			
+				</div>
+			</li>
+
+			<li class="prevalidate-sub-items">
+				<div class="row">
+					<div class="col-md-1">
+					</div>
+					<div class="col-md-1">
+						<% if @account.subdomain == @account.generate_subdomain_3 %>
+							<i class="fa fa-check fa-lg" style="color:#F89406;padding-left:35%"></i>
+						<% end %>					</div>
+					<div class="col-md-4">
+						<%= @account.url_subdomain_3 %>
+					</div>
+					<div class="col-md-4">
+						<% if @account.subdomain == @account.generate_subdomain_3 %>
+
+							<%= simple_form_for(@account) do |f| %>
+		  					<%= f.error_notification %>
+									<%= f.hidden_field :select_sub_three, :value => true %>
+									<%= f.hidden_field :subdomain, :value => @account.generate_subdomain_3 %>
+									<%= f.hidden_field :prevalidate_sub, :value => true %>
+
+								<%= f.submit t('account.keep_subdomain'), class: "btn btn-block btn-subdomain" %>
+							<% end %>
+
+						<% else %>
+
+							<%= simple_form_for(@account) do |f| %>
+	  						<%= f.error_notification %>
+									<%= f.hidden_field :select_sub_three, :value => true %>
+									<%= f.hidden_field :subdomain, :value => @account.generate_subdomain_3 %>
+									<%= f.hidden_field :prevalidate_sub, :value => true %>
+
+								<%= f.submit t('account.prefer_third'), class: "btn btn-block btn-subdomain" %>
+							<% end %>
+
+						<% end %>
+					</div>
+					<div class="col-md-2">
+
+					</div>
+			</li>
+			<li class="prevalidate-sub-items">
+				<%= simple_form_for(@account) do |f| %>
+	  			<%= f.error_notification %>
+						<div class="row">
+							<div class="col-md-2">
+								<%= t("account.your_subdomain") %>				
+							</div>
+							<div class="col-md-4">
+
+								<%= f.input :subdomain, label: false, hint: t("account.allowed_char") %>
+								<%= f.hidden_field :prevalidate_sub, :value => true %>
+
+							</div>
+							<div class="col-md-4">
+								<%= f.button :submit, t("account.prefer_mine"), class: "btn btn-block btn-subdomain" %>
+							</div>
+							<div class="col-md-2">						
+							</div>			
+						</div>
+					<% end %>
+			</li>
+</ul>
+

@@ -1,0 +1,45 @@
+<h2 class="validate-top-title">Votre restaurant est-il déjà ouvert?</h2>
+
+<div class="container-fluid">
+		<div class="row">
+			<div class="col-md-3">
+				
+			</div>
+			<div class="col-md-6">
+				<%= simple_form_for(@account) do |f| %>
+					<%= f.error_notification %>
+						<%= f.hidden_field :validate_sub, :value => true %>
+					<%= f.submit t('account.validate_subdomain'), class: "btn btn-block btn-validate-subdomain" %>
+				<% end %>	
+			</div>
+			<div class="col-md-3">
+				
+			</div>
+			
+		</div>
+
+		<div class="row">
+			<div class="col-md-6">
+				
+			</div>
+			<div class="col-md-3">
+				<%= simple_form_for(@account) do |f| %>
+					<%= f.error_notification %>
+						<%= f.hidden_field :prevalidate_sub, :value => false %>
+					<%= f.submit t('account.back_subdomain'), class: "btn btn-block btn-back-subdomain" %>
+				<% end %>				
+			</div>
+			<div class="col-md-3">
+				
+			</div>			
+		</div>	
+</div>
+<div class="bottom-dark">
+	
+</div>
+
+
+
+
+
+

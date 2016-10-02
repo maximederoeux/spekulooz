@@ -1,4 +1,13 @@
 fr:
   user:
     minimum: caractères minimum
-  
+  account:
+    keep_subdomain: "Je garde celui-ci"
+    prefer_first: "Je préfère le premier"
+    prefer_second: "Je préfère le deuxième"
+    prefer_third: "Je préfère le troisième"
+    prefer_mine: "Je l'ai modifié en respectant les règles"
+    allowed_char: "Uniquement des minuscules sans accents, des chiffres, des tirets (-) ou des tirets bas (_). Pas d'espaces ou de majuscules."
+    your_subdomain: "Votre sous-domaine"
+    back_subdomain: "Non, je veux revenir et changer"
+    validate_subdomain: "Oui, je suis d'accord et je confirme"

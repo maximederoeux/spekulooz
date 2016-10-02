@@ -1,3 +1,13 @@
 en:
   user:
     minimum: characters minimum
+  account:
+    keep_subdomain: "I keep this one"
+    prefer_first: "I'd rather take the first one"
+    prefer_second: "I'd rather take the second one"
+    prefer_third: "I'd rather take the third one"
+    prefer_mine: "I modified it and respected the rules"
+    allowed_char: "Only small characters, numbers, underscore(_) or hyphen(-). No spaces or capital characters"
+    your_subdomain: "Your subdomain"
+    back_subdomain: "No, I want to go back and change"
+    validate_subdomain: "Yes, I agree and confirm my choice"
