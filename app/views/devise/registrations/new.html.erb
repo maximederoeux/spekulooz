@@ -1,7 +1,10 @@
-<h2>Sign up</h2>
+<div class="container-fluid devise-forms">
 
-<%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  <%= f.error_notification %>
+    <h2>Votre présence web et mobile en quelques clics gratuitement</h2>
+
+      <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+      <%= f.error_notification %>
+
 
   <div class="form-inputs">
     <%= f.input :resto_name, required: true, autofocus: true %>
@@ -16,3 +19,7 @@
 <% end %>
 
 <%= render "devise/shared/links" %>
+
+
+</div>
+
