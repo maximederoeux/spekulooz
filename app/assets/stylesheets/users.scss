@@ -74,11 +74,12 @@ body {
 .landing {
   max-width: 100%;
   background-color: #DADFE1;
-  display: block;
   padding-bottom: 2%;
-  padding-left:15%;
-  padding-right:15%;
+  padding-left:10%;
+  padding-right:10%;
   min-height:100vh;
+  display: block;
+  position: relative;
 
 }
 
@@ -91,13 +92,15 @@ body {
 }
 
 .landing h1 {
-  margin:0;
+  margin-bottom: 10%;
   padding-top: 10%;
   padding-left: 5%;
   font-size: 2em;
   line-height: 1.1em;
-  position: absolute;
+  position: relative;
   font-family: 'Alegreya', serif;
+  display: block;
+  text-align: center;
 }
 
 .landing h2 {
@@ -106,20 +109,43 @@ body {
   padding-left: 5%;
   font-size: 1.5em;
   line-height: 1.1em;
-  position: absolute;
+  position: relative;
   font-family: 'Alegreya', serif;
+  text-align: center;
 }
 
-.landing p {
+.landing .row p {
   margin:0;
-  padding-top: 5%;
-  padding-left: 5%;
-  max-width: 40%;
-  font-size: 3.5em;
-  line-height: 1.1em;
-  position: absolute;
+  padding-top: 1%;
+  padding-bottom: 1%;
+  padding-left: 0;
+  padding-right: 0;
+  max-width: 100%;
+  font-size: 2em;
+  line-height: 1em;
+  display: block;
+  position: relative;
   font-family: 'Alegreya', serif;
+
 }
 
+.new-account {
+  max-width: 100%;
+  margin-top: 10%;
+  display: block;
+  position: relative;
+
+}
+
+.btn-new-account {
+  background-color: #34495E;
+  font-family: 'Alegreya', serif;
+  text-align: center;
+  color: #DADFE1;
+  font-size: 1.6em;
+  font-weight: 500;
+  max-width: 50%;
+  float:right;
+}
 
 /* USER SHOW END */

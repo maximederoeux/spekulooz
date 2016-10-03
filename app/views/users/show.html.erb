@@ -1,7 +1,13 @@
 <div class="landing">
 	<div class="row">
 		<div class="col-md-6">
-			<h1>Informations générales</h1>
+			<h1>Vos informations</h1>
+			<p><%= @user.full_name %><p>
+			<p><%= @user.email %><p>
+			<% @user.accounts.each do |account| %>
+				<p><%= account.resto_name %><p>
+			<% end %>
+
 		</div>
 		<div class="col-md-6">
 			<% if @user.accounts.count == 0 %>
@@ -11,140 +17,19 @@
 			<% elsif @user.accounts.count > 1 %>
 				<h1>Vos restaurants</h1>
 			<% end %>
-		<div>
-			<%= simple_form_for (@new_account) do |f| %>
-				<%= f.input :resto_name %>
-				<%= f.hidden_field :user_id, :value => @user.id %>
-				<%= f.submit "Créer", class: "btn btn-block" %>
-			<% end %>			
-			
+
+			<div class="new-account">
+				<%= simple_form_for (@new_account) do |f| %>
+					<%= f.input :resto_name, label: false %>
+					<%= f.hidden_field :user_id, :value => current_user.id %>
+					<%= f.submit "Créer", class: "btn btn-block btn-new-account form-inline" %>
+				<% end %>
+			</div>
+
+
+
 		</div>
-
-		</div>		
-	</div>
-	<p></p>
-
-</div>
-
-<div class="sign-up">
-	<div class="row">
-		<div class="col-md-8">
-			<h1>Obtenez un site web et mobile qui grandit et vit au rythme de votre restaurant</h1>
-		</div>
-		<div class="col-md-4">
-			<p>Démarrez maintenant gratuitement!</p>
-		</div>	
-	</div>
-</div>
-
-<div class="selling">
-	
-	<div class="row">
-		<div class="col-md-8">
-		
-			<h3>Votre présence web et mobile en quelques minutes</h3>
-
-			<p>Spekulooz vous assure une présence web et mobile qui facilite la communication entre vous et vos clients grâce à des interfaces utilisateurs adaptées à chaque type d’appareil. Et ça, en à peine quelques minutes.</p>
-		</div>
-
-		<div class="col-md-4">
-			<img src="assets/web.jpg" style="max-width:100%;max-height:80%;padding-top:15%;opacity:0.3;">
-		</div>		
 	</div>
 
-	<div class="row">
-		<div class="col-md-4">	
-			<img src="assets/service.jpg" style="max-width:100%;padding-top:15%;opacity:0.5;">
-
-		</div>
-		<div class="col-md-8">
-			<h3>Pas en plein service !</h3>
-
-			<p>Tous les moments ne sont pas propices à la gestion de votre site internet. Et Spekulooz ne désire pas être dans vos jambes au mauvais moment. C’est pourquoi tous les changements sont planifiés. Insérez vos nouvelles suggestions quand vous avez le temps de le faire, et choisissez le moment auquel elles seront mises en avant sur votre site. </p>
-
-		</div>		
-	</div>		
-
-	<div class="row">
-		<div class="col-md-8">
-		
-			<h3>Vous n’êtes pas seul</h3>
-
-			<p>Spekulooz vous accompagne et vous conseille à chaque instant de la vie de votre site. Que ce soit pour vous aider à choisir vos couleurs, insérer pour vous des modifications ou encore une relecture orthographique de vos textes, Spekuloos est là pour vous.</p>
-		</div>
-
-		<div class="col-md-4">
-			<img src="assets/alone.jpg" style="max-width:100%;padding-top:15%;opacity:0.4;">
-		</div>		
-	</div>		
-
-	<div class="row">
-		<div class="col-md-4">	
-			<img src="assets/communicate.jpg" style="max-width:100%;padding-top:15%;opacity:0.5;">
-
-		</div>
-		<div class="col-md-8">
-			<h3>Votre site communique pour vous</h3>
-
-			<p>Les informations qui sont sur votre site peuvent être mises à jour très régulièrement. Vous pouvez ainsi toujours renvoyer vos clients vers votre site où ils découvriront ce que votre établissement a à leur offrir. </p>
-
-		</div>		
-	</div>	
-
 </div>
 
-
-<div class="sign-up">
-	<div class="row">
-		<div class="col-md-8">
-			<h1>Obtenez un site web et mobile qui grandit et vit au rythme de votre restaurant</h1>
-		</div>
-		<div class="col-md-4">
-			<p>Démarrez maintenant gratuitement!</p>
-		</div>	
-	</div>
-</div>
-
-
-<div class="ingredients">
-	<h1>Les ingrédients de votre site</h1>
-
-		<h2>Votre histoire, votre philosophie</h2>
-
-			<p>Votre restaurant est unique, votre parcours aussi. Présentez-les, racontez cette histoire en quelques paragraphes.</p>
-
-		
-		<h2>Annoncez vos événements</h2>
-
-			<p>Spekulooz se charge de promouvoir vos événements sur votre site et prépare tout pour les partager d’un seul clic sur vos réseaux sociaux.</p>
-
-		<h2>Le menu de votre restaurantest un être vivant</h2>
-
-			<p>Votre menu évolue sûrement. Spekulooz gère la promotion de votre nouvelle carte et annonce son arrivée sur votre site, au moment que vous avez choisi, et vous permet de la partager sur vos réseaux sociaux.</p>
-
-		<h2>Plats du jour, suggestions et menus saisonniers</h2>
-
-
-			<p>Boostez vos ventes en mettant en avant vos plats du jour, suggestions ou menus saisonniers. Vos nouveautés sont sûrement alléchantes. Mais qui le sait ? Spekulooz fait leur promotion sur votre site et prépare tout pour les partager d’un seul clic sur vos réseaux sociaux.</p>
-
-		<h2>Répondez aux demandes de réservation d’un simple clic</h2>
-
-			<p>Spekulooz vous prévient par email et/ou par sms. Vous confirmez ou infirmez directement sur votre smartphone, ou vous rappelez votre client, d’un simple clic.</p>
-
-</div>
-
-<div class="sign-up">
-	<div class="row">
-		<div class="col-md-8">
-			<h1>Obtenez un site web et mobile qui grandit et vit au rythme de votre restaurant</h1>
-		</div>
-		<div class="col-md-4">
-			<p>Démarrez maintenant gratuitement!</p>
-		</div>	
-	</div>
-</div>
-
-
-<div class="selling">
-	<h1>Comment ça marche?</h1>
-</div>

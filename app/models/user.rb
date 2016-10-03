@@ -59,5 +59,15 @@ class User < ApplicationRecord
     else
       false
     end
-  end  
+  end
+
+  def full_name
+    if name.present? && first_name.present?
+      "#{first_name} #{name}"
+    elsif name.present? && first_name.blank?
+      name
+    elsif name.blank? && first_name.blank?
+      "N'oubliez pas de compléter votre profil"
+    end
+  end
 end
