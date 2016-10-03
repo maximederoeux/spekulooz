@@ -14,6 +14,8 @@ body {
 	font-size: 1em;
 }
 
+/* PREVALIDATE SUBDOMAIN START*/
+
 ul.prevalidate-sub-list {
 	margin:0;
 	max-width: 100%;
@@ -51,6 +53,11 @@ p.prevalidate-sub {
 	padding-top: 2%;
 	margin-top: 0;
 }
+
+/* PREVALIDATE SUBDOMAIN END*/
+
+/* VALIDATE SUBDOMAIN START*/
+
 
 .btn-subdomain {
 	background-color: #DADFE1;
@@ -153,6 +160,10 @@ h2.validate-bottom-title {
 	font-size: 1.8em;
 }
 
+/* VALIDATE SUBDOMAIN END*/
+
+/* OPEN DATE START*/
+
 
 .btn-open-date {
 	background-color: #DADFE1;
@@ -209,3 +220,193 @@ h2.open-date {
 	margin-bottom: 0;
 	margin-right: 0.7em;
 }
+
+/* OPEN DATE START*/
+
+/* SELECT BG PICT START */
+
+.select-bg-pict {
+	max-width: 100%;
+	background-color: #34495E;
+	display: block;
+	padding-bottom: 2%;
+	padding-left:0;
+	padding-right:0;
+	min-height:100vh;
+	color: #DADFE1;
+
+}
+
+.select-bg-pict img {
+	max-width:80%;
+	margin: 10%;
+	position: relative;
+  display: inline-block;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 5px;
+  transition: 0.3s;
+  padding-top: 5%;
+
+}
+
+.btn-pict {
+	max-width:100%;
+	margin-top: 0;
+	margin-bottom: 0;
+	margin-left: 2em;
+	position: relative;
+  display: inline-block;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 0.3em;
+  transition: 0.3s;
+
+}
+.select-bg-pict h1 {
+  color: #DADFE1;
+	font-family: 'Alegreya', serif;
+	text-align: center;
+	padding-top:5%;	
+	padding-bottom:5%;
+	font-size: 3em;
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+.select-bg-pict h2 {
+  color: #DADFE1;
+	font-family: 'Alegreya', serif;
+	text-align: left;
+	padding-top:1%;	
+	padding-bottom:1%;
+	font-size: 1.8em;
+	margin-top: 20%;
+	margin-bottom: 0;
+	margin-left: 25%;
+}
+
+.row .no-margin {
+	margin-left: 0;
+	margin-right: 0;
+}
+
+.show-for-sr, {
+    position: absolute !important;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+}
+
+.btn-add-file {
+	background-color: #DADFE1;
+	color: #34495E;
+  font-family: 'Roboto Condensed', sans-serif;
+	font-size: 1.5em !important;
+  border: 1px solid black !important;
+  line-height: 3em !important;
+  margin-bottom: 15%;
+  margin-top: 8%;
+  display: block;
+  float: left;
+  max-width: 40%;
+  padding-right: 1em;
+  padding-left: 1em;
+}
+
+.btn-add-file:hover {
+	background-color: #E9D460;
+	color: #22313F;
+  font-family: 'Roboto Condensed', sans-serif;
+	font-size: 1.8em;
+}
+
+.btn-save-file {
+	background-color: #DADFE1;
+	color: #34495E;
+  font-family: 'Roboto Condensed', sans-serif;
+	font-size: 1.5em !important;
+  border: 1px solid black !important;
+  line-height: 3em !important;
+  margin-bottom: 15%;
+  margin-top: 60%;
+  display: block;
+  float: left;
+  max-width: 100%;
+  padding-right: 1em;
+  padding-left: 1em;
+  margin-left: 0;
+}
+
+.btn-save-file:hover {
+	background-color: #E9D460;
+	color: #22313F;
+  font-family: 'Roboto Condensed', sans-serif;
+	font-size: 1.8em;
+}
+
+.add-file {
+	color: #DADFE1;
+	font-family: 'Roboto Condensed', sans-serif !important;
+	text-align: left;
+	padding-top:1%;	
+	padding-bottom:15%;
+	font-size: 1.3em !important;
+	margin-top: 2%;
+	margin-bottom: 0;
+	margin-left: 25%;
+}
+
+.btn-your-pict {
+	max-width:100%;
+	margin-top: 0;
+	margin-bottom: 0;
+	margin-left: 2em;
+	position: relative;
+  display: block;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 0.3em;
+  transition: 0.3s;
+  float:left;
+}
+
+.col-less-padding {
+	margin-right: 0 !important;
+}
+
+.btn-url {
+  background-color: #E9D460;
+  font-family: 'Alegreya', serif;
+  text-align: center;
+  color: #22313F !important;
+  font-size: 2em  !important;
+  max-width: 50%  !important;
+  margin-bottom: 0;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5%;
+  border-radius: 0.3rem;
+}
+
+.btn-url:hover {
+  background-color: #DADFE1;
+  font-family: 'Alegreya', serif;
+  text-align: center;
+  color: #22313F !important;
+  font-size: 2.2em  !important;
+  max-width: 50%  !important;
+  margin-bottom: 0;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5%;
+  border-radius: 0.3rem;
+}
+/* SELECT BG PICT END */

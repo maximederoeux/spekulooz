@@ -7,6 +7,9 @@ class Account < ApplicationRecord
 	after_create :generate_subdomain_3
 	after_create :update_subdomain
 
+  has_attached_file :bg_pict_one, styles: { medium: "300x300>", thumb: "100x100>" }, default_url: "/images/:style/missing.png"
+  validates_attachment_content_type :bg_pict_one, content_type: /\Aimage\/.*\z/
+  
   def generate_subdomain_1
   	resto_name.parameterize.gsub(/[!@#$%^&*()-=_+|;':",.<>?']/, '')
   end
@@ -67,7 +70,23 @@ class Account < ApplicationRecord
 		"#{generate_subdomain_3}.spekulooz.be"
 	end
 
-	def validated_url
-		"#{subdomain}.spekulooz.be"
+	def validated_url_dev
+		"http://#{subdomain}.lvh.me:3000"
+	end
+
+	def ready_to_start_design
+		if prevalidate_sub == true && validate_sub == true && open_check == true
+			true
+		else
+			false
+		end
+	end
+
+	def ready_for_last_step
+		if ready_to_start_design == true && open_check == true && bg_pict_select == true
+			true
+		else
+			false
+		end
 	end
 end

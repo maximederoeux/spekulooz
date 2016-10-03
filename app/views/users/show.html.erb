@@ -4,9 +4,7 @@
 			<h1>Vos informations</h1>
 			<p><%= @user.full_name %><p>
 			<p><%= @user.email %><p>
-			<% @user.accounts.each do |account| %>
-				<p><%= account.resto_name %><p>
-			<% end %>
+
 
 		</div>
 		<div class="col-md-6">
@@ -15,7 +13,7 @@
 			<% elsif @user.accounts.count == 1 %>
 				<h1>Votre restaurants</h1>
 			<% elsif @user.accounts.count > 1 %>
-				<h1>Vos restaurants</h1>
+				<h1>Vos restaurant</h1>
 			<% end %>
 
 			<div class="new-account">
@@ -25,6 +23,12 @@
 					<%= f.submit "Créer", class: "btn btn-block btn-new-account form-inline" %>
 				<% end %>
 			</div>
+
+			<div class="new-account">
+			<% @user.accounts.each do |account| %>
+				<p><%= account.resto_name %><p>
+			<% end %>
+			</div>			
 
 
 

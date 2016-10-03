@@ -1,0 +1,76 @@
+<div class="select-bg-pict">
+
+<h1>Choisissez l'image de la page d'accueil de votre site</h1>
+
+		<div class="row no-margin">
+
+			<div class="col-md-1">
+			</div>
+
+			<div class="col-md-10">
+				<div class="col-md-4">
+					<%= simple_form_for (@account) do |f| %>
+						<%= f.hidden_field :bg_pict_number, :value => 1 %>
+					 	<%= f.hidden_field :bg_pict_select, :value => true %>
+
+						<%= f.submit "Comment", :type => :image, :src => "/assets/bg-cheese.jpg", class: "btn-pict" %>
+					<% end %>
+				</div>
+				<div class="col-md-4">
+					<%= simple_form_for (@account) do |f| %>
+						<%= f.hidden_field :bg_pict_number, :value => 2 %>
+					 	<%= f.hidden_field :bg_pict_select, :value => true %>
+
+						<%= f.submit "Comment", :type => :image, :src => "/assets/bg-cocktails.jpg", class: "btn-pict" %>
+					<% end %>
+				</div>		
+				<div class="col-md-4">
+					<%= simple_form_for (@account) do |f| %>
+						<%= f.hidden_field :bg_pict_number, :value => 3 %>
+					 	<%= f.hidden_field :bg_pict_select, :value => true %>
+
+						<%= f.submit "Comment", :type => :image, :src => "/assets/bg-spices.jpg", class: "btn-pict" %>
+					<% end %>
+				</div>	
+			</div>
+
+			<div class="col-md-1">
+			</div>
+
+		</div>
+
+
+				<% if @account.ready_for_last_step == true %>
+
+					<%= link_to "Voir votre site", "#{@account.validated_url_dev}", class: "btn-block btn-url" %>
+
+				<% end %>
+
+
+		<div class="row less-margin">
+			<div class="col-md-5">
+				<h2>
+					Ou attachez une image de votre choix
+				</h2>
+				<div class="add-file">
+					<%= simple_form_for @account do |f| %>
+					  <%= f.input :bg_pict_one, as: :file, class: "show-for-sr", label: false %>
+					 <%= f.hidden_field :bg_pict_select, :value => true %>
+				</div>
+			</div>
+			<div class="col-md-2 col-less-padding">
+				<%= f.submit "Télécharger", class: "btn-save-file" %>
+					<% end %>
+
+			</div>
+			<div class="col-md-5">
+				<% if @account.bg_pict_one.present? %>
+					<%= image_tag @account.bg_pict_one.url(:medium), class: "btn-your-pict" %>
+				<% else %>
+					<h2>Pas encore d'image<h2>
+				<% end %>
+			</div>
+		</div>
+	
+
+</div>

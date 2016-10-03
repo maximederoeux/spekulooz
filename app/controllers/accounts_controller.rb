@@ -81,8 +81,8 @@ class AccountsController < ApplicationController
         elsif @account.prevalidate_sub == true && @account.validate_sub == true && @account.open_check.blank?
           format.html { redirect_to edit_account_path(@account), notice: 'Account was successfully updated.' }
           format.json { render :show, status: :ok, location: @account }
-        elsif @account.prevalidate_sub == true && @account.validate_sub == true && @account.open_check == true
-          format.html { redirect_to @account, notice: 'Account was successfully updated.' }
+        elsif @account.ready_to_start_design == true
+          format.html { redirect_to edit_account_path(@account), notice: 'Account was successfully updated.' }
           format.json { render :show, status: :ok, location: @account }
         else 
           format.html { redirect_to @account, notice: 'Account was successfully updated.' }
@@ -123,6 +123,7 @@ class AccountsController < ApplicationController
     def account_params
       params.require(:account).permit(:subdomain, :resto_name, :user_id,
                                       :select_sub_one, :select_sub_two, :select_sub_three, :prevalidate_sub, :validate_sub,
-                                      :already_open, :open_on, :open_check)
+                                      :already_open, :open_on, :open_check,
+                                      :bg_pict_select, :bg_pict_number, :bg_pict_one)
     end
 end

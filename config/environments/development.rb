@@ -54,6 +54,8 @@ Rails.application.configure do
 
   # ADDED MYSELF
 
+  Paperclip.options[:command_path] = "/usr/local/bin/"
+
   # DEVISE
   config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
 

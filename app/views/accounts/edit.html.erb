@@ -10,6 +10,10 @@
 
 	<%= render 'already_open', account: @account %>
 
+<% elsif @account.ready_to_start_design == true %>
+
+	<%= render 'select_bg_pict', account: @account %>
+
 <% end %>
 
 <hr>

@@ -10,13 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161002164457) do
+ActiveRecord::Schema.define(version: 20161003141222) do
 
   create_table "accounts", force: :cascade do |t|
     t.string   "subdomain"
     t.string   "resto_name"
-    t.datetime "created_at",       null: false
-    t.datetime "updated_at",       null: false
+    t.datetime "created_at",               null: false
+    t.datetime "updated_at",               null: false
     t.integer  "user_id"
     t.boolean  "select_sub_one"
     t.boolean  "select_sub_two"
@@ -26,6 +26,12 @@ ActiveRecord::Schema.define(version: 20161002164457) do
     t.boolean  "already_open"
     t.date     "open_on"
     t.boolean  "open_check"
+    t.string   "bg_pict_one_file_name"
+    t.string   "bg_pict_one_content_type"
+    t.integer  "bg_pict_one_file_size"
+    t.datetime "bg_pict_one_updated_at"
+    t.boolean  "bg_pict_select"
+    t.integer  "bg_pict_number"
   end
 
   create_table "items", force: :cascade do |t|
