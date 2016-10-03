@@ -8,6 +8,8 @@ body {
 	background-color: #DADFE1;	
 }
 
+/* DEVISE FORMS START */
+
 .devise-forms {
 	margin-left:25%;
 	margin-right:25%;
@@ -64,3 +66,60 @@ body {
   background-color: #0275d8;
   border-color: #0275d8;
 }
+
+/* DEVISE FORMS END */
+
+/* USER SHOW START */
+
+.landing {
+  max-width: 100%;
+  background-color: #DADFE1;
+  display: block;
+  padding-bottom: 2%;
+  padding-left:15%;
+  padding-right:15%;
+  min-height:100vh;
+
+}
+
+.landing img {
+  max-width:100%;
+  display: block;
+  margin: auto;
+  position: relative;
+
+}
+
+.landing h1 {
+  margin:0;
+  padding-top: 10%;
+  padding-left: 5%;
+  font-size: 2em;
+  line-height: 1.1em;
+  position: absolute;
+  font-family: 'Alegreya', serif;
+}
+
+.landing h2 {
+  margin:0;
+  padding-top: 10%;
+  padding-left: 5%;
+  font-size: 1.5em;
+  line-height: 1.1em;
+  position: absolute;
+  font-family: 'Alegreya', serif;
+}
+
+.landing p {
+  margin:0;
+  padding-top: 5%;
+  padding-left: 5%;
+  max-width: 40%;
+  font-size: 3.5em;
+  line-height: 1.1em;
+  position: absolute;
+  font-family: 'Alegreya', serif;
+}
+
+
+/* USER SHOW END */

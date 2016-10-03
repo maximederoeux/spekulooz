@@ -5,6 +5,7 @@ class UsersController < ApplicationController
 
   def show
   	@user = User.find(params[:id])
+    @new_account = Account.new
   end
 
   def edit
