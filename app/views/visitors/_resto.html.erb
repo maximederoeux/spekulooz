@@ -1,1 +1,363 @@
-Votre restaurant
+<%= @sub_account.resto_name %><br>
+<%= @sub_account.user_id %><br>
+<%= @sub_account.user.name %><br>
+<hr>
+
+<% if user_signed_in? %>
+	<%= current_user.id %><br>
+	<%= current_user.name %><br>
+<% end %>
+
+
+
+<p>03 - Muted Tones</p>
+<div class="row">
+	<div class="col-md-3" style="background-color:#C0B283">
+		<p style="color:#373737;font-size:2em;">Pale Gold</p>
+	</div>
+	<div class="col-md-3" style="background-color:#DCD0C0">
+		<p style="color:#373737;font-size:2em;">Silk</p>
+	</div>
+	<div class="col-md-3" style="background-color:#F4F4F4">
+		<p style="color:#373737;font-size:2em;">Paper</p>
+	</div>
+	<div class="col-md-3" style="background-color:#373737">
+		<p style="color:#F4F4F4;font-size:2em;">Charcoal</p>
+	</div>
+</div>
+
+<p>47 - Modern and minimal</p>
+<div class="row">
+	<div class="col-md-3" style="background-color:#C06014">
+		<p style="color:#EDDBCD;font-size:2em;">Ochre</p>
+	</div>
+	<div class="col-md-3" style="background-color:#EDDBCD">
+		<p style="color:#000000;font-size:2em;">Pastel Peach</p>
+	</div>
+	<div class="col-md-3" style="background-color:#000000">
+		<p style="color:#EDDBCD;font-size:2em;">Black</p>
+	</div>
+	<div class="col-md-3" style="background-color:#CDCDCD">
+		<p style="color:#000000;font-size:2em;">Cool grey</p>
+	</div>
+</div>
+
+<p>01 - Fun and professionnal</p>
+<div class="row">
+	<div class="col-md-3" style="background-color:#4ABDAC">
+		<p>Fresh</p>
+	</div>
+	<div class="col-md-3" style="background-color:#FC4A1A">
+		<p>Vermillion</p>
+	</div>
+	<div class="col-md-3" style="background-color:#F7B733">
+		<p>Sunshine</p>
+	</div>
+	<div class="col-md-3" style="background-color:#DFDCE3">
+		<p>Clean</p>
+	</div>
+</div>
+
+<p>08 - Clean and Highlighted</p> 
+<div class="row">
+	<div class="col-md-3" style="background-color:#CAEBF2">
+		<p>Sky</p>
+	</div>
+	<div class="col-md-3" style="background-color:#A9A9A9">
+		<p>Carbon</p>
+	</div>
+	<div class="col-md-3" style="background-color:#FF3B3F">
+		<p>Watermelon</p>
+	</div>
+	<div class="col-md-3" style="background-color:#EFEFEF">
+		<p>Neutral</p>
+	</div>
+</div>
+
+<p>09 - Warm Tones</p>
+<div class="row">
+	<div class="col-md-3" style="background-color:#D7CEC7">
+		<p>Grain</p>
+	</div>
+	<div class="col-md-3" style="background-color:#565656">
+		<p>Blackboard</p>
+	</div>
+	<div class="col-md-3" style="background-color:#76323F">
+		<p>Oxblood</p>
+	</div>
+	<div class="col-md-3" style="background-color:#C09F80">
+		<p>Tan</p>
+	</div>
+</div>
+
+<p>11 - Cool vs Warm</p>
+<div class="row">
+	<div class="col-md-3" style="background-color:#18121E">
+		<p>Navy Blue</p>
+	</div>
+	<div class="col-md-3" style="background-color:#233237">
+		<p>Gun metal</p>
+	</div>
+	<div class="col-md-3" style="background-color:#984B43">
+		<p>Rusty Red</p>
+	</div>
+	<div class="col-md-3" style="background-color:#EAC67A">
+		<p>Warm Yellow</p>
+	</div>
+</div>
+
+<p>12 Pretty Pastel</p>
+<div class="row">
+	<div class="col-md-3" style="background-color:#BFD8D2">
+		<p>Powder</p>
+	</div>
+	<div class="col-md-3" style="background-color:#FEDCD2">
+		<p>Peach</p>
+	</div>
+	<div class="col-md-3" style="background-color:#DF744A">
+		<p>Warm</p>
+	</div>
+	<div class="col-md-3" style="background-color:#DCB239">
+		<p>Lemon</p>
+	</div>
+</div>
+
+<p>17 - Summer inspired</p>
+<div class="row">
+	<div class="col-md-3" style="background-color:#286DA8">
+		<p>Summer Sky</p>
+	</div>
+	<div class="col-md-3" style="background-color:#CD5360">
+		<p>Warm Peach</p>
+	</div>
+	<div class="col-md-3" style="background-color:#B37D4E">
+		<p>Field</p>
+	</div>
+	<div class="col-md-3" style="background-color:#438496">
+		<p>Breeze</p>
+	</div>
+</div>
+
+<p>Cheerfull and sleek</p>
+<div class="row">
+	<div class="col-md-3" style="background-color:#6B7A8F">
+		<p>Blueberry</p>
+	</div>
+	<div class="col-md-3" style="background-color:#F7882F">
+		<p>Apricot</p>
+	</div>
+	<div class="col-md-3" style="background-color:#F7C331">
+		<p>Citrus</p>
+	</div>
+	<div class="col-md-3" style="background-color:#DCC7AA">
+		<p>Apple Core</p>
+	</div>
+</div>
+
+<p>Luxurious and modern</p>
+<div class="row">
+	<div class="col-md-3" style="background-color:#0F1626">
+		<p>Navy Blue</p>
+	</div>
+	<div class="col-md-3" style="background-color:#AB987A">
+		<p>Leather</p>
+	</div>
+	<div class="col-md-3" style="background-color:#FF533D">
+		<p>Coral</p>
+	</div>
+	<div class="col-md-3" style="background-color:#F5F5F5">
+		<p>Eggshell</p>
+	</div>
+</div>
+
+<p>Antique and clean</p>
+<div class="row">
+	<div class="col-md-3" style="background-color:#B56357">
+		<p>Rust</p>
+	</div>
+	<div class="col-md-3" style="background-color:#B4DBC0">
+		<p>Mint</p>
+	</div>
+	<div class="col-md-3" style="background-color:#EAE3EA">
+		<p>Slate</p>
+	</div>
+	<div class="col-md-3" style="background-color:#A7B3A5">
+		<p>Sea Foam</p>
+	</div>
+</div>
+
+<p>31 - Cool and calm</p>
+<div class="row">
+	<div class="col-md-3" style="background-color:#6BBAA7">
+		<p>Aqua</p>
+	</div>
+	<div class="col-md-3" style="background-color:#FBA100">
+		<p>Sunshine</p>
+	</div>
+	<div class="col-md-3" style="background-color:#6C6488">
+		<p>Lavender</p>
+	</div>
+	<div class="col-md-3" style="background-color:#B6A19E">
+		<p>Dusty Rose</p>
+	</div>
+</div>
+
+<p>33 - Earthy and Fresh</p>
+<div class="row">
+	<div class="col-md-3" style="background-color:#945D60">
+		<p>Terra Cotta</p>
+	</div>
+	<div class="col-md-3" style="background-color:#626E60">
+		<p>Herb</p>
+	</div>
+	<div class="col-md-3" style="background-color:#AF473C">
+		<p>Chilli</p>
+	</div>
+	<div class="col-md-3" style="background-color:#3C3C3C">
+		<p>Charcoal</p>
+	</div>
+</div>
+
+<p>36 - Vintage charm</p>
+<div class="row">
+	<div class="col-md-3" style="background-color:#CDA34F">
+		<p>Gold</p>
+	</div>
+	<div class="col-md-3" style="background-color:#E9E7DA">
+		<p>Daisy</p>
+	</div>
+	<div class="col-md-3" style="background-color:#636B46">
+		<p>Stem</p>
+	</div>
+	<div class="col-md-3" style="background-color:#373F27">
+		<p>Greenery</p>
+	</div>
+</div>
+
+<p>38 - Stormy Hues</p>
+<div class="row">
+	<div class="col-md-3" style="background-color:#494E6B">
+		<p>Stormy</p>
+	</div>
+	<div class="col-md-3" style="background-color:#98878F">
+		<p>Cloud</p>
+	</div>
+	<div class="col-md-3" style="background-color:#985E6D">
+		<p>Sunset</p>
+	</div>
+	<div class="col-md-3" style="background-color:#192231">
+		<p>Evening</p>
+	</div>
+</div>
+
+<p>40 - Simple and Fresh</p>
+<div class="row">
+	<div class="col-md-3" style="background-color:#414141">
+		<p>Matte</p>
+	</div>
+	<div class="col-md-3" style="background-color:#CCDFCB">
+		<p>Fresh</p>
+	</div>
+	<div class="col-md-3" style="background-color:#FF6A5C">
+		<p>Watermelon</p>
+	</div>
+	<div class="col-md-3" style="background-color:#056571">
+		<p>Teal</p>
+	</div>
+</div>
+
+<p>41 - Tropical Tones</p>
+<div class="row">
+	<div class="col-md-3" style="background-color:#1FC58F">
+		<p>Ocean</p>
+	</div>
+	<div class="col-md-3" style="background-color:#EAB126">
+		<p>Sand</p>
+	</div>
+	<div class="col-md-3" style="background-color:#F24CAE">
+		<p>Cocktail</p>
+	</div>
+	<div class="col-md-3" style="background-color:#1B7B34">
+		<p>Palm</p>
+	</div>
+</div>
+
+<p>42 - Bold Feature colors</p>
+<div class="row">
+	<div class="col-md-3" style="background-color:#E14658">
+		<p>Coral</p>
+	</div>
+	<div class="col-md-3" style="background-color:#22252C">
+		<p>Navy</p>
+	</div>
+	<div class="col-md-3" style="background-color:#3F3250">
+		<p>Mountain</p>
+	</div>
+	<div class="col-md-3" style="background-color:#C0B3A0">
+		<p>Scrub</p>
+	</div>
+</div>
+
+<p>43 - Antique Tones</p>
+<div class="row">
+	<div class="col-md-3" style="background-color:#155765">
+		<p>Bluebell</p>
+	</div>
+	<div class="col-md-3" style="background-color:#57652A">
+		<p>Olive</p>
+	</div>
+	<div class="col-md-3" style="background-color:#AB9353">
+		<p>Ornate</p>
+	</div>
+	<div class="col-md-3" style="background-color:#4D2C3D">
+		<p>Plum</p>
+	</div>
+</div>
+
+<p>45 - Simple but bold</p>
+<div class="row">
+	<div class="col-md-3" style="background-color:#F7EF6A">
+		<p>Fresh</p>
+	</div>
+	<div class="col-md-3" style="background-color:#93C178">
+		<p>Vermillion</p>
+	</div>
+	<div class="col-md-3" style="background-color:#465C8B">
+		<p>Sunshine</p>
+	</div>
+	<div class="col-md-3" style="background-color:#DFDCE3">
+		<p>Clean</p>
+	</div>
+</div>
+
+<p>48 - Fun and Cheerfull</p>
+<div class="row">
+	<div class="col-md-3" style="background-color:#A7D2CB">
+		<p>Clean</p>
+	</div>
+	<div class="col-md-3" style="background-color:#F2D388">
+		<p>Butter</p>
+	</div>
+	<div class="col-md-3" style="background-color:#C98474">
+		<p>Salmon</p>
+	</div>
+	<div class="col-md-3" style="background-color:#874C62">
+		<p>Eggplant</p>
+	</div>
+</div>
+
+<p>49 - Sunny and calm</p>
+<div class="row">
+	<div class="col-md-3" style="background-color:#CAE4DB">
+		<p>Morning Sky</p>
+	</div>
+	<div class="col-md-3" style="background-color:#DCAE1D">
+		<p>Honey</p>
+	</div>
+	<div class="col-md-3" style="background-color:#00303F">
+		<p>Cerulean</p>
+	</div>
+	<div class="col-md-3" style="background-color:#7A9D96">
+		<p>Mist</p>
+	</div>
+</div>

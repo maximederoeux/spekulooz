@@ -1,1 +1,21 @@
-_navigation_subdomain.html.erb
+  <% if user_signed_in? && @sub_account.user_id == current_user.id %>
+
+		<nav>
+			<ul>
+			  <li class="pull-left"><%= link_to "#{@sub_account.resto_name}", root_path %></li>
+		        <li class="pull-left"><%= link_to "Mon profil", user_path(current_user) %></li>
+		        <li class="pull-right"><%= link_to "Déconnexion", destroy_user_session_path, :method=>'delete' %></li>
+
+			</ul>	
+		</nav>
+
+	<% end %>
+
+<nav>
+	<ul>
+	  <li class="pull-left"><%= link_to "#{@sub_account.resto_name}", root_path %></li>
+    <li class="pull-right"><%= link_to "Réservations", account_path(@sub_account) %></li>
+    <li class="pull-right"><%= link_to "Menu", account_path(@sub_account) %></li>
+    <li class="pull-right"><%= link_to "Suggestions", account_path(@sub_account) %></li>
+	</ul>	
+</nav>
