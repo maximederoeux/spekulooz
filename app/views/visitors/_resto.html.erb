@@ -5,4 +5,14 @@
 </div>
 
 <h1><%= @sub_account.user.full_name %></h1>
-<h1><%= current_user.full_name %></h1>
+
+<% if user_signed_in? %>
+
+
+<h1>Dedans <%= current_user.full_name %></h1>
+
+<% else %>
+
+Dehors
+
+<% end %>
