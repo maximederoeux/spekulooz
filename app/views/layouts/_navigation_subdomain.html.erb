@@ -7,7 +7,7 @@
       <li class="spekulooz-right"><%= link_to_unless_current "FR", locale: "fr" %></li>
       <li class="spekulooz-right"><%= link_to_unless_current "NL", locale: "nl" %></li>
         <% if user_signed_in? %>
-          <li class="spekuloozl-left"><%= link_to "Mon profil", user_path(current_user) %></li>
+          <li class="spekulooz-left"><%= link_to "Mon profil", user_path(current_user) %></li>
           <li class="spekulooz-left"><%= link_to "Modifier", edit_user_path(current_user) %></li>
           <li class="spekulooz-right"><%= link_to "Déconnexion", destroy_user_session_path, :method=>'delete' %></li>
         <% else %>
