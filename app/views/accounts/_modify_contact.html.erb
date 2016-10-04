@@ -42,7 +42,7 @@
 							    		<%= f.input :address %>
 							    		<%= f.input :zipcode %>
 							    		<%= f.input :city %>
-							    		<%= f.input :country %>
+                  <%= f.select :country, @countries, {prompt: false}, {class: "form-country more-padding"} %>
 							    		<%= f.input :phone %>
 
 							    		<%= f.input :fax %>

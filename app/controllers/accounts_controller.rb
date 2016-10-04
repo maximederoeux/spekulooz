@@ -43,6 +43,7 @@ class AccountsController < ApplicationController
       redirect_to root_path, :alert => "Access denied."
     end
 
+    @countries = Account.countries
   end
 
   # POST /accounts
