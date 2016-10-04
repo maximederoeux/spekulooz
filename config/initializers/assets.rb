@@ -12,3 +12,4 @@ Rails.application.config.assets.version = '1.0'
 
 Rails.application.config.assets.precompile += %w( nav_one.scss )
 Rails.application.config.assets.precompile += %w( nav_spekulooz.scss )
+Rails.application.config.assets.precompile += %w( accounts_spekulooz.css )
