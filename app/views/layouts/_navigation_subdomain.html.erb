@@ -6,6 +6,7 @@
       <li class="spekulooz-right"><%= link_to_unless_current "EN", locale: "en" %></li>
       <li class="spekulooz-right"><%= link_to_unless_current "FR", locale: "fr" %></li>
       <li class="spekulooz-right"><%= link_to_unless_current "NL", locale: "nl" %></li>
+
         <% if user_signed_in? %>
           <li class="spekulooz-left"><%= link_to "Mon profil", user_path(current_user) %></li>
           <li class="spekulooz-left"><%= link_to "Modifier", edit_user_path(current_user) %></li>
@@ -27,9 +28,17 @@
     <li class="pull-right"><%= link_to_unless_current "FR", locale: "fr" %></li>
     <li class="pull-right"><%= link_to_unless_current "NL", locale: "nl" %></li>
       <% if user_signed_in? %>
-        <li class="pull-left"><%= link_to "Menu", root_path %></li>
+
+        <% if user_signed_in? && current_user.id == @sub_account.user_id %>
+
+          <%= render 'modify_contact' %>
+
+        <% end %>
+
+        <li class="pull-right"><%= link_to "Menu", root_path %></li>
         <li class="pull-right"><%= link_to "Réservation", root_path %></li>
       <% else %>
+        <li class="pull-right"><%= link_to "Connexion", new_user_session_path %></li>
         <li class="pull-right"><%= link_to "Suggestions", root_path %></li>
         <li class="pull-right"><%= link_to "Galerie", root_path %></li>
       <% end %>

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161003141222) do
+ActiveRecord::Schema.define(version: 20161004185321) do
 
   create_table "accounts", force: :cascade do |t|
     t.string   "subdomain"
@@ -32,6 +32,21 @@ ActiveRecord::Schema.define(version: 20161003141222) do
     t.datetime "bg_pict_one_updated_at"
     t.boolean  "bg_pict_select"
     t.integer  "bg_pict_number"
+    t.string   "address"
+    t.string   "zipcode"
+    t.string   "country"
+    t.string   "phone"
+    t.string   "fax"
+    t.string   "mobile"
+    t.string   "facebook"
+    t.string   "twitter"
+    t.string   "instagram"
+    t.string   "google"
+    t.string   "snapchat"
+    t.string   "youtube"
+    t.string   "vimeo"
+    t.string   "city"
+    t.string   "email"
   end
 
   create_table "items", force: :cascade do |t|

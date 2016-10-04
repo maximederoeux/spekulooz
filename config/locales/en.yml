@@ -1,6 +1,6 @@
 en:
   menu:
-
+    update: "Save changes"
   user:
     minimum: characters minimum
   account:
@@ -18,3 +18,21 @@ en:
     not_open: "No, it isn't."
     open_on: "Opening forecast on the"
     go_on: "Continue"
+    resto_name: "Your restaurant's name"
+    address: "Street and house number"
+    zipcode: "Zipcode"
+    city: "City"
+    country: "Country"
+    phone: "Fixed Telephone"
+    fax: "Fax"
+    mobile: "Mobile"
+    email: "Restaurant's email"
+    facebook: "Facebook page"
+    twitter: "Twitter account"
+    instagram: "Instagram"
+    google: "Google+"
+    snapchat: "Snapchat"
+    youtube: "Youtube account"
+    vimeo: "Vimeo account"
+
+

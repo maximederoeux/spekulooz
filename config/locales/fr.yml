@@ -1,6 +1,6 @@
 fr:
   menu:
-
+    update: "Enregistrer"
   user:
     minimum: caractères minimum
   account:
@@ -18,3 +18,19 @@ fr:
     not_open: "Non, pas encore."
     open_on: "Ouverture prévue pour le "
     go_on: "Continuer"
+    resto_name: "Rue et numéro"
+    address: "Adresse de votre restaurant"
+    zipcode: "Code postal"
+    city: "Ville"
+    country: "Pays"
+    phone: "Téléphone fixe +32 xx xx xx xx"
+    fax: "Fax"
+    mobile: "GSM +32 xxx xx xx xx"
+    email: "Email du restaurant"
+    facebook: "Page Facebook"
+    twitter: "Compte Twitter"
+    instagram: "Instagram"
+    google: "Google+"
+    snapchat: "Snapchat"
+    youtube: "Youtube"
+    vimeo: "Vimeo"

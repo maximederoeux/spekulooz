@@ -1,0 +1,67 @@
+<!-- Large modal -->
+<button type="button" class="btn btn-contact" data-toggle="modal" data-target="#modify_contact_<%= @sub_account.id %>">
+
+  <% if @sub_account.address.blank? %>
+
+  	Indiquer vos coordonnées
+
+  <% else %>
+
+  	Modifier vos coordonnées
+
+  <% end %>
+
+
+</button>
+
+<div class="modal fade" id="modify_contact_<%= @sub_account.id %>" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+
+      <%= simple_form_for(@sub_account) do |f| %>
+        <%= f.error_notification %>
+
+        <div class="modal-body">
+
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
+          </button>
+
+			    <div class="row">
+			    	<div class="col-md-12">
+			      <%= f.input :resto_name, label: false, :placeholder => t('account.resto_name') %>			    		
+			    	</div>
+			    	<div class="col-md-6">
+			    		<%= f.input :address, label: false, :placeholder => t('account.address') %>
+					   	<%= f.input :city, label: false, :placeholder => t('account.city') %>
+					    <div class="row">
+					    	<div class="col-md-6">							    		
+					    		<%= f.input :zipcode, label: false, :placeholder => t('account.zipcode') %>
+					    	</div>
+					    	<div class="col-md-6">
+					    		<%= f.select :country, @countries, {prompt: false}, {class: "form-country more-padding"} %>
+					    	</div>
+					    </div>
+					  </div>
+
+			    	<div class="col-md-6">
+			    		<%= f.input :phone, label: false, :placeholder => t('account.phone') %>
+
+			    		<%= f.input :fax, label: false, :placeholder => t('account.fax') %>
+
+			    		<%= f.input :mobile, label: false, :placeholder => t('account.mobile') %>
+	
+			    		<%= f.input :email, label: false, :placeholder => t('account.email') %>
+			    	</div>
+			    		<%= f.submit t('menu.update'), class: "btn btn-save-contact" %>
+      				<% end %>
+			    	</div>
+			    
+
+			  </div>	
+
+
+
+
+  	</div>
+	</div>
+</div>

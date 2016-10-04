@@ -1,6 +1,6 @@
 nl:
   menu:
-
+    update: "Opslaan"
   user:
     minimum: karakters minimum
   account:
@@ -18,3 +18,19 @@ nl:
     not_open: "Nee, nog niet."
     open_on: "Voorziene opening op"
     go_on: "Doorgaan"
+    resto_name: "Uw restaurant naam"
+    address: "Straat en huisnummer"
+    zipcode: "Postcode"
+    city: "Stad"
+    country: "Land"
+    phone: "Vaste telefoon"
+    fax: "Fax"
+    mobile: "Mobiel"
+    email: "Restaurant email"
+    facebook: "Facebook"
+    twitter: "Twitter"
+    instagram: "Instagram"
+    google: "Google+"
+    snapchat: "Snapchat"
+    youtube: "Youtube"
+    vimeo: "Vimeo"

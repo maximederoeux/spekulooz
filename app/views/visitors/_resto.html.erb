@@ -1,18 +1,26 @@
-<div class="top-spices">
-	<h1><%= @sub_account.resto_name %></h1>
-	<img src="/assets/bg-spices.jpg">
+<div class="homebg">
 
+
+	<div class="welcome">
+		<%= @sub_account.resto_name %>
+	</div>
 </div>
 
-<h1><%= @sub_account.user.full_name %></h1>
-
-<% if user_signed_in? %>
-
-
-<h1>Dedans <%= current_user.full_name %></h1>
-
-<% else %>
-
-Dehors
-
+<% unless @sub_account.address.blank? %>
+	<div class="contacts">
+		<%= @sub_account.address %>
+		<%= @sub_account.zipcode %>
+		<%= @sub_account.city %>
+		<%= @sub_account.country %>
+		<%= @sub_account.email %>
+		<%= @sub_account.phone %>
+		<%= @sub_account.fax %>
+		<%= @sub_account.mobile %>
+		<%= @sub_account.facebook %>
+		<%= @sub_account.twitter %>
+		<%= @sub_account.instagram %>
+		<%= @sub_account.google %>
+		<%= @sub_account.snapchat %>
+	</div>
 <% end %>
+

@@ -93,4 +93,14 @@ class Account < ApplicationRecord
 			false
 		end
 	end
+
+
+	COUNTRIES = ["BE", "FR", "LU", "NL"]
+
+	def self.countries
+    COUNTRIES.map do |country|
+      country
+    end
+	end
+
 end

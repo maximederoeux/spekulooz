@@ -85,7 +85,7 @@ class AccountsController < ApplicationController
           format.html { redirect_to edit_account_path(@account), notice: 'Account was successfully updated.' }
           format.json { render :show, status: :ok, location: @account }
         else 
-          format.html { redirect_to @account, notice: 'Account was successfully updated.' }
+          format.html { redirect_to :back, notice: 'Account was successfully updated.' }
           format.json { render :show, status: :ok, location: @account }
         end        
       else
@@ -124,6 +124,9 @@ class AccountsController < ApplicationController
       params.require(:account).permit(:subdomain, :resto_name, :user_id,
                                       :select_sub_one, :select_sub_two, :select_sub_three, :prevalidate_sub, :validate_sub,
                                       :already_open, :open_on, :open_check,
-                                      :bg_pict_select, :bg_pict_number, :bg_pict_one)
+                                      :bg_pict_select, :bg_pict_number, :bg_pict_one,
+                                      :address, :city, :zipcode, :country, :phone, :fax, :mobile, :email,
+                                      :facebook, :twitter, :instagram, :google, :snapchat, :youtube, :vimeo)
     end
 end
+

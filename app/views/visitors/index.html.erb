@@ -1,6 +1,7 @@
 <% if @sub_accounts.any? %>
 
 	<%= stylesheet_link_tag 'nav_one' if params[:action] == 'index' %>
+	<%= stylesheet_link_tag 'welcome_one' if params[:action] == 'index' %>
 
 	<%= render 'resto' %>
 
