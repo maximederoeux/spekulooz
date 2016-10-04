@@ -1,0 +1,79 @@
+body {
+	margin: 0;
+	font-family: 'Roboto', sans-serif;
+}
+
+/* SPICES START */
+
+nav ul.main-page {
+    list-style-type: none;
+    margin: 0;
+    padding-left: 2em;
+    padding-right: 2em;
+    overflow: hidden;
+    background-color: #640002;
+
+}
+
+nav ul li.pull-left {
+    float: left;
+    position: static;
+}
+
+nav ul li.pull-right {
+    float: right;
+    position: static;
+}
+nav ul li.pull-right a:link {
+    display: block;
+    font-family: 'Roboto Condensed', sans-serif;
+    color: #F4F4F4;
+    text-align: center;
+    padding: 1em;
+    text-decoration: none;
+    font-size: 1.5em;
+}
+
+nav ul li.pull-left a:link {
+    display: block;
+    font-family: 'Roboto Condensed', sans-serif;
+    color: #DADFE1;
+    text-align: center;
+    padding: 1em;
+    text-decoration: none;
+    font-size: 1.5em;
+}
+
+nav ul li.pull-right a:visited {
+    display: block;
+    color: #DADFE1;
+    text-align: center;
+    padding: 16px;
+    text-decoration: none;
+    font-size: 1em;
+}
+
+nav ul li.pull-left a:visited {
+    display: block;
+    color: #DADFE1;
+    text-align: center;
+    padding: 16px;
+    text-decoration: none;
+    font-size: 1em;
+}
+
+nav ul li.pull-right a:hover {
+    background-color: #A68053;
+    text-decoration: none;
+    font-size: 1.7em;
+    color: #640002;
+
+}
+
+nav ul li.pull-left a:hover {
+    background-color: #A68053;
+    text-decoration: none;
+    font-size: 1.7em;
+    color: #640002;
+
+}

@@ -42,7 +42,21 @@
 
 				<% if @account.ready_for_last_step == true %>
 
-					<%= link_to "Voir votre site", "#{@account.validated_url_dev}", class: "btn-block btn-url" %>
+					<% if Rails.env.development? %>
+
+						<%= link_to "Voir votre site", "#{@account.validated_url_dev}", class: "btn-block btn-url" %>
+
+
+					<% else %>
+
+						<%= link_to "Voir votre site", "#{@account.validated_url_prod}", class: "btn-block btn-url" %>
+
+					<% end %>
+
+
+
+
+					
 
 				<% end %>
 

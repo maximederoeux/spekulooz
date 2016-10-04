@@ -1,14 +1,24 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Spekulooz</title>
+
+    <% if @sub_accounts.any? %>
+
+      <title><%= @sub_account.resto_name %></title>
+
+    <% else %>
+
+      <title>Spekulooz</title>
+
+    <% end %>
+
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
 
-    <link href="https://fonts.googleapis.com/css?family=Alegreya|Roboto|Roboto+Condensed" rel="stylesheet">
-    
+    <link href="https://fonts.googleapis.com/css?family=Alegreya|Alice|Cantarell|Coustard|Fjalla+One|Leckerli+One|Playfair+Display|Roboto|Roboto+Condensed" rel="stylesheet">
+
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 
     <script type="text/javascript" src="javascripts/bootstrap-filestyle.min.js"> </script>

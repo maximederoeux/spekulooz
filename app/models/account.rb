@@ -74,6 +74,10 @@ class Account < ApplicationRecord
 		"http://#{subdomain}.lvh.me:3000"
 	end
 
+	def validated_url_prod
+		"http://#{subdomain}.spekulooz.be"
+	end
+
 	def ready_to_start_design
 		if prevalidate_sub == true && validate_sub == true && open_check == true
 			true

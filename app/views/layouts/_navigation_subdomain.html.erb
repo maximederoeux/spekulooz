@@ -1,21 +1,17 @@
-  <% if user_signed_in? && @sub_account.user_id == current_user.id %>
 
-		<nav>
-			<ul>
-			  <li class="pull-left"><%= link_to "#{@sub_account.resto_name}", root_path %></li>
-		        <li class="pull-left"><%= link_to "Mon profil", user_path(current_user) %></li>
-		        <li class="pull-right"><%= link_to "Déconnexion", destroy_user_session_path, :method=>'delete' %></li>
-
-			</ul>	
-		</nav>
-
-	<% end %>
 
 <nav>
-	<ul>
+	<ul class="main-page">
 	  <li class="pull-left"><%= link_to "#{@sub_account.resto_name}", root_path %></li>
-    <li class="pull-right"><%= link_to "Réservations", account_path(@sub_account) %></li>
-    <li class="pull-right"><%= link_to "Menu", account_path(@sub_account) %></li>
-    <li class="pull-right"><%= link_to "Suggestions", account_path(@sub_account) %></li>
+    <li class="pull-right"><%= link_to_unless_current "EN", locale: "en" %></li>
+    <li class="pull-right"><%= link_to_unless_current "FR", locale: "fr" %></li>
+    <li class="pull-right"><%= link_to_unless_current "NL", locale: "nl" %></li>
+      <% if user_signed_in? %>
+        <li class="pull-left"><%= link_to "Menu", user_path(current_user) %></li>
+        <li class="pull-right"><%= link_to "Réservation", destroy_user_session_path, :method=>'delete' %></li>
+      <% else %>
+			  <li class="pull-right"><%= link_to "Suggestions", new_user_registration_path %></li>
+			  <li class="pull-right"><%= link_to "Galerie", new_user_session_path %></li>
+      <% end %>
 	</ul>	
 </nav>

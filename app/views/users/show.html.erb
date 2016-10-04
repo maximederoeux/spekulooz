@@ -25,9 +25,22 @@
 			</div>
 
 			<div class="new-account">
-			<% @user.accounts.each do |account| %>
-				<p><%= account.resto_name %><p>
-			<% end %>
+
+				<% if Rails.env.development? %>
+
+					<% @user.accounts.each do |account| %>
+						<%= link_to "#{account.resto_name}", "#{account.validated_url_dev}", class: "btn-block btn-url" %>
+					<% end %>
+
+				<% else %>
+
+					<% @user.accounts.each do |account| %>
+						<%= link_to "#{account.resto_name}", "#{account.validated_url_prod}", class: "btn-block btn-url" %>
+					<% end %>
+
+				<% end %>
+
+
 			</div>			
 
 
