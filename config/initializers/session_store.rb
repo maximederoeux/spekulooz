@@ -7,7 +7,7 @@
 if Rails.env.production?
   Rails.application.config.session_store :cookie_store, :key => '_app_name_session', :domain => '.spekulooz.be'
 else
-  Rails.application.config.session_store :cookie_store, :key => '_app_name_session'
+  Rails.application.config.session_store :cookie_store, :key => '_app_name_session', :domain => '.lvh.me:3000'
 end
 
 # END FROM

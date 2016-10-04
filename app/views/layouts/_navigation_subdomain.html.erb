@@ -1,17 +1,42 @@
+<% if user_signed_in? %>
+
+  <nav>
+    <ul class="main-page">
+      <li class="pull-left"><%= link_to "Spekulooz", root_path %></li>
+      <li class="pull-right"><%= link_to_unless_current "EN", locale: "en" %></li>
+      <li class="pull-right"><%= link_to_unless_current "FR", locale: "fr" %></li>
+      <li class="pull-right"><%= link_to_unless_current "NL", locale: "nl" %></li>
+        <% if user_signed_in? %>
+          <li class="pull-left"><%= link_to "Mon profil", user_path(current_user) %></li>
+          <li class="pull-left"><%= link_to "Modifier", edit_user_path(current_user) %></li>
+          <li class="pull-right"><%= link_to "Déconnexion", destroy_user_session_path, :method=>'delete' %></li>
+        <% else %>
+          <li class="pull-right"><%= link_to "Inscription", new_user_registration_path %></li>
+          <li class="pull-right"><%= link_to "Connexion", new_user_session_path %></li>
+        <% end %>
+    </ul> 
+  </nav>
+
+<% end %>
 
 
 <nav>
-	<ul class="main-page">
-	  <li class="pull-left"><%= link_to "#{@sub_account.resto_name}", root_path %></li>
+  <ul class="main-page">
+    <li class="pull-left"><%= link_to "#{@sub_account.resto_name}", root_path %></li>
     <li class="pull-right"><%= link_to_unless_current "EN", locale: "en" %></li>
     <li class="pull-right"><%= link_to_unless_current "FR", locale: "fr" %></li>
     <li class="pull-right"><%= link_to_unless_current "NL", locale: "nl" %></li>
       <% if user_signed_in? %>
-        <li class="pull-left"><%= link_to "Menu", user_path(current_user) %></li>
-        <li class="pull-right"><%= link_to "Réservation", destroy_user_session_path, :method=>'delete' %></li>
+        <li class="pull-left"><%= link_to "Menu", root_path %></li>
+        <li class="pull-right"><%= link_to "Réservation", root_path %></li>
       <% else %>
-			  <li class="pull-right"><%= link_to "Suggestions", new_user_registration_path %></li>
-			  <li class="pull-right"><%= link_to "Galerie", new_user_session_path %></li>
+        <li class="pull-right"><%= link_to "Suggestions", root_path %></li>
+        <li class="pull-right"><%= link_to "Galerie", root_path %></li>
       <% end %>
-	</ul>	
+  </ul> 
 </nav>
+
+
+
+
+
