@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161004185321) do
+ActiveRecord::Schema.define(version: 20161005071647) do
 
   create_table "accounts", force: :cascade do |t|
     t.string   "subdomain"
@@ -47,6 +47,48 @@ ActiveRecord::Schema.define(version: 20161004185321) do
     t.string   "vimeo"
     t.string   "city"
     t.string   "email"
+    t.time     "mon_am_start"
+    t.time     "mon_am_end"
+    t.time     "mon_pm_start"
+    t.time     "mon_pm_end"
+    t.boolean  "mon_am_closed"
+    t.boolean  "mon_pm_closed"
+    t.time     "tue_am_start"
+    t.time     "tue_am_end"
+    t.time     "tue_pm_start"
+    t.time     "tue_pm_end"
+    t.boolean  "tue_am_closed"
+    t.boolean  "tue_pm_closed"
+    t.time     "wed_am_start"
+    t.time     "wed_am_end"
+    t.time     "wed_pm_start"
+    t.time     "wed_pm_end"
+    t.boolean  "wed_am_closed"
+    t.boolean  "wed_pm_closed"
+    t.time     "thu_am_start"
+    t.time     "thu_am_end"
+    t.time     "thu_pm_start"
+    t.time     "thu_pm_end"
+    t.boolean  "thu_am_closed"
+    t.boolean  "thu_pm_closed"
+    t.time     "fri_am_start"
+    t.time     "fri_am_end"
+    t.time     "fri_pm_start"
+    t.time     "fri_pm_end"
+    t.boolean  "fri_am_closed"
+    t.boolean  "fri_pm_closed"
+    t.time     "sat_am_start"
+    t.time     "sat_am_end"
+    t.time     "sat_pm_start"
+    t.time     "sat_pm_end"
+    t.boolean  "sat_am_closed"
+    t.boolean  "sat_pm_closed"
+    t.time     "sun_am_start"
+    t.time     "sun_am_end"
+    t.time     "sun_pm_start"
+    t.time     "sun_pm_end"
+    t.boolean  "sun_am_closed"
+    t.boolean  "sun_pm_closed"
   end
 
   create_table "items", force: :cascade do |t|

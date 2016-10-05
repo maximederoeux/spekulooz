@@ -1,9 +1,9 @@
 <!-- Large modal -->
-<button type="button" class="btn btn-contact" data-toggle="modal" data-target="#modify_contact_<%= @sub_account.id %>">
+<button type="button" class="btn btn-networks" data-toggle="modal" data-target="#modify_networks_<%= @sub_account.id %>">
 
   <% if @sub_account.address.present? && @sub_account.facebook.blank? %>
 
-  	Vos réseaux sociaux
+  	Présent sur les réseaux sociaux ?
 
   <% else %>
 
@@ -14,14 +14,14 @@
 
 </button>
 
-<div class="modal fade" id="modify_contact_<%= @sub_account.id %>" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+<div class="modal fade" id="modify_networks_<%= @sub_account.id %>" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
   <div class="modal-dialog modal-lg">
     <div class="modal-content">
 
       <%= simple_form_for(@sub_account) do |f| %>
         <%= f.error_notification %>
 
-        <div class="modal-body">
+        <div class="modal-body less-padding">
 
           <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
           </button>
@@ -31,23 +31,25 @@
           		
           	</div>
           	<div class="col-md-10">
-          		<%= f.input :facebook, label: false, :placeholder => t('account.email') %>
-			    		<%= f.input :twitter, label: false, :placeholder => t('account.facebook') %>
+          		<%= f.input :facebook, label: false, :placeholder => t('account.facebook') %>
+			    		<%= f.input :twitter, label: false, :placeholder => t('account.twitter') %>
 			    		<%= f.input :instagram, label: false, :placeholder => t('account.instagram') %>
 			    		<%= f.input :google, label: false, :placeholder => t('account.google') %>
 			    		<%= f.input :snapchat, label: false, :placeholder => t('account.snapchat') %>
 			    		<%= f.input :youtube, label: false, :placeholder => t('account.youtube') %>
 			    		<%= f.input :vimeo, label: false, :placeholder => t('account.vimeo') %>
-          	</div>          	
+              <%= f.submit t('menu.update'), class: "btn btn-save-networks" %>
+              <% end %>
+
+          	</div>
+
+
+
           </div>
 							
 
 
-			    	</div>
-			    		<%= f.submit t('menu.update'), class: "btn btn-save-contact" %>
-      				<% end %>
-			    	</div>
-			    
+  
 
 			  </div>	
 
@@ -57,10 +59,3 @@
   	</div>
 	</div>
 </div>
-
-      <%= simple_form_for(@sub_account) do |f| %>
-      <%= f.error_notification %>
-
-
-
-			    		<% end %>

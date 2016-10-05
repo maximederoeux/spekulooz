@@ -1,0 +1,46 @@
+class AddMonAmStartToAccounts < ActiveRecord::Migration[5.0]
+  def change
+    add_column :accounts, :mon_am_start, :time
+    add_column :accounts, :mon_am_end, :time
+    add_column :accounts, :mon_pm_start, :time
+    add_column :accounts, :mon_pm_end, :time
+    add_column :accounts, :mon_am_closed, :boolean
+    add_column :accounts, :mon_pm_closed, :boolean
+    add_column :accounts, :tue_am_start, :time
+    add_column :accounts, :tue_am_end, :time
+    add_column :accounts, :tue_pm_start, :time
+    add_column :accounts, :tue_pm_end, :time
+    add_column :accounts, :tue_am_closed, :boolean
+    add_column :accounts, :tue_pm_closed, :boolean
+    add_column :accounts, :wed_am_start, :time
+    add_column :accounts, :wed_am_end, :time
+    add_column :accounts, :wed_pm_start, :time
+    add_column :accounts, :wed_pm_end, :time
+    add_column :accounts, :wed_am_closed, :boolean
+    add_column :accounts, :wed_pm_closed, :boolean
+    add_column :accounts, :thu_am_start, :time
+    add_column :accounts, :thu_am_end, :time
+    add_column :accounts, :thu_pm_start, :time
+    add_column :accounts, :thu_pm_end, :time
+    add_column :accounts, :thu_am_closed, :boolean
+    add_column :accounts, :thu_pm_closed, :boolean
+    add_column :accounts, :fri_am_start, :time
+    add_column :accounts, :fri_am_end, :time
+    add_column :accounts, :fri_pm_start, :time
+    add_column :accounts, :fri_pm_end, :time
+    add_column :accounts, :fri_am_closed, :boolean
+    add_column :accounts, :fri_pm_closed, :boolean
+    add_column :accounts, :sat_am_start, :time
+    add_column :accounts, :sat_am_end, :time
+    add_column :accounts, :sat_pm_start, :time
+    add_column :accounts, :sat_pm_end, :time
+    add_column :accounts, :sat_am_closed, :boolean
+    add_column :accounts, :sat_pm_closed, :boolean
+    add_column :accounts, :sun_am_start, :time
+    add_column :accounts, :sun_am_end, :time
+    add_column :accounts, :sun_pm_start, :time
+    add_column :accounts, :sun_pm_end, :time    
+    add_column :accounts, :sun_am_closed, :boolean
+    add_column :accounts, :sun_pm_closed, :boolean
+  end
+end
