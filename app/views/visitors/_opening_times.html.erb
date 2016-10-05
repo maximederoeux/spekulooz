@@ -1,285 +1,785 @@
-<!-- Large modal -->
-<button type="button" class="btn btn-opening" data-toggle="modal" data-target="#opening_times_<%= @sub_account.id %>">
+<ul class="opening-times">
+
+	<li class="opening-day">
+		<div class="row">
+			<div class="col-md-4">
+
+			<% if user_signed_in? && current_user.id == @sub_account.user.id %>
+
+				<!-- LARGE MODAL -->
+				<button type="button" class="btn btn-opening" data-toggle="modal" data-target="#monday_times_<%= @sub_account.id %>">
 
 
-  	Vos heures d'ouvertures
+				  	<span class="weekday">Lundi</span>	
 
-</button>
+				</button>
 
-<div class="modal fade" id="opening_times_<%= @sub_account.id %>" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
-  <div class="modal-dialog modal-lg">
-    <div class="modal-content">
+				<div class="modal fade" id="monday_times_<%= @sub_account.id %>" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+				  <div class="modal-dialog modal-lg">
+				    <div class="modal-content">
 
-        <div class="modal-body">
-
-
-	        <ul class="opening">
-				    <%= simple_form_for(@sub_account) do |f| %>
-        			<%= f.error_notification %>
-
-	        	<li class="opening-line">
-					    <div class="row">
-					    	<div class="col-md-3">
-								</div>
-					    	<div class="col-md-3 text-center">
-					    		Fermé
-					    	</div>
-					    	<div class="col-md-3 text-center">							    		
-					    		Ouverture
-					    	</div>
-					    	<div class="col-md-3">
-					    		Fermeture
-					    	</div>
-					    </div>        		
-	        	</li>
-	        	<li class="opening-line">
-					    <div class="row">
-					    	<div class="col-md-3">
-					    		Lundi AM
-								</div>
-					    	<div class="col-md-3">
-					    		<%= f.input :mon_am_closed, label: false %>
-					    	</div>
-					    	<div class="col-md-3">							    		
-					    		<%= f.input :mon_am_start, label: false %>
-					    	</div>
-					    	<div class="col-md-3">
-					    		<%= f.input :mon_am_end, label: false %>
-					    	</div>
-					    </div>        		
-	        	</li>
-	        	<li class="opening-line">
-				    <div class="row">
-				    	<div class="col-md-3">
-				    		Lundi PM
-							</div>
-				    	<div class="col-md-3">
-				    		<%= f.input :mon_pm_closed, label: false %>
-				    	</div>
-				    	<div class="col-md-3">							    		
-				    		<%= f.input :mon_pm_start, label: false %>
-				    	</div>
-				    	<div class="col-md-3">
-				    	<%= f.input :mon_pm_end, label: false %>
-				    	</div>
-				    </div>        		
-	        	</li>
-	        	<li class="opening-line">
-					    <div class="row">
-					    	<div class="col-md-3">
-					    		Mardi AM
-								</div>
-					    	<div class="col-md-3">
-					    		<%= f.input :tue_am_closed, label: false %>
-					    	</div>
-					    	<div class="col-md-3">							    		
-					    		<%= f.input :tue_am_start, label: false %>
-					    	</div>
-					    	<div class="col-md-3">
-					    		<%= f.input :tue_am_end, label: false %>
-					    	</div>
-					    </div>        		
-	        	</li>
-	        	<li class="opening-line">
-				    <div class="row">
-				    	<div class="col-md-3">
-				    		Mardi PM
-							</div>
-				    	<div class="col-md-3">
-				    		<%= f.input :tue_pm_closed, label: false %>
-				    	</div>
-				    	<div class="col-md-3">							    		
-				    		<%= f.input :tue_pm_start, label: false %>
-				    	</div>
-				    	<div class="col-md-3">
-				    	<%= f.input :tue_pm_end, label: false %>
-				    	</div>
-				    </div>        		
-	        	</li>
-	        	<li class="opening-line">
-					    <div class="row">
-					    	<div class="col-md-3">
-					    		Mercredi AM
-								</div>
-					    	<div class="col-md-3">
-					    		<%= f.input :mon_am_closed, label: false %>
-					    	</div>
-					    	<div class="col-md-3">							    		
-					    		<%= f.input :wed_am_start, label: false %>
-					    	</div>
-					    	<div class="col-md-3">
-					    		<%= f.input :wed_am_end, label: false %>
-					    	</div>
-					    </div>        		
-	        	</li>
-	        	<li class="opening-line">
-				    <div class="row">
-				    	<div class="col-md-3">
-				    		Mercredi PM
-							</div>
-				    	<div class="col-md-3">
-				    		<%= f.input :wed_pm_closed, label: false %>
-				    	</div>
-				    	<div class="col-md-3">							    		
-				    		<%= f.input :wed_pm_start, label: false %>
-				    	</div>
-				    	<div class="col-md-3">
-				    	<%= f.input :wed_pm_end, label: false %>
-				    	</div>
-				    </div>        		
-	        	</li>
-	        	<li class="opening-line">
-					    <div class="row">
-					    	<div class="col-md-3">
-					    		Jeudi AM
-								</div>
-					    	<div class="col-md-3">
-					    		<%= f.input :thu_am_closed, label: false %>
-					    	</div>
-					    	<div class="col-md-3">							    		
-					    		<%= f.input :thu_am_start, label: false %>
-					    	</div>
-					    	<div class="col-md-3">
-					    		<%= f.input :thu_am_end, label: false %>
-					    	</div>
-					    </div>        		
-	        	</li>
-	        	<li class="opening-line">
-				    <div class="row">
-				    	<div class="col-md-3">
-				    		Jeudi PM
-							</div>
-				    	<div class="col-md-3">
-				    		<%= f.input :thu_pm_closed, label: false %>
-				    	</div>
-				    	<div class="col-md-3">							    		
-				    		<%= f.input :thu_pm_start, label: false %>
-				    	</div>
-				    	<div class="col-md-3">
-				    	<%= f.input :thu_pm_end, label: false %>
-				    	</div>
-				    </div>        		
-	        	</li>
-	        	<li class="opening-line">
-					    <div class="row">
-					    	<div class="col-md-3">
-					    		Vendredi AM
-								</div>
-					    	<div class="col-md-3">
-					    		<%= f.input :fri_am_closed, label: false %>
-					    	</div>
-					    	<div class="col-md-3">							    		
-					    		<%= f.input :fri_am_start, label: false %>
-					    	</div>
-					    	<div class="col-md-3">
-					    		<%= f.input :fri_am_end, label: false %>
-					    	</div>
-					    </div>        		
-	        	</li>
-	        	<li class="opening-line">
-				    <div class="row">
-				    	<div class="col-md-3">
-				    		Vendredi PM
-							</div>
-				    	<div class="col-md-3">
-				    		<%= f.input :fri_pm_closed, label: false %>
-				    	</div>
-				    	<div class="col-md-3">							    		
-				    		<%= f.input :fri_pm_start, label: false %>
-				    	</div>
-				    	<div class="col-md-3">
-				    	<%= f.input :fri_pm_end, label: false %>
-				    	</div>
-				    </div>        		
-	        	</li>
-	        	<li class="opening-line">
-					    <div class="row">
-					    	<div class="col-md-3">
-					    		Samedi AM
-								</div>
-					    	<div class="col-md-3">
-					    		<%= f.input :sat_am_closed, label: false %>
-					    	</div>
-					    	<div class="col-md-3">							    		
-					    		<%= f.input :sat_am_start, label: false %>
-					    	</div>
-					    	<div class="col-md-3">
-					    		<%= f.input :sat_am_end, label: false %>
-					    	</div>
-					    </div>        		
-	        	</li>
-	        	<li class="opening-line">
-				    <div class="row">
-				    	<div class="col-md-3">
-				    		Samedi PM
-							</div>
-				    	<div class="col-md-3">
-				    		<%= f.input :sat_pm_closed, label: false %>
-				    	</div>
-				    	<div class="col-md-3">							    		
-				    		<%= f.input :sat_pm_start, label: false %>
-				    	</div>
-				    	<div class="col-md-3">
-				    	<%= f.input :sat_pm_end, label: false %>
-				    	</div>
-				    </div>        		
-	        	</li>
-	        	<li class="opening-line">
-					    <div class="row">
-					    	<div class="col-md-3">
-					    		Dimanche AM
-								</div>
-					    	<div class="col-md-3">
-					    		<%= f.input :sun_am_closed, label: false %>
-					    	</div>
-					    	<div class="col-md-3">							    		
-					    		<%= f.input :sun_am_start, label: false %>
-					    	</div>
-					    	<div class="col-md-3">
-					    		<%= f.input :sun_am_end, label: false %>
-					    	</div>
-					    </div>        		
-	        	</li>
-	        	<li class="opening-line">
-				    <div class="row">
-				    	<div class="col-md-3">
-				    		Dimanche PM
-							</div>
-				    	<div class="col-md-3">
-				    		<%= f.input :sun_pm_closed, label: false %>
-				    	</div>
-				    	<div class="col-md-3">							    		
-				    		<%= f.input :sun_pm_start, label: false %>
-				    	</div>
-				    	<div class="col-md-3">
-				    		<%= f.input :sun_pm_end, label: false %>
-				    	</div>
-				    </div>        		
-	        	</li>	        		        	
-	        	<li class="opening-line">
-					    <div class="row">
-					    	<div class="col-md-4">
-								</div>
-					    	<div class="col-md-4">
-					    	</div>
-					    	<div class="col-md-2">
-				          <button type="button" class="btn btn-save-contact" data-dismiss="modal" aria-label="Close"><span>Fermer</span>
-				          </button>						    		
-					    	</div>
-					    	<div class="col-md-2">
-					    		<%= f.submit t('menu.update'), class: "btn btn-save-contact" %>
-
-					    	</div>
-				    </div>        		
-	        	</li>
-	        	<% end %>
-	        </ul>
-	      				
-			  </div>
+			        <div class="modal-body">
 
 
+				        <ul class="opening">
+							    <%= simple_form_for(@sub_account) do |f| %>
+			        			<%= f.error_notification %>
 
-  	</div>
-	</div>
-</div>
+					        	<li class="opening-line">
+									    <div class="row">
+									    	<div class="col-md-3">
+												</div>
+									    	<div class="col-md-3 text-center">
+									    		Fermé
+									    	</div>
+									    	<div class="col-md-3 text-center">							    		
+									    		Ouverture
+									    	</div>
+									    	<div class="col-md-3">
+									    		Fermeture
+									    	</div>
+									    </div>        		
+					        	</li>
+					        	<li class="opening-line">
+									    <div class="row">
+									    	<div class="col-md-3">
+									    		Lundi AM
+												</div>
+									    	<div class="col-md-3">
+									    		<%= f.input :mon_am_closed, label: false %>
+									    	</div>
+									    	<div class="col-md-3">							    		
+									    		<%= f.input :mon_am_start, label: false %>
+									    	</div>
+									    	<div class="col-md-3">
+									    		<%= f.input :mon_am_end, label: false %>
+									    	</div>
+									    </div>        		
+					        	</li>
+					        	<li class="opening-line">
+									    <div class="row">
+									    	<div class="col-md-3">
+									    		Lundi PM
+												</div>
+									    	<div class="col-md-3">
+									    		<%= f.input :mon_pm_closed, label: false %>
+									    	</div>
+									    	<div class="col-md-3">							    		
+									    		<%= f.input :mon_pm_start, label: false %>
+									    	</div>
+									    	<div class="col-md-3">
+									    	<%= f.input :mon_pm_end, label: false %>
+									    	</div>
+									    </div>        		
+					        	</li>	        		        	
+					        	<li class="opening-line">
+									    <div class="row">
+									    	<div class="col-md-4">
+												</div>
+									    	<div class="col-md-4">
+									    	</div>
+									    	<div class="col-md-2">
+								          <button type="button" class="btn btn-save-contact" data-dismiss="modal" aria-label="Close"><span>Fermer</span>
+								          </button>						    		
+									    	</div>
+									    	<div class="col-md-2">
+									    		<%= f.submit t('menu.update'), class: "btn btn-save-contact" %>
 
+									    	</div>
+								    	</div>        		
+			        			</li>
+				        	<% end %>
+				        </ul>					      				
+						  </div>
+				  	</div>
+					</div>
+				</div> <!-- END MODAL -->
+
+				<% else %>
+
+					<span class="weekday">Lundi</span>
+
+				<% end %>
+				
+			</div>
+			<div class="col-md-4">
+				<%= @sub_account.mon_am_start.present? ? l(@sub_account.mon_am_start, :format => '%H:%M') : "Pas d'heure" %>-<%= @sub_account.mon_am_end.present? ? l(@sub_account.mon_am_end, :format => '%H:%M') : "Pas d'heure" %>
+			</div>
+			<div class="col-md-4">
+				<%= @sub_account.mon_pm_start.present? ? l(@sub_account.mon_pm_start, :format => '%H:%M') : "Pas d'heure" %>-<%= @sub_account.mon_pm_end.present? ? l(@sub_account.mon_pm_end, :format => '%H:%M') : "Pas d'heure" %>	
+			</div>		
+		</div>
+	</li>
+
+	<li class="opening-day">
+		<div class="row">
+			<div class="col-md-4">
+
+			<% if user_signed_in? && current_user.id == @sub_account.user.id %>
+
+				<!-- LARGE MODAL -->
+				<button type="button" class="btn btn-opening" data-toggle="modal" data-target="#tuesday_times_<%= @sub_account.id %>">
+
+
+				  	<span class="weekday">Mardi</span>	
+
+				</button>
+
+				<div class="modal fade" id="tuesday_times_<%= @sub_account.id %>" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+				  <div class="modal-dialog modal-lg">
+				    <div class="modal-content">
+
+			        <div class="modal-body">
+
+
+				        <ul class="opening">
+							    <%= simple_form_for(@sub_account) do |f| %>
+			        			<%= f.error_notification %>
+
+					        	<li class="opening-line">
+									    <div class="row">
+									    	<div class="col-md-3">
+												</div>
+									    	<div class="col-md-3 text-center">
+									    		Fermé
+									    	</div>
+									    	<div class="col-md-3 text-center">							    		
+									    		Ouverture
+									    	</div>
+									    	<div class="col-md-3">
+									    		Fermeture
+									    	</div>
+									    </div>        		
+					        	</li>
+					        	<li class="opening-line">
+									    <div class="row">
+									    	<div class="col-md-3">
+									    		Mardi AM
+												</div>
+									    	<div class="col-md-3">
+									    		<%= f.input :tue_am_closed, label: false %>
+									    	</div>
+									    	<div class="col-md-3">							    		
+									    		<%= f.input :tue_am_start, label: false %>
+									    	</div>
+									    	<div class="col-md-3">
+									    		<%= f.input :tue_am_end, label: false %>
+									    	</div>
+									    </div>        		
+					        	</li>
+					        	<li class="opening-line">
+									    <div class="row">
+									    	<div class="col-md-3">
+									    		Mardi PM
+												</div>
+									    	<div class="col-md-3">
+									    		<%= f.input :tue_pm_closed, label: false %>
+									    	</div>
+									    	<div class="col-md-3">							    		
+									    		<%= f.input :tue_pm_start, label: false %>
+									    	</div>
+									    	<div class="col-md-3">
+									    		<%= f.input :tue_pm_end, label: false %>
+									    	</div>
+									    </div>        		
+					        	</li>	        		        	
+					        	<li class="opening-line">
+									    <div class="row">
+									    	<div class="col-md-4">
+												</div>
+									    	<div class="col-md-4">
+									    	</div>
+									    	<div class="col-md-2">
+								          <button type="button" class="btn btn-save-contact" data-dismiss="modal" aria-label="Close"><span>Fermer</span>
+								          </button>						    		
+									    	</div>
+									    	<div class="col-md-2">
+									    		<%= f.submit t('menu.update'), class: "btn btn-save-contact" %>
+
+									    	</div>
+								    	</div>        		
+			        			</li>
+				        	<% end %>
+				        </ul>					      				
+						  </div>
+				  	</div>
+					</div>
+				</div> <!-- END MODAL -->
+
+				<% else %>
+
+					<span class="weekday">Mardi</span>
+
+				<% end %>
+
+			</div>
+
+			<div class="col-md-4">
+				<%= @sub_account.tue_am_start.present? ? l(@sub_account.tue_am_start, :format => '%H:%M') : "Pas d'heure" %>-<%= @sub_account.tue_am_end.present? ? l(@sub_account.tue_am_end, :format => '%H:%M') : "Pas d'heure" %>
+			</div>
+			<div class="col-md-4">
+				<%= @sub_account.tue_pm_start.present? ? l(@sub_account.tue_pm_start, :format => '%H:%M') : "Pas d'heure" %>-<%= @sub_account.tue_pm_end.present? ? l(@sub_account.tue_pm_end, :format => '%H:%M') : "Pas d'heure" %>	
+			</div>		
+		</div>
+	</li>
+
+	<li class="opening-day">
+		<div class="row">
+			<div class="col-md-4">
+
+			<% if user_signed_in? && current_user.id == @sub_account.user.id %>
+
+				<!-- LARGE MODAL -->
+				<button type="button" class="btn btn-opening" data-toggle="modal" data-target="#wednesday_times_<%= @sub_account.id %>">
+
+
+				  	<span class="weekday">Mercredi</span>	
+
+				</button>
+
+				<div class="modal fade" id="wednesday_times_<%= @sub_account.id %>" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+				  <div class="modal-dialog modal-lg">
+				    <div class="modal-content">
+
+			        <div class="modal-body">
+
+
+				        <ul class="opening">
+							    <%= simple_form_for(@sub_account) do |f| %>
+			        			<%= f.error_notification %>
+
+					        	<li class="opening-line">
+									    <div class="row">
+									    	<div class="col-md-3">
+												</div>
+									    	<div class="col-md-3 text-center">
+									    		Fermé
+									    	</div>
+									    	<div class="col-md-3 text-center">							    		
+									    		Ouverture
+									    	</div>
+									    	<div class="col-md-3">
+									    		Fermeture
+									    	</div>
+									    </div>        		
+					        	</li>
+					        	<li class="opening-line">
+									    <div class="row">
+									    	<div class="col-md-3">
+									    		Mercredi AM
+												</div>
+									    	<div class="col-md-3">
+									    		<%= f.input :wed_am_closed, label: false %>
+									    	</div>
+									    	<div class="col-md-3">							    		
+									    		<%= f.input :wed_am_start, label: false %>
+									    	</div>
+									    	<div class="col-md-3">
+									    		<%= f.input :wed_am_end, label: false %>
+									    	</div>
+									    </div>        		
+					        	</li>
+					        	<li class="opening-line">
+									    <div class="row">
+									    	<div class="col-md-3">
+									    		Mercredi PM
+												</div>
+									    	<div class="col-md-3">
+									    		<%= f.input :wed_pm_closed, label: false %>
+									    	</div>
+									    	<div class="col-md-3">							    		
+									    		<%= f.input :wed_pm_start, label: false %>
+									    	</div>
+									    	<div class="col-md-3">
+									    		<%= f.input :wed_pm_end, label: false %>
+									    	</div>
+									    </div>        		
+					        	</li>	        		        	
+					        	<li class="opening-line">
+									    <div class="row">
+									    	<div class="col-md-4">
+												</div>
+									    	<div class="col-md-4">
+									    	</div>
+									    	<div class="col-md-2">
+								          <button type="button" class="btn btn-save-contact" data-dismiss="modal" aria-label="Close"><span>Fermer</span>
+								          </button>						    		
+									    	</div>
+									    	<div class="col-md-2">
+									    		<%= f.submit t('menu.update'), class: "btn btn-save-contact" %>
+
+									    	</div>
+								    	</div>        		
+			        			</li>
+				        	<% end %>
+				        </ul>					      				
+						  </div>
+				  	</div>
+					</div>
+				</div> <!-- END MODAL -->
+
+				<% else %>
+
+					<span class="weekday">Mercredi</span>
+
+				<% end %>
+
+			</div>
+
+			<div class="col-md-4">
+				<%= @sub_account.wed_am_start.present? ? l(@sub_account.wed_am_start, :format => '%H:%M') : "Pas d'heure" %>-<%= @sub_account.mon_am_end.present? ? l(@sub_account.wed_am_end, :format => '%H:%M') : "Pas d'heure" %>
+			</div>
+			<div class="col-md-4">
+				<%= @sub_account.wed_pm_start.present? ? l(@sub_account.wed_pm_start, :format => '%H:%M') : "Pas d'heure" %>-<%= @sub_account.wed_pm_end.present? ? l(@sub_account.wed_pm_end, :format => '%H:%M') : "Pas d'heure" %>	
+			</div>			
+		</div>
+	</li>
+
+	<li class="opening-day">
+		<div class="row">
+			<div class="col-md-4">
+
+			<% if user_signed_in? && current_user.id == @sub_account.user.id %>
+
+				<!-- LARGE MODAL -->
+				<button type="button" class="btn btn-opening" data-toggle="modal" data-target="#thursday_times_<%= @sub_account.id %>">
+
+
+				  	<span class="weekday">Jeudi</span>	
+
+				</button>
+
+				<div class="modal fade" id="thursday_times_<%= @sub_account.id %>" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+				  <div class="modal-dialog modal-lg">
+				    <div class="modal-content">
+
+			        <div class="modal-body">
+
+
+				        <ul class="opening">
+							    <%= simple_form_for(@sub_account) do |f| %>
+			        			<%= f.error_notification %>
+
+					        	<li class="opening-line">
+									    <div class="row">
+									    	<div class="col-md-3">
+												</div>
+									    	<div class="col-md-3 text-center">
+									    		Fermé
+									    	</div>
+									    	<div class="col-md-3 text-center">							    		
+									    		Ouverture
+									    	</div>
+									    	<div class="col-md-3">
+									    		Fermeture
+									    	</div>
+									    </div>        		
+					        	</li>
+					        	<li class="opening-line">
+									    <div class="row">
+									    	<div class="col-md-3">
+									    		Jeudi AM
+												</div>
+									    	<div class="col-md-3">
+									    		<%= f.input :thu_am_closed, label: false %>
+									    	</div>
+									    	<div class="col-md-3">							    		
+									    		<%= f.input :thu_am_start, label: false %>
+									    	</div>
+									    	<div class="col-md-3">
+									    		<%= f.input :thu_am_end, label: false %>
+									    	</div>
+									    </div>        		
+					        	</li>
+					        	<li class="opening-line">
+									    <div class="row">
+									    	<div class="col-md-3">
+									    		Jeudi PM
+												</div>
+									    	<div class="col-md-3">
+									    		<%= f.input :thu_pm_closed, label: false %>
+									    	</div>
+									    	<div class="col-md-3">							    		
+									    		<%= f.input :thu_pm_start, label: false %>
+									    	</div>
+									    	<div class="col-md-3">
+									    		<%= f.input :thu_pm_end, label: false %>
+									    	</div>
+									    </div>        		
+					        	</li>	        		        	
+					        	<li class="opening-line">
+									    <div class="row">
+									    	<div class="col-md-4">
+												</div>
+									    	<div class="col-md-4">
+									    	</div>
+									    	<div class="col-md-2">
+								          <button type="button" class="btn btn-save-contact" data-dismiss="modal" aria-label="Close"><span>Fermer</span>
+								          </button>						    		
+									    	</div>
+									    	<div class="col-md-2">
+									    		<%= f.submit t('menu.update'), class: "btn btn-save-contact" %>
+
+									    	</div>
+								    	</div>        		
+			        			</li>
+				        	<% end %>
+				        </ul>					      				
+						  </div>
+				  	</div>
+					</div>
+				</div> <!-- END MODAL -->
+
+				<% else %>
+
+					<span class="weekday">Jeudi</span>
+
+				<% end %>
+
+			</div>
+
+			<div class="col-md-4">
+				<%= @sub_account.thu_am_start.present? ? l(@sub_account.thu_am_start, :format => '%H:%M') : "Pas d'heure" %>-<%= @sub_account.thu_am_end.present? ? l(@sub_account.thu_am_end, :format => '%H:%M') : "Pas d'heure" %>
+			</div>
+			<div class="col-md-4">
+				<%= @sub_account.thu_pm_start.present? ? l(@sub_account.thu_pm_start, :format => '%H:%M') : "Pas d'heure" %>-<%= @sub_account.thu_pm_end.present? ? l(@sub_account.thu_pm_end, :format => '%H:%M') : "Pas d'heure" %>	
+			</div>	
+		</div>
+	</li>
+
+	<li class="opening-day">
+		<div class="row">
+			<div class="col-md-4">
+
+			<% if user_signed_in? && current_user.id == @sub_account.user.id %>
+
+				<!-- LARGE MODAL -->
+				<button type="button" class="btn btn-opening" data-toggle="modal" data-target="#friday_times_<%= @sub_account.id %>">
+
+
+				  	<span class="weekday">Vendredi</span>	
+
+				</button>
+
+				<div class="modal fade" id="friday_times_<%= @sub_account.id %>" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+				  <div class="modal-dialog modal-lg">
+				    <div class="modal-content">
+
+			        <div class="modal-body">
+
+
+				        <ul class="opening">
+							    <%= simple_form_for(@sub_account) do |f| %>
+			        			<%= f.error_notification %>
+
+					        	<li class="opening-line">
+									    <div class="row">
+									    	<div class="col-md-3">
+												</div>
+									    	<div class="col-md-3 text-center">
+									    		Fermé
+									    	</div>
+									    	<div class="col-md-3 text-center">							    		
+									    		Ouverture
+									    	</div>
+									    	<div class="col-md-3">
+									    		Fermeture
+									    	</div>
+									    </div>        		
+					        	</li>
+					        	<li class="opening-line">
+									    <div class="row">
+									    	<div class="col-md-3">
+									    		Vendredi AM
+												</div>
+									    	<div class="col-md-3">
+									    		<%= f.input :fri_am_closed, label: false %>
+									    	</div>
+									    	<div class="col-md-3">							    		
+									    		<%= f.input :fri_am_start, label: false %>
+									    	</div>
+									    	<div class="col-md-3">
+									    		<%= f.input :fri_am_end, label: false %>
+									    	</div>
+									    </div>        		
+					        	</li>
+					        	<li class="opening-line">
+									    <div class="row">
+									    	<div class="col-md-3">
+									    		Vendredi PM
+												</div>
+									    	<div class="col-md-3">
+									    		<%= f.input :fri_pm_closed, label: false %>
+									    	</div>
+									    	<div class="col-md-3">							    		
+									    		<%= f.input :fri_pm_start, label: false %>
+									    	</div>
+									    	<div class="col-md-3">
+									    		<%= f.input :fri_pm_end, label: false %>
+									    	</div>
+									    </div>        		
+					        	</li>	        		        	
+					        	<li class="opening-line">
+									    <div class="row">
+									    	<div class="col-md-4">
+												</div>
+									    	<div class="col-md-4">
+									    	</div>
+									    	<div class="col-md-2">
+								          <button type="button" class="btn btn-save-contact" data-dismiss="modal" aria-label="Close"><span>Fermer</span>
+								          </button>						    		
+									    	</div>
+									    	<div class="col-md-2">
+									    		<%= f.submit t('menu.update'), class: "btn btn-save-contact" %>
+
+									    	</div>
+								    	</div>        		
+			        			</li>
+				        	<% end %>
+				        </ul>					      				
+						  </div>
+				  	</div>
+					</div>
+				</div> <!-- END MODAL -->
+
+				<% else %>
+
+					<span class="weekday">Vendredi</span>
+
+				<% end %>
+
+			</div>
+
+			<div class="col-md-4">
+				<%= @sub_account.fri_am_start.present? ? l(@sub_account.fri_am_start, :format => '%H:%M') : "Pas d'heure" %>-<%= @sub_account.fri_am_end.present? ? l(@sub_account.fri_am_end, :format => '%H:%M') : "Pas d'heure" %>
+			</div>
+			<div class="col-md-4">
+				<%= @sub_account.fri_pm_start.present? ? l(@sub_account.fri_pm_start, :format => '%H:%M') : "Pas d'heure" %>-<%= @sub_account.fri_pm_end.present? ? l(@sub_account.fri_pm_end, :format => '%H:%M') : "Pas d'heure" %>	
+			</div>		
+		</div>
+	</li>
+
+	<li class="opening-day">
+		<div class="row">
+			<div class="col-md-4">
+
+			<% if user_signed_in? && current_user.id == @sub_account.user.id %>
+
+				<!-- LARGE MODAL -->
+				<button type="button" class="btn btn-opening" data-toggle="modal" data-target="#saturday_times_<%= @sub_account.id %>">
+
+
+				  	<span class="weekday">Samedi</span>	
+
+				</button>
+
+				<div class="modal fade" id="saturday_times_<%= @sub_account.id %>" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+				  <div class="modal-dialog modal-lg">
+				    <div class="modal-content">
+
+			        <div class="modal-body">
+
+
+				        <ul class="opening">
+							    <%= simple_form_for(@sub_account) do |f| %>
+			        			<%= f.error_notification %>
+
+					        	<li class="opening-line">
+									    <div class="row">
+									    	<div class="col-md-3">
+												</div>
+									    	<div class="col-md-3 text-center">
+									    		Fermé
+									    	</div>
+									    	<div class="col-md-3 text-center">							    		
+									    		Ouverture
+									    	</div>
+									    	<div class="col-md-3">
+									    		Fermeture
+									    	</div>
+									    </div>        		
+					        	</li>
+					        	<li class="opening-line">
+									    <div class="row">
+									    	<div class="col-md-3">
+									    		Samedi AM
+												</div>
+									    	<div class="col-md-3">
+									    		<%= f.input :sat_am_closed, label: false %>
+									    	</div>
+									    	<div class="col-md-3">							    		
+									    		<%= f.input :sat_am_start, label: false %>
+									    	</div>
+									    	<div class="col-md-3">
+									    		<%= f.input :sat_am_end, label: false %>
+									    	</div>
+									    </div>        		
+					        	</li>
+					        	<li class="opening-line">
+									    <div class="row">
+									    	<div class="col-md-3">
+									    		Samedi PM
+												</div>
+									    	<div class="col-md-3">
+									    		<%= f.input :sat_pm_closed, label: false %>
+									    	</div>
+									    	<div class="col-md-3">							    		
+									    		<%= f.input :sat_pm_start, label: false %>
+									    	</div>
+									    	<div class="col-md-3">
+									    		<%= f.input :sat_pm_end, label: false %>
+									    	</div>
+									    </div>        		
+					        	</li>	        		        	
+					        	<li class="opening-line">
+									    <div class="row">
+									    	<div class="col-md-4">
+												</div>
+									    	<div class="col-md-4">
+									    	</div>
+									    	<div class="col-md-2">
+								          <button type="button" class="btn btn-save-contact" data-dismiss="modal" aria-label="Close"><span>Fermer</span>
+								          </button>						    		
+									    	</div>
+									    	<div class="col-md-2">
+									    		<%= f.submit t('menu.update'), class: "btn btn-save-contact" %>
+
+									    	</div>
+								    	</div>        		
+			        			</li>
+				        	<% end %>
+				        </ul>					      				
+						  </div>
+				  	</div>
+					</div>
+				</div> <!-- END MODAL -->
+
+				<% else %>
+
+					<span class="weekday">Samedi</span>
+
+				<% end %>
+
+			</div>
+
+			<div class="col-md-4">
+				<%= @sub_account.sat_am_start.present? ? l(@sub_account.sat_am_start, :format => '%H:%M') : "Pas d'heure" %>-<%= @sub_account.sat_am_end.present? ? l(@sub_account.sat_am_end, :format => '%H:%M') : "Pas d'heure" %>
+			</div>
+			<div class="col-md-4">
+				<%= @sub_account.sat_pm_start.present? ? l(@sub_account.sat_pm_start, :format => '%H:%M') : "Pas d'heure" %>-<%= @sub_account.sat_pm_end.present? ? l(@sub_account.sat_pm_end, :format => '%H:%M') : "Pas d'heure" %>	
+			</div>		
+		</div>
+	</li>
+
+	<li class="opening-day">
+		<div class="row">
+			<div class="col-md-4">
+
+			<% if user_signed_in? && current_user.id == @sub_account.user.id %>
+
+				<!-- LARGE MODAL -->
+				<button type="button" class="btn btn-opening" data-toggle="modal" data-target="#sunday_times_<%= @sub_account.id %>">
+
+
+				  	<span class="weekday">Dimanche</span>	
+
+				</button>
+
+				<div class="modal fade" id="sunday_times_<%= @sub_account.id %>" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+				  <div class="modal-dialog modal-lg">
+				    <div class="modal-content">
+
+			        <div class="modal-body">
+
+
+				        <ul class="opening">
+							    <%= simple_form_for(@sub_account) do |f| %>
+			        			<%= f.error_notification %>
+
+					        	<li class="opening-line">
+									    <div class="row">
+									    	<div class="col-md-3">
+												</div>
+									    	<div class="col-md-3 text-center">
+									    		Fermé
+									    	</div>
+									    	<div class="col-md-3 text-center">							    		
+									    		Ouverture
+									    	</div>
+									    	<div class="col-md-3">
+									    		Fermeture
+									    	</div>
+									    </div>        		
+					        	</li>
+					        	<li class="opening-line">
+									    <div class="row">
+									    	<div class="col-md-3">
+									    		Dimanche AM
+												</div>
+									    	<div class="col-md-3">
+									    		<%= f.input :sun_am_closed, label: false %>
+									    	</div>
+									    	<div class="col-md-3">							    		
+									    		<%= f.input :sun_am_start, label: false %>
+									    	</div>
+									    	<div class="col-md-3">
+									    		<%= f.input :sun_am_end, label: false %>
+									    	</div>
+									    </div>        		
+					        	</li>
+					        	<li class="opening-line">
+									    <div class="row">
+									    	<div class="col-md-3">
+									    		Dimanche PM
+												</div>
+									    	<div class="col-md-3">
+									    		<%= f.input :sun_pm_closed, label: false %>
+									    	</div>
+									    	<div class="col-md-3">							    		
+									    		<%= f.input :sun_pm_start, label: false %>
+									    	</div>
+									    	<div class="col-md-3">
+									    		<%= f.input :sun_pm_end, label: false %>
+									    	</div>
+									    </div>        		
+					        	</li>	        		        	
+					        	<li class="opening-line">
+									    <div class="row">
+									    	<div class="col-md-4">
+												</div>
+									    	<div class="col-md-4">
+									    	</div>
+									    	<div class="col-md-2">
+								          <button type="button" class="btn btn-save-contact" data-dismiss="modal" aria-label="Close"><span>Fermer</span>
+								          </button>						    		
+									    	</div>
+									    	<div class="col-md-2">
+									    		<%= f.submit t('menu.update'), class: "btn btn-save-contact" %>
+
+									    	</div>
+								    	</div>        		
+			        			</li>
+				        	<% end %>
+				        </ul>					      				
+						  </div>
+				  	</div>
+					</div>
+				</div> <!-- END MODAL -->
+
+				<% else %>
+
+					<span class="weekday">Dimanche</span>
+
+				<% end %>
+
+			</div>		
+			<div class="col-md-4">
+				<%= @sub_account.sun_am_start.present? ? l(@sub_account.sun_am_start, :format => '%H:%M') : "Pas d'heure" %>-<%= @sub_account.sun_am_end.present? ? l(@sub_account.sun_am_end, :format => '%H:%M') : "Pas d'heure" %>
+			</div>
+			<div class="col-md-4">
+				<%= @sub_account.sun_pm_start.present? ? l(@sub_account.sun_pm_start, :format => '%H:%M') : "Pas d'heure" %>-<%= @sub_account.sun_pm_end.present? ? l(@sub_account.sun_pm_end, :format => '%H:%M') : "Pas d'heure" %>	
+			</div>			
+		</div>
+	</li>
+	
+</ul>

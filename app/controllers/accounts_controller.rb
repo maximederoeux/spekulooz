@@ -127,7 +127,13 @@ class AccountsController < ApplicationController
                                       :already_open, :open_on, :open_check,
                                       :bg_pict_select, :bg_pict_number, :bg_pict_one,
                                       :address, :city, :zipcode, :country, :phone, :fax, :mobile, :email,
-                                      :facebook, :twitter, :instagram, :google, :snapchat, :youtube, :vimeo)
+                                      :facebook, :twitter, :instagram, :google, :snapchat, :youtube, :vimeo,
+                                      :mon_am_start, :mon_am_end, :mon_pm_start, :mon_pm_end, :mon_am_closed, :mon_pm_closed, 
+                                      :tue_am_start, :tue_am_end, :tue_pm_start, :tue_pm_end, :tue_am_closed, :tue_pm_closed,
+                                      :wed_am_start, :wed_am_end, :wed_pm_start, :wed_pm_end, :wed_am_closed, :wed_pm_closed,
+                                      :thu_am_start, :thu_am_end, :thu_pm_start, :thu_pm_end, :thu_am_closed, :thu_pm_closed,
+                                      :fri_am_start, :fri_am_end, :fri_pm_start, :fri_pm_end, :fri_am_closed, :fri_pm_closed,
+                                      :sat_am_start, :sat_am_end, :sat_pm_start, :sat_pm_end, :sat_am_closed, :sat_pm_closed,
+                                      :sun_am_start, :sun_am_end, :sun_pm_start, :sun_pm_end, :sun_am_closed, :sun_pm_closed)
     end
 end
-

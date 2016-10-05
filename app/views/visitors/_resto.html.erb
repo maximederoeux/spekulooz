@@ -9,7 +9,6 @@
 <% unless @sub_account.address.blank? %>
 	<div class="contacts">
 		<%= render 'social_networks' %>
-		<%= render 'opening_times' %>
 
 		<div class="intro-contact">
 			Nous contacter
@@ -30,36 +29,8 @@
 				</div>			
 			</div>
 			<div class="col-md-6">
-				<ul class="opening">
-				<li class="opening-line">
-					<div class="row">
-						<div class="col-md-4">
-							Lundi
 
-						</div>
-						<div class="col-md-4">
-						<%= @sub_account.mon_am_start.present? ? l(@sub_account.mon_am_start, :format => '%H:%M') : "Pas d'heure" %>
-						</div>
-						<div class="col-md-4">
-						<%= @sub_account.mon_am_end.present? ? l(@sub_account.mon_am_end, :format => '%H:%M') : "Pas d'heure" %>
-						</div>
-						<div class="col-md-4">
-						</div>
-						<div class="col-md-4">
-						<%= @sub_account.mon_pm_start.present? ? l(@sub_account.mon_pm_start, :format => '%H:%M') : "Pas d'heure" %>
-						</div>
-						<div class="col-md-4">
-						<%= @sub_account.mon_pm_end.present? ? l(@sub_account.mon_pm_end, :format => '%H:%M') : "Pas d'heure" %>							
-						</div>
-					</div>
-				</li>
-
-					
-				</ul>
-
-
-
-
+			<%= render 'opening_times' %>
 			
 			</div>
 		</div>
