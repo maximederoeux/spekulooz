@@ -1,0 +1,24 @@
+<%= simple_form_for(@menu) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.input :name %>
+    <%= f.input :description %>
+    <%= f.input :start_date %>
+    <%= f.input :end_date %>
+    <%= f.input :active %>
+    <%= f.input :food %>
+    <%= f.input :drink %>
+    <%= f.input :period_quantity %>
+    <%= f.input :period %>
+    <%= f.input :promote %>
+    <%= f.input :price %>
+    <%= f.label :status %>
+    <%= f.select :status, @statuses, {prompt: false, include_blank: true}, {class: "form-control"} %>
+    <%= f.input :account_id %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

@@ -1,6 +1,13 @@
 nl:
-  menu:
+  word:
     update: "Opslaan"
+
+  statuses:
+    main: "Hoofdmenu"
+    specials: "Suggesties"
+    season: "Seizoensmenu"
+    tasting: "Degustatiemenu"
+
   user:
     minimum: karakters minimum
   account:

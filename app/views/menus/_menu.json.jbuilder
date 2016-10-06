@@ -1,0 +1,2 @@
+json.extract! menu, :id, :name, :description, :start_date, :end_date, :active, :food, :drink, :period_quantity, :period, :promote, :price, :status, :account_id, :created_at, :updated_at
+json.url menu_url(menu, format: :json)

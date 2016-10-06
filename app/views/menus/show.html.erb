@@ -1,0 +1,69 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @menu.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @menu.description %>
+</p>
+
+<p>
+  <strong>Start date:</strong>
+  <%= @menu.start_date %>
+</p>
+
+<p>
+  <strong>End date:</strong>
+  <%= @menu.end_date %>
+</p>
+
+<p>
+  <strong>Active:</strong>
+  <%= @menu.active %>
+</p>
+
+<p>
+  <strong>Food:</strong>
+  <%= @menu.food %>
+</p>
+
+<p>
+  <strong>Drink:</strong>
+  <%= @menu.drink %>
+</p>
+
+<p>
+  <strong>Period quantity:</strong>
+  <%= @menu.period_quantity %>
+</p>
+
+<p>
+  <strong>Period:</strong>
+  <%= @menu.period %>
+</p>
+
+<p>
+  <strong>Promote:</strong>
+  <%= @menu.promote %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @menu.price %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @menu.status %>
+</p>
+
+<p>
+  <strong>Account:</strong>
+  <%= @menu.account_id %>
+</p>
+
+<%= link_to 'Edit', edit_menu_path(@menu) %> |
+<%= link_to 'Back', menus_path %>

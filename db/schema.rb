@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161005071647) do
+ActiveRecord::Schema.define(version: 20161006193054) do
 
   create_table "accounts", force: :cascade do |t|
     t.string   "subdomain"
@@ -91,12 +91,52 @@ ActiveRecord::Schema.define(version: 20161005071647) do
     t.boolean  "sun_pm_closed"
   end
 
+  create_table "categories", force: :cascade do |t|
+    t.string   "name"
+    t.string   "description"
+    t.boolean  "food"
+    t.boolean  "drink"
+    t.integer  "account_id"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
   create_table "items", force: :cascade do |t|
     t.string   "name"
     t.decimal  "price"
     t.integer  "account_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+    t.string   "description"
+    t.boolean  "active"
+    t.date     "start_date"
+    t.date     "end_date"
+    t.integer  "category_one_id"
+    t.integer  "category_two_id"
+    t.decimal  "price_one"
+    t.decimal  "price_two"
+    t.integer  "menu_one_id"
+    t.integer  "menu_two_id"
+    t.boolean  "food"
+    t.boolean  "drink"
+  end
+
+  create_table "menus", force: :cascade do |t|
+    t.string   "name"
+    t.string   "description"
+    t.date     "start_date"
+    t.date     "end_date"
+    t.boolean  "active"
+    t.boolean  "food"
+    t.boolean  "drink"
+    t.integer  "period_quantity"
+    t.string   "period"
+    t.boolean  "promote"
+    t.decimal  "price"
+    t.string   "status"
+    t.integer  "account_id"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
   end
 
   create_table "users", force: :cascade do |t|

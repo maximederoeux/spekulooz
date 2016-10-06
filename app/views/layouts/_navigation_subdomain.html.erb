@@ -31,13 +31,20 @@
 
         <% if user_signed_in? && current_user.id == @sub_account.user_id %>
 
-          <%= render 'modify_contact' %>
+          
 
         <% end %>
 
-        <li class="pull-right"><%= link_to "Menu", root_path %></li>
+
         <li class="pull-right"><%= link_to "Réservation", root_path %></li>
+
+        <li class="pull-right"><%= link_to "Galerie", root_path %></li>
+        <li class="pull-right"><%= link_to "Suggestions", root_path %></li>
+        <li class="pull-right"><%= link_to "Menu", menus_path %></li>
+
       <% else %>
+        <li class="pull-right"><%= link_to "Menu", menus_path %></li>
+        <li class="pull-right"><%= link_to "Réservation", root_path %></li>
         <li class="pull-right"><%= link_to "Connexion", new_user_session_path %></li>
         <li class="pull-right"><%= link_to "Suggestions", root_path %></li>
         <li class="pull-right"><%= link_to "Galerie", root_path %></li>

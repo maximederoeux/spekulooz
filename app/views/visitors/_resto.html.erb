@@ -1,14 +1,23 @@
 <div class="homebg">
 
-
 	<div class="welcome">
 		<%= @sub_account.resto_name %>
 	</div>
+
 </div>
+
+<div class="main-menu">
+	
+	<%= @sub_account.menus.is_main.last.name %>
+
+</div>
+
+
 
 <% unless @sub_account.address.blank? %>
 	<div class="contacts">
 		<%= render 'social_networks' %>
+		<%= render 'modify_contact' %>
 
 		<div class="intro-contact">
 			Nous contacter

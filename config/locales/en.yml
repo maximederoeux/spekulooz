@@ -1,6 +1,14 @@
 en:
-  menu:
+  word:
     update: "Save changes"
+
+  statuses:
+    main: "Main menu"
+    specials: "Specials"
+    season: "Season"
+    tasting: "Tasting menu"
+
+
   user:
     minimum: characters minimum
   account:

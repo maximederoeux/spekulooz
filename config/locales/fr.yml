@@ -1,6 +1,13 @@
 fr:
-  menu:
+  word:
     update: "Enregistrer"
+
+  statuses:
+    main: "Menu principal"
+    specials: "Suggestions"
+    season: "Menu saisonnier"
+    tasting: "Menu dégustation"
+
   user:
     minimum: caractères minimum
   account:
