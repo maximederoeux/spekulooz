@@ -154,7 +154,7 @@ float: right;
 	padding-right: 10%;
 }
 
-.btn-openings:hover {
+.btn-opening:hover {
 	background-color: #E9D460;
 	color: #22313F;
   font-family: 'Playfair Display', serif;
@@ -185,4 +185,20 @@ ul li.opening-day {
 .weekday {
 	color:#640002;
 	font-size: 1.3em;
+}
+
+.opening-title {
+  color: #640002;
+  font-family: 'Playfair Display', serif;
+  font-size: 1.5em;
+  line-height: 1.8em;
+  display: block;
+  text-align: center;
+  text-shadow: none; 
+  padding-bottom: 5%;
+}
+
+.opening-detail {
+	font-size:1.2em;
+	line-height: 2em;
 }

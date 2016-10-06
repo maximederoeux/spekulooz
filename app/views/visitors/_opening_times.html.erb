@@ -1,5 +1,5 @@
 <ul class="opening-times">
-
+	<div class="opening-title">Nos heures d'ouverture</div>
 	<li class="opening-day">
 		<div class="row">
 			<div class="col-md-4">
@@ -103,10 +103,18 @@
 				
 			</div>
 			<div class="col-md-4">
-				<%= @sub_account.mon_am_start.present? ? l(@sub_account.mon_am_start, :format => '%H:%M') : "Pas d'heure" %>-<%= @sub_account.mon_am_end.present? ? l(@sub_account.mon_am_end, :format => '%H:%M') : "Pas d'heure" %>
+			<% if @sub_account.mon_am_closed %>
+				<span class="opening-detail">Fermé</span>
+			<% else %>
+				<span class="opening-detail"><%= @sub_account.mon_am_start.present? ? l(@sub_account.mon_am_start, :format => '%H:%M') : "Pas d'heure" %>-<%= @sub_account.mon_am_end.present? ? l(@sub_account.mon_am_end, :format => '%H:%M') : "Pas d'heure" %></span>
+			<% end %>
 			</div>
 			<div class="col-md-4">
-				<%= @sub_account.mon_pm_start.present? ? l(@sub_account.mon_pm_start, :format => '%H:%M') : "Pas d'heure" %>-<%= @sub_account.mon_pm_end.present? ? l(@sub_account.mon_pm_end, :format => '%H:%M') : "Pas d'heure" %>	
+			<% if @sub_account.mon_pm_closed %>
+				<span class="opening-detail">Fermé</span>
+			<% else %>			
+				<span class="opening-detail"><%= @sub_account.mon_pm_start.present? ? l(@sub_account.mon_pm_start, :format => '%H:%M') : "Pas d'heure" %>-<%= @sub_account.mon_pm_end.present? ? l(@sub_account.mon_pm_end, :format => '%H:%M') : "Pas d'heure" %></span>
+			<% end %>
 			</div>		
 		</div>
 	</li>
@@ -215,10 +223,18 @@
 			</div>
 
 			<div class="col-md-4">
-				<%= @sub_account.tue_am_start.present? ? l(@sub_account.tue_am_start, :format => '%H:%M') : "Pas d'heure" %>-<%= @sub_account.tue_am_end.present? ? l(@sub_account.tue_am_end, :format => '%H:%M') : "Pas d'heure" %>
+			<% if @sub_account.tue_am_closed %>
+				<span class="opening-detail">Fermé</span>
+			<% else %>
+				<span class="opening-detail"><%= @sub_account.tue_am_start.present? ? l(@sub_account.tue_am_start, :format => '%H:%M') : "Pas d'heure" %>-<%= @sub_account.tue_am_end.present? ? l(@sub_account.tue_am_end, :format => '%H:%M') : "Pas d'heure" %></span>
+			<% end %>
 			</div>
 			<div class="col-md-4">
-				<%= @sub_account.tue_pm_start.present? ? l(@sub_account.tue_pm_start, :format => '%H:%M') : "Pas d'heure" %>-<%= @sub_account.tue_pm_end.present? ? l(@sub_account.tue_pm_end, :format => '%H:%M') : "Pas d'heure" %>	
+			<% if @sub_account.tue_pm_closed %>
+				<span class="opening-detail">Fermé</span>
+			<% else %>			
+				<span class="opening-detail"><%= @sub_account.tue_pm_start.present? ? l(@sub_account.tue_pm_start, :format => '%H:%M') : "Pas d'heure" %>-<%= @sub_account.tue_pm_end.present? ? l(@sub_account.tue_pm_end, :format => '%H:%M') : "Pas d'heure" %></span>
+			<% end %>
 			</div>		
 		</div>
 	</li>
@@ -327,10 +343,18 @@
 			</div>
 
 			<div class="col-md-4">
-				<%= @sub_account.wed_am_start.present? ? l(@sub_account.wed_am_start, :format => '%H:%M') : "Pas d'heure" %>-<%= @sub_account.mon_am_end.present? ? l(@sub_account.wed_am_end, :format => '%H:%M') : "Pas d'heure" %>
+			<% if @sub_account.wed_am_closed %>
+				<span class="opening-detail">Fermé</span>
+			<% else %>
+				<span class="opening-detail"><%= @sub_account.wed_am_start.present? ? l(@sub_account.wed_am_start, :format => '%H:%M') : "Pas d'heure" %>-<%= @sub_account.wed_am_end.present? ? l(@sub_account.wed_am_end, :format => '%H:%M') : "Pas d'heure" %></span>
+			<% end %>
 			</div>
 			<div class="col-md-4">
-				<%= @sub_account.wed_pm_start.present? ? l(@sub_account.wed_pm_start, :format => '%H:%M') : "Pas d'heure" %>-<%= @sub_account.wed_pm_end.present? ? l(@sub_account.wed_pm_end, :format => '%H:%M') : "Pas d'heure" %>	
+			<% if @sub_account.wed_pm_closed %>
+				<span class="opening-detail">Fermé</span>
+			<% else %>			
+				<span class="opening-detail"><%= @sub_account.wed_pm_start.present? ? l(@sub_account.wed_pm_start, :format => '%H:%M') : "Pas d'heure" %>-<%= @sub_account.wed_pm_end.present? ? l(@sub_account.wed_pm_end, :format => '%H:%M') : "Pas d'heure" %></span>
+			<% end %>
 			</div>			
 		</div>
 	</li>
@@ -439,11 +463,19 @@
 			</div>
 
 			<div class="col-md-4">
-				<%= @sub_account.thu_am_start.present? ? l(@sub_account.thu_am_start, :format => '%H:%M') : "Pas d'heure" %>-<%= @sub_account.thu_am_end.present? ? l(@sub_account.thu_am_end, :format => '%H:%M') : "Pas d'heure" %>
+			<% if @sub_account.thu_am_closed %>
+				<span class="opening-detail">Fermé</span>
+			<% else %>
+				<span class="opening-detail"><%= @sub_account.thu_am_start.present? ? l(@sub_account.thu_am_start, :format => '%H:%M') : "Pas d'heure" %>-<%= @sub_account.thu_am_end.present? ? l(@sub_account.thu_am_end, :format => '%H:%M') : "Pas d'heure" %></span>
+			<% end %>
 			</div>
 			<div class="col-md-4">
-				<%= @sub_account.thu_pm_start.present? ? l(@sub_account.thu_pm_start, :format => '%H:%M') : "Pas d'heure" %>-<%= @sub_account.thu_pm_end.present? ? l(@sub_account.thu_pm_end, :format => '%H:%M') : "Pas d'heure" %>	
-			</div>	
+			<% if @sub_account.thu_pm_closed %>
+				<span class="opening-detail">Fermé</span>
+			<% else %>			
+				<span class="opening-detail"><%= @sub_account.thu_pm_start.present? ? l(@sub_account.thu_pm_start, :format => '%H:%M') : "Pas d'heure" %>-<%= @sub_account.thu_pm_end.present? ? l(@sub_account.thu_pm_end, :format => '%H:%M') : "Pas d'heure" %></span>
+			<% end %>
+			</div>
 		</div>
 	</li>
 
@@ -551,10 +583,18 @@
 			</div>
 
 			<div class="col-md-4">
-				<%= @sub_account.fri_am_start.present? ? l(@sub_account.fri_am_start, :format => '%H:%M') : "Pas d'heure" %>-<%= @sub_account.fri_am_end.present? ? l(@sub_account.fri_am_end, :format => '%H:%M') : "Pas d'heure" %>
+			<% if @sub_account.fri_am_closed %>
+				<span class="opening-detail">Fermé</span>
+			<% else %>
+				<span class="opening-detail"><%= @sub_account.fri_am_start.present? ? l(@sub_account.fri_am_start, :format => '%H:%M') : "Pas d'heure" %>-<%= @sub_account.fri_am_end.present? ? l(@sub_account.fri_am_end, :format => '%H:%M') : "Pas d'heure" %></span>
+			<% end %>
 			</div>
 			<div class="col-md-4">
-				<%= @sub_account.fri_pm_start.present? ? l(@sub_account.fri_pm_start, :format => '%H:%M') : "Pas d'heure" %>-<%= @sub_account.fri_pm_end.present? ? l(@sub_account.fri_pm_end, :format => '%H:%M') : "Pas d'heure" %>	
+			<% if @sub_account.fri_pm_closed %>
+				<span class="opening-detail">Fermé</span>
+			<% else %>			
+				<span class="opening-detail"><%= @sub_account.fri_pm_start.present? ? l(@sub_account.fri_pm_start, :format => '%H:%M') : "Pas d'heure" %>-<%= @sub_account.fri_pm_end.present? ? l(@sub_account.fri_pm_end, :format => '%H:%M') : "Pas d'heure" %></span>
+			<% end %>
 			</div>		
 		</div>
 	</li>
@@ -663,11 +703,19 @@
 			</div>
 
 			<div class="col-md-4">
-				<%= @sub_account.sat_am_start.present? ? l(@sub_account.sat_am_start, :format => '%H:%M') : "Pas d'heure" %>-<%= @sub_account.sat_am_end.present? ? l(@sub_account.sat_am_end, :format => '%H:%M') : "Pas d'heure" %>
-			</div>
-			<div class="col-md-4">
-				<%= @sub_account.sat_pm_start.present? ? l(@sub_account.sat_pm_start, :format => '%H:%M') : "Pas d'heure" %>-<%= @sub_account.sat_pm_end.present? ? l(@sub_account.sat_pm_end, :format => '%H:%M') : "Pas d'heure" %>	
-			</div>		
+				<% if @sub_account.sat_am_closed %>
+					<span class="opening-detail">Fermé</span>
+				<% else %>
+					<span class="opening-detail"><%= @sub_account.sat_am_start.present? ? l(@sub_account.sat_am_start, :format => '%H:%M') : "Pas d'heure" %>-<%= @sub_account.sat_am_end.present? ? l(@sub_account.sat_am_end, :format => '%H:%M') : "Pas d'heure" %></span>
+				<% end %>
+				</div>
+				<div class="col-md-4">
+				<% if @sub_account.sat_pm_closed %>
+					<span class="opening-detail">Fermé</span>
+				<% else %>			
+					<span class="opening-detail"><%= @sub_account.sat_pm_start.present? ? l(@sub_account.sat_pm_start, :format => '%H:%M') : "Pas d'heure" %>-<%= @sub_account.sat_pm_end.present? ? l(@sub_account.sat_pm_end, :format => '%H:%M') : "Pas d'heure" %></span>
+				<% end %>
+				</div>	
 		</div>
 	</li>
 
@@ -774,11 +822,19 @@
 
 			</div>		
 			<div class="col-md-4">
-				<%= @sub_account.sun_am_start.present? ? l(@sub_account.sun_am_start, :format => '%H:%M') : "Pas d'heure" %>-<%= @sub_account.sun_am_end.present? ? l(@sub_account.sun_am_end, :format => '%H:%M') : "Pas d'heure" %>
-			</div>
-			<div class="col-md-4">
-				<%= @sub_account.sun_pm_start.present? ? l(@sub_account.sun_pm_start, :format => '%H:%M') : "Pas d'heure" %>-<%= @sub_account.sun_pm_end.present? ? l(@sub_account.sun_pm_end, :format => '%H:%M') : "Pas d'heure" %>	
-			</div>			
+				<% if @sub_account.sun_am_closed %>
+					<span class="opening-detail">Fermé</span>
+				<% else %>
+					<span class="opening-detail"><%= @sub_account.sun_am_start.present? ? l(@sub_account.sun_am_start, :format => '%H:%M') : "Pas d'heure" %>-<%= @sub_account.sun_am_end.present? ? l(@sub_account.sun_am_end, :format => '%H:%M') : "Pas d'heure" %></span>
+				<% end %>
+				</div>
+				<div class="col-md-4">
+				<% if @sub_account.sun_pm_closed %>
+					<span class="opening-detail">Fermé</span>
+				<% else %>			
+					<span class="opening-detail"><%= @sub_account.sun_pm_start.present? ? l(@sub_account.sun_pm_start, :format => '%H:%M') : "Pas d'heure" %>-<%= @sub_account.sun_pm_end.present? ? l(@sub_account.sun_pm_end, :format => '%H:%M') : "Pas d'heure" %></span>
+				<% end %>
+				</div>				
 		</div>
 	</li>
 	
