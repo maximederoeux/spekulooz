@@ -6,13 +6,8 @@
 
 </div>
 
-<div class="main-menu">
-	
-	<%= @sub_account.menus.is_main.last.name %><br>
 
-
-</div>
-
+<%= render 'menu' %>
 
 
 <% unless @sub_account.address.blank? %>

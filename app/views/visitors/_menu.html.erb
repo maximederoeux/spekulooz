@@ -1,0 +1,122 @@
+<div class="main-menu">
+
+	<div class="menu-title">
+		<%= @sub_account.menus.is_main.last.name %> 
+	</div>
+
+	<% if user_signed_in? && @sub_account.user_id == current_user.id %>
+
+		<div class="new-item">
+			<%= render 'add_item' %><br>
+
+			<% if @sub_account.items.last.item_categories.any? %>
+				<div class="row">
+					<div class="col-md-3">
+						<div class="new-item-detail">
+							Dernier plat ajouté
+						</div>
+					</div>
+					
+					<div class="col-md-3">				
+						<div class="new-item-detail">
+							<%= @sub_account.items.last.name %>
+						</div>					
+					</div>
+
+					<div class="col-md-3">				
+						<% @sub_account.items.last.item_categories.each do |item_category| %>
+
+							<div class="new-item-detail">
+								<%= item_category.category.name %><br> 
+							</div>
+						<% end %>
+					</div>		
+					<div class="col-md-3">				
+					<%= render 'add_item_category' %>
+					</div>							
+				</div>
+
+			<% else %>
+
+				<div class="row">
+					<div class="col-md-3">
+						<div class="new-item-detail">
+							<%= @sub_account.items.last.name %>
+						</div> 
+					</div>
+
+						<%= simple_form_for(@new_item_category) do |f| %>
+
+							<div class="col-md-3">
+								<%= f.collection_select :category_id, @categories, :id, :name, {prompt: true, include_blank: false}, class: "form-control styled-select" %>
+							</div>
+							<div class="col-md-3">
+								<%= f.input :price, label: false %>
+							</div>
+
+							<div class="col-md-3">
+								<%= f.hidden_field :item_id, :value => @sub_account.items.last.id %>
+								<%= f.hidden_field :food, :value => true %>
+
+								<%= f.submit t("word.update"), class: "btn btn-contact" %>
+							</div>
+						<% end %>
+					</div>
+
+
+				<% end %>
+
+
+			</div>
+
+		<% end %>
+
+	<% @sub_account.menus.is_main.last.categories.each do |category| %>
+
+		<div class="category">
+			<%= category.name %> 
+
+		</div>
+
+		<ul class="items">
+			<% category.item_categories.each do |item_category| %>
+				<li class="items-line-detail">
+					<div class="row">
+						<div class="col-md-2">
+							<%= render 'modify_item', item: item_category.item %>
+						</div>
+						<div class="col-md-4">
+							<div class="item-detail"><%= item_category.item.name %></div>
+						</div>
+						<div class="col-md-2">
+							
+						</div>
+						<div class="col-md-2">
+							<div class="item-detail"><%= item_category.price %></div>
+						</div>
+						<div class="col-md-2">
+							<%= render 'modify_item_category', item_category: item_category %>
+						</div>
+					</div>
+					</li>
+					<li class="items-line-detail">
+						<div class="row">
+							<div class="col-md-2">
+							</div>
+							<div class="col-md-6">
+								<div class="item-description"><%= item_category.item.description %></div>
+							</div>
+							<div class="col-md-4">
+							</div>							
+						</div>
+					</li>
+
+														
+
+			<% end %>
+		</ul>
+
+	<% end %>
+
+
+</div>

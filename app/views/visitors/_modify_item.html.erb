@@ -1,0 +1,38 @@
+<!-- Large modal -->
+<button type="button" class="btn btn-item" data-toggle="modal" data-target="#modify_item_<%= item.id %>">
+
+  Modifier
+
+
+</button>
+
+<div class="modal fade" id="modify_item_<%= item.id %>" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+
+      <%= simple_form_for(item) do |f| %>
+        <%= f.error_notification %>
+
+        <div class="modal-body">
+
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
+          </button>
+
+					    <%= f.input :name %>
+					    <%= f.input :description %>
+					    <%= f.input :active %>
+					    <%= f.input :start_date %>
+					    <%= f.input :end_date %>
+
+			    		<%= f.submit t('word.update'), class: "btn btn-save-contact" %>
+      				<% end %>
+			    
+
+			  </div>	
+
+
+
+
+  	</div>
+	</div>
+</div>

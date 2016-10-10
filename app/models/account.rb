@@ -1,6 +1,7 @@
 class Account < ApplicationRecord
 	belongs_to :user
 	has_many :menus
+	has_many :items
 
 	after_create :generate_subdomain_1
 	after_create :generate_subdomain_2

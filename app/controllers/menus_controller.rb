@@ -10,6 +10,8 @@ class MenusController < ApplicationController
   # GET /menus/1
   # GET /menus/1.json
   def show
+    @menu = Menu.find(params[:id])
+    @menu_categories = @menu.menu_categories
   end
 
   # GET /menus/new

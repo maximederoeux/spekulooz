@@ -17,7 +17,6 @@ class ItemsController < ApplicationController
   # GET /items/new
   def new
     @item = Item.new
-    @account = @item.account
   end
 
   # GET /items/1/edit
@@ -29,13 +28,10 @@ class ItemsController < ApplicationController
   # POST /items.json
   def create
     @item = Item.new(item_params)
-    @account = @item.account
-    @categories = @account.categories
-    @menus = @account.menus
 
     respond_to do |format|
       if @item.save
-        format.html { redirect_to @item, notice: 'Item was successfully created.' }
+        format.html { redirect_to :back, notice: 'Item was successfully created.' }
         format.json { render :show, status: :created, location: @item }
       else
         format.html { render :new }
@@ -48,9 +44,6 @@ class ItemsController < ApplicationController
   # PATCH/PUT /items/1.json
   def update
     @item = Item.find(params[:id])
-    @account = @item.account
-    @categories = @account.categories
-    @menus = @account.menus
 
     respond_to do |format|
       if @item.update(item_params)
@@ -84,7 +77,6 @@ class ItemsController < ApplicationController
       params.require(:item).permit(:name, :price, :account_id,
                                     :description, 
                                     :active, :start_date, :end_date,
-                                    :price_one, :price_two,
                                     :food,:drink)
     end
 end

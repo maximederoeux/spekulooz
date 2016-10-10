@@ -67,3 +67,16 @@
 
 <%= link_to 'Edit', edit_menu_path(@menu) %> |
 <%= link_to 'Back', menus_path %>
+
+
+<hr>
+
+<% @menu_categories.each do |menu_category| %>
+
+  <%= menu_category.category.name %><br>
+
+    <% menu_category.category.item_categories.each do |item_category| %>
+      <%= item_category.item.name %><br>
+    <% end %>
+
+<% end %>

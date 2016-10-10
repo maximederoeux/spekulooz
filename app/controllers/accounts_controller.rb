@@ -16,7 +16,6 @@ class AccountsController < ApplicationController
     else
       @account = Account.find(params[:id])
     end
-    @items = @account.items
     @user = @account.user
     
     unless @user == current_user
