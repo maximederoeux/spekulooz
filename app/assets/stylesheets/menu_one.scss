@@ -94,6 +94,13 @@ ul li.items-line-description {
 	padding: 0;
 }
 
+.btn-item:hover {
+	background-color: #E9D460;
+	color: #22313F;
+  font-family: 'Playfair Display', serif;
+	font-size: 1.2em;
+}
+
 .btn-item-picture {
 	background-color: #F4C698;
 	color: #000000;
@@ -104,12 +111,6 @@ ul li.items-line-description {
 	min-height: 200px;
 }
 
-.btn-item:hover {
-	background-color: #E9D460;
-	color: #22313F;
-  font-family: 'Playfair Display', serif;
-	font-size: 1.2em;
-}
 
 .add-item-file {
 	color: #DADFE1;
@@ -117,7 +118,7 @@ ul li.items-line-description {
 	text-align: left;
 	padding-top:1%;	
 	padding-bottom:5%;
-	font-size: 1em;
+	font-size: 0.9em;
 	margin-top: 2%;
 	margin-bottom: 0;
 }
@@ -139,6 +140,13 @@ ul li.items-line-description {
 
 .btn-item-pict {
 	width: 100%;
+	border: 1px solid #640002 !important;
+  padding: 0.3em;
+
+}
+
+.btn-item-pict:hover {
+
 }
 
 .modal-item-header {
@@ -198,10 +206,8 @@ ul li.items-line-description {
 }
 
 .price-item-picture {
-	display: block;
-	position: absolute;
-	margin-top: 5%;
-	margin-left: 80%;
+	padding-top: 65%;
+	padding-left: 65%;
 }
 
 .btn-modify-item-category-picture {

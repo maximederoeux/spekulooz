@@ -8,65 +8,8 @@
 
 
 <%= render 'menu' %>
+<%= render 'contact' %>
 
 
-<% unless @sub_account.address.blank? %>
-	<div class="contacts">
-		<%= render 'social_networks' %>
-		<%= render 'modify_contact' %>
 
-		<div class="intro-contact">
-			Nous contacter
-		</div>
-
-
-		<div class="row">
-			<div class="col-md-6">
-				<div class="address">
-				<span class="address-title"> Où nous trouver?</span><br>
-				<%= @sub_account.address %><br>
-				<%= @sub_account.zipcode %> <%= @sub_account.city %> <%= @sub_account.country %><br>
-				<span class="address-title">Comment nous contacter?</span><br>
-					<img src="/assets/mail.png" style="max-width:5%;margin-right:2%;"><%= @sub_account.email %><br>
-					<img src="/assets/old-phone.png" style="max-width:5%;margin-right:2%;"><%= @sub_account.phone %><br>
-					<img src="/assets/fax.png" style="max-width:5%;margin-right:2%;"><%= @sub_account.fax %><br>
-					<img src="/assets/smartphone.png" style="max-width:5%;margin-right:2%;"><%= @sub_account.mobile %><br>				
-				</div>			
-			</div>
-			<div class="col-md-6">
-
-			<%= render 'opening_times' %>
-			
-			</div>
-		</div>
-
-		<div class="social-networks">
-			<% if @sub_account.facebook.present? %>
-				<%= link_to image_tag("facebook-one.png"), "#{@sub_account.facebook}" %>
-			<% end %>
-			<% if @sub_account.twitter.present? %>
-				<%= link_to image_tag("twitter-one.png"), "#{@sub_account.twitter}" %>
-			<% end %>			
-			<% if @sub_account.instagram.present? %>
-				<%= link_to image_tag("instagram-one.png"), "#{@sub_account.instagram}" %>
-			<% end %>
-			<% if @sub_account.google.present? %>
-				<%= link_to image_tag("google-plus-one.png"), "#{@sub_account.google}" %>
-			<% end %>	
-			<% if @sub_account.snapchat.present? %>
-				<%= link_to image_tag("snapchat-one.png"), "#{@sub_account.snapchat}" %>
-			<% end %>	
-			<% if @sub_account.youtube.present? %>
-				<%= link_to image_tag("youtube-one.png"), "#{@sub_account.youtube}" %>
-			<% end %>	
-			<% if @sub_account.vimeo.present? %>
-				<%= link_to image_tag("vimeo-one.png"), "#{@sub_account.vimeo}" %>			
-			<% end %>			
-		</div>
-
-
-		
-		
-	</div>
-<% end %>
 

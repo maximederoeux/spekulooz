@@ -10,22 +10,30 @@
   <div class="modal-dialog modal-lg">
     <div class="modal-content">
 
-      <%= simple_form_for(item_category) do |f| %>
-        <%= f.error_notification %>
 
         <div class="modal-body">
+            <%= simple_form_for(item_category) do |f| %>
+              <%= f.error_notification %>
+                <div class="row">
 
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
-          </button>
+                  <div class="col-md-4">
+                    <%= f.collection_select :category_id, @categories, :id, :name, {prompt: true, include_blank: false}, class: "form-control styled-select" %>
+                    
+                  </div>
+                  <div class="col-md-4">
+                    <%= f.input :price, label: false, :placeholder => "Prix en €" %>
+                  </div>
+                  <div class="col-md-4">
+                    <%= f.hidden_field :food, :value => true %>
+                    <%= f.hidden_field :item_id, :value => @sub_account.items.last.id %>
 
-						<%= f.collection_select :category_id, @categories, :id, :name, {prompt: true, include_blank: false}, class: "form-control styled-select" %>
-					    <%= f.input :price %>
-
-			    		<%= f.submit t('word.update'), class: "btn btn-save-contact" %>
-      				<% end %>
-			    
-
-			  </div>	
+                    <%= f.submit t('word.update'), class: "btn btn-save-item" %>
+                  </div>                        
+                </div>
+              
+              <% end %>
+    
+        </div>  
 
 
 
