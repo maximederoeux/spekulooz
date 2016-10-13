@@ -14,6 +14,7 @@
  	font-family: 'Alice';
  	font-size: 4em;
  	padding-top: 7%;
+ 	padding-bottom: 5%;
  	color: #F7B733;
   text-shadow: 0 0 3px #640002;
   font-variant: small-caps;		
@@ -23,7 +24,7 @@
 	max-width: 100%;
 	text-align: center;
  	font-family: 'Alice';
- 	font-size: 2em;
+ 	font-size: 2.5em;
  	padding-top: 7%;
  	color: #640002;
   text-shadow: 0 0 3px #F7B733;
@@ -52,7 +53,6 @@ ul.items {
 
 ul li.items-line-detail {
   font-family: 'Playfair Display', serif;
-	font-size: 1em;
 	color: #000000;
 	font-size: 1.2em;
 	line-height: 1.2em;
@@ -68,7 +68,6 @@ ul li.items-line-description {
   font-family: 'Playfair Display', serif;
 	font-size: 1em;
 	color: #000000;
-	font-size: 1em;
 	line-height: 1em;
 }
 
@@ -92,6 +91,17 @@ ul li.items-line-description {
   font-family: 'Playfair Display', serif;
 	font-size: 1em;
 	margin-top:0;
+	padding: 0;
+}
+
+.btn-item-picture {
+	background-color: #F4C698;
+	color: #000000;
+  font-family: 'Playfair Display', serif;
+	font-size: 1em;
+	margin-top:0;
+	padding: 0;
+	min-height: 200px;
 }
 
 .btn-item:hover {
@@ -99,4 +109,110 @@ ul li.items-line-description {
 	color: #22313F;
   font-family: 'Playfair Display', serif;
 	font-size: 1.2em;
+}
+
+.add-item-file {
+	color: #DADFE1;
+	font-family: 'Playfair Display', sans-serif !important;
+	text-align: left;
+	padding-top:1%;	
+	padding-bottom:5%;
+	font-size: 1em;
+	margin-top: 2%;
+	margin-bottom: 0;
+}
+
+.btn-save-item {
+	background-color: #F4C698;
+	color: #000000;
+  font-family: 'Playfair Display', serif;
+	font-size: 1em;
+
+}
+
+.btn-save-item:hover {
+	background-color: #E9D460;
+	color: #22313F;
+  font-family: 'Playfair Display', serif;
+	font-size: 1.2em;
+}
+
+.btn-item-pict {
+	width: 100%;
+}
+
+.modal-item-header {
+	background-color: #640002;
+	color: #F5A630;
+	max-width: 100%;
+}
+
+.modal-item-body {
+	min-width: 100%;
+	position: absolute;
+}
+
+.modal-item-description {
+  font-family: 'Playfair Display', serif;
+	font-size: 0.8em;
+	color: #000000;
+	font-style: italic;
+	display: inline-block;
+	float: right;
+	position: relative;
+	max-width: 100%;
+	padding-left: 3%;
+}
+
+.modal-item-picture {
+	display: inline-block;
+	position: relative;
+
+}
+
+.modal-item-price {
+  font-family: 'Playfair Display', serif;
+	font-size: 1em;
+	float: right;
+	margin-right: 3%;
+	padding-top: 5%;
+
+}
+
+.col-float-left {
+	float: right;
+
+}
+
+.modify-item-picture {
+	display: block;
+	position: absolute;
+	margin-top: 5%;
+	margin-left: 5%;
+}
+
+.btn-modify-item-picture {
+	background-color:transparent !important;
+	margin-top:0;
+	padding: 0;
+}
+
+.price-item-picture {
+	display: block;
+	position: absolute;
+	margin-top: 5%;
+	margin-left: 80%;
+}
+
+.btn-modify-item-category-picture {
+	background-color:transparent !important;
+	margin-top:0;
+	padding: 0;
+}
+
+.modify-item-category-picture {
+	display: block;
+	position: absolute;
+	margin-top: 5%;
+	margin-left: 65%;
 }

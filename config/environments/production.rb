@@ -90,4 +90,7 @@ Rails.application.configure do
   config.action_mailer.default_url_options = { host: 'spekulooz.be' }
   config.action_controller.default_url_options = { host: 'spekulooz.be' }
 
+  # TIME ZONE
+  config.active_record.time_zone_aware_types = [:datetime, :time]
+
 end

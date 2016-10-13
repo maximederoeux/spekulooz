@@ -1,7 +1,7 @@
 <!-- Large modal -->
-<button type="button" class="btn btn-contact" data-toggle="modal" data-target="#new_starter_<%= @sub_account.id %>">
+<button type="button" class="btn btn-item" data-toggle="modal" data-target="#new_starter_<%= @sub_account.id %>">
 
-  Ajouter un plat
+  <img src="assets/add-pen.png" style="max-width:50%;">
 
 
 </button>
@@ -26,7 +26,14 @@
 					    <%= f.hidden_field :food, :value => true %>
 					    <%= f.hidden_field :account_id, :value => @sub_account.id %>
 
-			    		<%= f.submit t('word.update'), class: "btn btn-save-contact" %>
+					    <div class="add-file">
+				
+							  <%= f.input :picture, as: :file, class: "show-for-sr", label: false %>
+							</div>
+
+
+
+			    		<%= f.submit t('word.update'), class: "btn btn-save-item" %>
       				<% end %>
 			    
 

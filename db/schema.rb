@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161010091911) do
+ActiveRecord::Schema.define(version: 20161013120049) do
 
   create_table "accounts", force: :cascade do |t|
     t.string   "subdomain"
@@ -89,6 +89,7 @@ ActiveRecord::Schema.define(version: 20161010091911) do
     t.time     "sun_pm_end"
     t.boolean  "sun_am_closed"
     t.boolean  "sun_pm_closed"
+    t.integer  "menu_design"
   end
 
   create_table "categories", force: :cascade do |t|
@@ -112,8 +113,8 @@ ActiveRecord::Schema.define(version: 20161010091911) do
 
   create_table "items", force: :cascade do |t|
     t.string   "name"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at",           null: false
+    t.datetime "updated_at",           null: false
     t.string   "description"
     t.boolean  "active"
     t.date     "start_date"
@@ -121,6 +122,10 @@ ActiveRecord::Schema.define(version: 20161010091911) do
     t.boolean  "food"
     t.boolean  "drink"
     t.integer  "account_id"
+    t.string   "picture_file_name"
+    t.string   "picture_content_type"
+    t.integer  "picture_file_size"
+    t.datetime "picture_updated_at"
   end
 
   create_table "menu_categories", force: :cascade do |t|

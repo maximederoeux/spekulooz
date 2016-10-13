@@ -59,4 +59,8 @@ Rails.application.configure do
   # DEVISE
   config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
 
+
+  # TIME ZONE
+  config.active_record.time_zone_aware_types = [:datetime, :time]
+
 end

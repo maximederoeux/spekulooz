@@ -47,7 +47,7 @@ class ItemsController < ApplicationController
 
     respond_to do |format|
       if @item.update(item_params)
-        format.html { redirect_to @item, notice: 'Item was successfully updated.' }
+        format.html { redirect_to :back, notice: 'Item was successfully updated.' }
         format.json { render :show, status: :ok, location: @item }
       else
         format.html { render :edit }
@@ -77,6 +77,6 @@ class ItemsController < ApplicationController
       params.require(:item).permit(:name, :price, :account_id,
                                     :description, 
                                     :active, :start_date, :end_date,
-                                    :food,:drink)
+                                    :food,:drink, :picture)
     end
 end

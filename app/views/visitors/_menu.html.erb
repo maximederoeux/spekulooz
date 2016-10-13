@@ -4,26 +4,31 @@
 		<%= @sub_account.menus.is_main.last.name %> 
 	</div>
 
+<!-- IF USER SIGNED IN START -->
+
 	<% if user_signed_in? && @sub_account.user_id == current_user.id %>
 
 		<div class="new-item">
-			<%= render 'add_item' %><br>
+			
 
 			<% if @sub_account.items.last.item_categories.any? %>
 				<div class="row">
+					<div class="col-md-1">
+							<%= render 'add_item' %>
+					</div>
 					<div class="col-md-3">
 						<div class="new-item-detail">
 							Dernier plat ajouté
 						</div>
 					</div>
 					
-					<div class="col-md-3">				
+					<div class="col-md-4">				
 						<div class="new-item-detail">
 							<%= @sub_account.items.last.name %>
 						</div>					
 					</div>
 
-					<div class="col-md-3">				
+					<div class="col-md-2">				
 						<% @sub_account.items.last.item_categories.each do |item_category| %>
 
 							<div class="new-item-detail">
@@ -31,7 +36,7 @@
 							</div>
 						<% end %>
 					</div>		
-					<div class="col-md-3">				
+					<div class="col-md-2">				
 					<%= render 'add_item_category' %>
 					</div>							
 				</div>
@@ -62,60 +67,166 @@
 							</div>
 						<% end %>
 					</div>
-
-
 				<% end %>
-
-
 			</div>
 
 		<% end %>
 
-	<% @sub_account.menus.is_main.last.categories.each do |category| %>
+<!-- IF USER SIGNED IN START -->
 
-		<div class="category">
-			<%= category.name %> 
 
-		</div>
 
-		<ul class="items">
-			<% category.item_categories.each do |item_category| %>
-				<li class="items-line-detail">
-					<div class="row">
-						<div class="col-md-2">
-							<%= render 'modify_item', item: item_category.item %>
-						</div>
-						<div class="col-md-4">
-							<div class="item-detail"><%= item_category.item.name %></div>
-						</div>
-						<div class="col-md-2">
-							
-						</div>
-						<div class="col-md-2">
-							<div class="item-detail"><%= item_category.price %></div>
-						</div>
-						<div class="col-md-2">
-							<%= render 'modify_item_category', item_category: item_category %>
-						</div>
-					</div>
-					</li>
-					<li class="items-line-detail">
+<!-- MENU WITH PICTURES START -->
+
+	<% if @sub_account.menu_design == 1 %> 
+
+		<% @sub_account.menus.is_main.last.categories.each do |category| %>
+
+			<div class="category">
+				
+				<%= category.name %> 
+
+			</div>
+
+				<div class="container">
+					
 						<div class="row">
-							<div class="col-md-2">
-							</div>
-							<div class="col-md-6">
-								<div class="item-description"><%= item_category.item.description %></div>
-							</div>
-							<div class="col-md-4">
-							</div>							
+
+							<% category.item_categories.each do |item_category| %>
+
+								<div class="col-md-4 col-sm-6 col-xs-6">
+									<div class="thumbnail">
+
+									<% if user_signed_in? && @sub_account.user_id == current_user.id %>
+										<div class="modify-item-picture">
+											<%= render 'modify_item_with_picture', item: item_category.item %>
+										</div>
+										<div class="modify-item-category-picture">
+											<%= render 'modify_item_category_with_picture', item_category: item_category %>
+										</div>										
+									<% end %>
+
+									<div class="price-item-picture">
+											<%= item_category.price %>
+								
+									</div>
+
+										<!-- Modal -->
+										<button type="button" class="btn btn-block btn-item-picture" data-toggle="modal" data-target="#show_item_<%= item_category.id %>">
+
+										  <%= image_tag item_category.item.picture.url(:medium), class:"btn-item-pict" %>
+
+										</button>
+
+										<div class="modal fade" id="show_item_<%= item_category.id %>" tabindex="-1" role="dialog">
+										  <div class="modal-dialog" role="document">
+										    <div class="modal-content">
+
+										      <div class="modal-header modal-item-header">
+										        <h4 class="modal-title"><%= item_category.item.name %></h4>
+										      </div>
+
+										      <div class="modal-body modal-item-body">
+										      	<div class="row">
+										      		<div class="col-md-6">
+												      	<div class="modal-item-picture">
+												      		<%= image_tag item_category.item.picture.url(:medium) %>
+												      	</div>								      			
+										      		</div>
+										      		<div class="col-md-6">
+												        <div class="modal-item-description">
+											        		<%= item_category.item.description %><br>
+													        	<span class="modal-item-price">
+													        		<%= item_category.price %>
+													        	</span>				
+											        	</div>								      			
+										      		</div>
+										      	</div>										        					        							      	
+										      </div>
+										    </div><!-- /.modal-content -->
+										  </div><!-- /.modal-dialog -->
+										</div><!-- /.modal -->
+
+									</div>							
+								
+								</div>
+								
+							<% end %>
 						</div>
-					</li>
-
-														
-
+				</div>
 			<% end %>
-		</ul>
 
+<!-- MENU WITH PICTURES END -->
+
+
+	<!-- MENU WITHOUT PICTURES -->
+
+	<% else %>
+
+		<% @sub_account.menus.is_main.last.categories.each do |category| %>
+
+			<div class="category">
+				
+				<%= category.name %> 
+
+			</div>
+
+				<ul class="items">
+
+					<% category.item_categories.each do |item_category| %>
+
+						<li class="items-line-detail">
+							<div class="row">								
+								<div class="col-md-2">
+								<% if user_signed_in? && @sub_account.user_id == current_user.id %>
+									<%= render 'modify_item', item: item_category.item %>
+								<% end %>
+								</div>
+
+								<div class="col-md-4">
+									<div class="item-detail"><%= item_category.item.name %></div>
+								</div>
+
+								<div class="col-md-2">
+									
+								</div>
+
+								<div class="col-md-2">
+									<div class="item-detail">										
+										<%= item_category.price %>
+									</div>
+								</div>
+
+								<div class="col-md-2">
+									<% if user_signed_in? && @sub_account.user_id == current_user.id %>
+										<%= render 'modify_item_category', item_category: item_category %>
+									<% end %>
+								</div>
+							</div>
+
+						</li>
+
+						<li class="items-line-detail">
+							<div class="row">
+
+								<div class="col-md-2">
+								</div>
+
+								<div class="col-md-6">
+									<div class="item-description">
+									<%= item_category.item.description %></div>
+								</div>
+
+								<div class="col-md-4">
+								</div>	
+
+							</div>
+						</li>			
+					<% end %>
+				</ul>
+
+		<% end %>
+ 	
 	<% end %>
 
 
