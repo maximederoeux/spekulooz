@@ -44,3 +44,5 @@ fr:
   menu:
       show: "Afficher votre menu"
       hide: "Masquer votre menu"
+      without_pictures: "Retirer les photos"
+      big_pictures: "Afficher les photos"

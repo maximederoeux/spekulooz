@@ -45,5 +45,7 @@ en:
   menu:
       show: "Show your menu"
       hide: "Hide your menu"
+      without_pictures: "Remove pictures"
+      big_pictures: "Show big pictures"
 
 

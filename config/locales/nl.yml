@@ -44,3 +44,5 @@ nl:
   menu:
       show: "Toon uw menu"
       hide: "Maskeer uw menu"
+      without_pictures: "Fotos verwijderen"
+      big_pictures: "Grote fotos tonen"

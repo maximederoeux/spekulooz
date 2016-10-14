@@ -14,6 +14,12 @@
 		</div>
 	<% end %>
 
+	<% if user_signed_in? && @sub_account.user_id == current_user.id %>
+		<div class="modify-menu-design">
+			<%= render 'menu_main_with_pictures' %>
+		</div>
+	<% end %>
+
 
 	<div class="menu-title">
 
@@ -209,7 +215,7 @@
 												        <div class="modal-item-description">
 											        		<%= item_category.item.description %><br>
 													        	<span class="modal-item-price">
-													        		<%= item_category.price %>
+																			<%= number_to_currency(item_category.price, :unit => "€", :precision => 2) %>
 													        	</span>				
 											        	</div>								      			
 										      		</div>
@@ -265,7 +271,7 @@
 
 								<div class="col-md-2">
 									<div class="item-detail">										
-										<%= item_category.price %>
+										<%= number_to_currency(item_category.price, :unit => "€", :precision => 2) %>
 									</div>
 								</div>
 

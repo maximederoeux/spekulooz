@@ -13,7 +13,7 @@
 	text-align: center;
  	font-family: 'Alice';
  	font-size: 4em;
- 	padding-top: 7%;
+ 	padding-top: 10%;
  	padding-bottom: 5%;
  	color: #F7B733;
   text-shadow: 0 0 3px #640002;
@@ -234,15 +234,24 @@ ul li.items-line-description {
 }
 
 .hide-menu {
-	display: block;
-	position: absolute;
-	margin-left: 10%;
+	display: inline-block;
+	position: relative;
+	margin-left: 5%;
+	float: left;
 }
 
 .modify-menu {
-	display: block;
-	position: absolute;
-	margin-left: 50%;
+	display: inline-block;
+	position: relative;
+	float:left;
+	margin-left: 5%;
+}
+
+.modify-menu-design {
+	display: inline-block;
+	position: relative;
+	float: left;
+	margin-left: 5%;
 }
 
 .btn-hide {
@@ -252,6 +261,7 @@ ul li.items-line-description {
 	font-size: 1em;
 	margin-top:1em;
 	border: 1px solid #640002;
+	margin-right: 3%;
 }
 
 .btn-hide:hover {
@@ -292,3 +302,4 @@ ul li.items-line-description {
   font-family: 'Playfair Display', serif;
 	font-size: 1.2em;
 }
+
