@@ -1,47 +1,180 @@
 <% if @sub_account.bg_pict_number == 1 %>
 
-	<div 	class="homebg" 
-				style="background-image: url('/assets/bg-cheese.jpg');background-align: center;background-repeat: no-repeat;background-size: cover;text-align: center;opacity: 0.6;">
+	<div class="top">
+		<div class="top-bg" style="background-image: url('/assets/bg-cheese.jpg');background-align: center;background-repeat: no-repeat;background-size: cover;">
+			
+			<div class="top-text">
+				
+				<div class="top-modal">
+					<% if user_signed_in? && current_user.id == @sub_account.user_id %>
+	  
+	          <% if @sub_account.address.blank? %>
 
-	<div class="welcome">
-		<%= @sub_account.resto_name %>
+	            <!-- Large modal -->
+							<button type="button" class="btn btn-add-contact" data-toggle="modal" data-target="#modify_contact_<%= @sub_account.id %>">
+
+								Indiquez vos coordonnées
+
+							</button>
+
+	          <% else %>
+
+	            <% unless @sub_account.menus.is_main.first.active == true %>
+
+	              <!-- Large modal -->
+								<button type="button" class="btn btn-add-contact" data-toggle="modal" data-target="#show_main_menu">
+
+									Afficher le menu
+
+								</button>
+	            <% end %>            
+	          <% end %>         
+	        <% end %>					
+				</div>
+
+				<span class="top-resto-name"><%= @sub_account.resto_name %></span>
+								
+			</div>
+
+			<div class="top-filter">
+				
+			</div>
+		</div>
 	</div>
-
-</div>
 
 <% elsif @sub_account.bg_pict_number == 2 %>
 
-	<div 	class="homebg" 
-				style="background-image: url('/assets/bg-cocktails.jpg');background-align: center;background-repeat: no-repeat;background-size: cover;text-align: center;opacity: 0.6;">
+	<div class="top">
+		<div class="top-bg" style="background-image: url('/assets/bg-cocktails.jpg');background-align: center;background-repeat: no-repeat;background-size: cover;">
+			
+			<div class="top-text">
+				
+				<div class="top-modal">
+					<% if user_signed_in? && current_user.id == @sub_account.user_id %>
+	  
+	          <% if @sub_account.address.blank? %>
 
+	            <!-- Large modal -->
+							<button type="button" class="btn btn-add-contact" data-toggle="modal" data-target="#modify_contact_<%= @sub_account.id %>">
 
-	<div class="welcome">
-		<%= @sub_account.resto_name %>
+								Indiquez vos coordonnées
+
+							</button>
+
+	          <% else %>
+
+	            <% unless @sub_account.menus.is_main.first.active == true %>
+
+	              <!-- Large modal -->
+								<button type="button" class="btn btn-add-contact" data-toggle="modal" data-target="#show_main_menu">
+
+									Afficher le menu
+
+								</button>
+	            <% end %>            
+	          <% end %>         
+	        <% end %>					
+				</div>
+
+				<span class="top-resto-name"><%= @sub_account.resto_name %></span>
+								
+			</div>
+
+			<div class="top-filter">
+				
+			</div>
+		</div>
 	</div>
-
-</div>
 
 <% elsif @sub_account.bg_pict_number == 3 %>
 
-	<div class="homebg" style="background-image: url(image-path('assets/bg-spices.jpg'));
-	">
+	<div class="top">
+		<div class="top-bg" style="background-image: url('/assets/bg-spices.jpg');background-align: center;background-repeat: no-repeat;background-size: cover;">
+			
+			<div class="top-text">
+				
+				<div class="top-modal">
+					<% if user_signed_in? && current_user.id == @sub_account.user_id %>
+	  
+	          <% if @sub_account.address.blank? %>
 
-	<div class="welcome">
-		<%= @sub_account.resto_name %>
+	            <!-- Large modal -->
+							<button type="button" class="btn btn-add-contact" data-toggle="modal" data-target="#modify_contact_<%= @sub_account.id %>">
+
+								Indiquez vos coordonnées
+
+							</button>
+
+	          <% else %>
+
+	            <% unless @sub_account.menus.is_main.first.active == true %>
+
+	              <!-- Large modal -->
+								<button type="button" class="btn btn-add-contact" data-toggle="modal" data-target="#show_main_menu">
+
+									Afficher le menu
+
+								</button>
+	            <% end %>            
+	          <% end %>         
+	        <% end %>					
+				</div>
+
+				<span class="top-resto-name"><%= @sub_account.resto_name %></span>
+								
+			</div>
+
+			<div class="top-filter">
+				
+			</div>
+		</div>
 	</div>
 
-</div>
 
 <% elsif @sub_account.bg_pict_number == 4 %>
 
-	<div class="homebg" style="background-image: url('<%= @sub_account.bg_pict_one %>');
-	">
+	<div class="top">
+		<div class="top-bg" style="background-image: url('<%= @sub_account.bg_pict_one %>');background-align: center;background-repeat: no-repeat;background-size: cover;">
+			
+			<div class="top-text">
+				
+				<div class="top-modal">
+					<% if user_signed_in? && current_user.id == @sub_account.user_id %>
+	  
+	          <% if @sub_account.address.blank? %>
 
-	<div class="welcome">
-		<%= @sub_account.resto_name %>
+	            <!-- Large modal -->
+							<button type="button" class="btn btn-add-contact" data-toggle="modal" data-target="#modify_contact_<%= @sub_account.id %>">
+
+								Indiquez vos coordonnées
+
+							</button>
+
+	          <% else %>
+
+	            <% unless @sub_account.menus.is_main.first.active == true %>
+
+	              <!-- Large modal -->
+								<button type="button" class="btn btn-add-contact" data-toggle="modal" data-target="#show_main_menu">
+
+									Afficher le menu
+
+								</button>
+	            <% end %>            
+	          <% end %>         
+	        <% end %>					
+				</div>
+
+				<span class="top-resto-name"><%= @sub_account.resto_name %></span>
+								
+			</div>
+
+			<div class="top-filter">
+				
+			</div>
+		</div>
 	</div>
 
-</div>
 
 <% end %>
 
@@ -51,8 +184,91 @@
 
 <% end %>
 
-<%= render 'contact' %>
+	<%= render 'contact' %>
 
 
 
 
+<!-- MODAL CONTACT START -->
+
+<div class="modal fade" id="modify_contact_<%= @sub_account.id %>" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+
+      <%= simple_form_for(@sub_account) do |f| %>
+        <%= f.error_notification %>
+
+        <div class="modal-body">
+
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
+          </button>
+
+			    <div class="row">
+			    	<div class="col-md-12">
+			      <%= f.input :resto_name, label: false, :placeholder => t('account.resto_name') %>			    		
+			    	</div>
+			    	<div class="col-md-6">
+			    		<%= f.input :address, label: false, :placeholder => t('account.address') %>
+					   	<%= f.input :city, label: false, :placeholder => t('account.city') %>
+					    <div class="row">
+					    	<div class="col-md-6">							    		
+					    		<%= f.input :zipcode, label: false, :placeholder => t('account.zipcode') %>
+					    	</div>
+					    	<div class="col-md-6">
+					    		<%= f.select :country, @countries, {prompt: false}, {class: "form-country more-padding"} %>
+					    	</div>
+					    </div>
+					  </div>
+
+			    	<div class="col-md-6">
+			    		<%= f.input :phone, label: false, :placeholder => t('account.phone') %>
+
+			    		<%= f.input :fax, label: false, :placeholder => t('account.fax') %>
+
+			    		<%= f.input :mobile, label: false, :placeholder => t('account.mobile') %>
+	
+			    		<%= f.input :email, label: false, :placeholder => t('account.email') %>
+			    	</div>
+
+			    		<% if @sub_account.active == nil %>
+
+			    			<%= f.hidden_field :active, :value => true %>
+
+			    		<% end %>
+
+
+			    		<%= f.submit t('word.update'), class: "btn btn-save-contact" %>
+      				<% end %>
+			    	</div>
+			  </div>	
+  	</div>
+	</div>
+</div>
+
+<!-- MODAL CONTACT END -->
+
+<!-- MODAL MENU START -->
+
+<div class="modal fade" id="show_main_menu" tabindex="-1" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      
+
+        <div class="modal-body">
+            <%= simple_form_for(@sub_account.menus.is_main.first) do |f| %>
+              <%= f.error_notification %>
+
+                    <%= f.hidden_field :active, :value => true %>
+
+                    <%= f.submit t('menu.show'), class: "btn btn-block btn-save-item" %>
+
+					    
+      				<% end %>
+		
+			  </div>	
+  	</div>
+	</div>
+</div>
+
+<!-- MODAL MENU END -->

@@ -1,3 +1,5 @@
+
+
 <div class="landing">
 	<div class="row">
 		<div class="col-md-6">
@@ -8,39 +10,42 @@
 
 		</div>
 		<div class="col-md-6">
+
 			<% if @user.accounts.count == 0 %>
-				<h2>Vous n'avez pas encore créé de restaurant</h2>
+				<div class="accounts-title">Vous n'avez pas encore créé de site pour votre restaurant</div>
 			<% elsif @user.accounts.count == 1 %>
-				<h1>Votre restaurants</h1>
+				<div class="accounts-title">Votre site</div>
 			<% elsif @user.accounts.count > 1 %>
-				<h1>Vos restaurant</h1>
+				<div class="accounts-title">Vos sites</div>
 			<% end %>
 
-			<div class="new-account">
-				<%= simple_form_for (@new_account) do |f| %>
-					<%= f.input :resto_name, label: false %>
-					<%= f.hidden_field :user_id, :value => current_user.id %>
-					<%= f.submit "Créer", class: "btn btn-block btn-new-account form-inline" %>
-				<% end %>
-			</div>
-
-			<div class="new-account">
+			<div class="your-accounts">
 
 				<% if Rails.env.development? %>
 
 					<% @user.accounts.each do |account| %>
-						<%= link_to "#{account.resto_name}", "#{account.validated_url_dev}", class: "btn-block btn-url" %>
+						<%= link_to "#{account.resto_name}", "#{account.validated_url_dev}", class: "btn btn-block btn-new-account" %>
 					<% end %>
 
 				<% else %>
 
 					<% @user.accounts.each do |account| %>
-						<%= link_to "#{account.resto_name}", "#{account.validated_url_prod}", class: "btn-block btn-url" %>
+						<%= link_to "#{account.resto_name}", "#{account.validated_url_prod}", class: "btn btn-block btn-new-account" %>
 					<% end %>
 
 				<% end %>
 
 
+			</div>
+
+			<div class="accounts-title">Créer un nouveau site</div>
+
+			<div class="new-account">
+				<%= simple_form_for (@new_account) do |f| %>
+					<%= f.input :resto_name, label: false %>
+					<%= f.hidden_field :user_id, :value => current_user.id %>
+					<%= f.submit "Créer", class: "btn btn-block btn-new-account" %>
+				<% end %>
 			</div>			
 
 

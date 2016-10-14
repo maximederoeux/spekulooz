@@ -1,3 +1,57 @@
+/* testing filter on image */
+
+.top {
+	position: relative;
+}
+
+.top-bg {
+	z-index: 0;
+	height: 100vh;
+}
+
+.top-filter {
+	height: 100vh;
+	z-index: 1;
+	background-color: black;
+	background-size: cover;
+	opacity: 0.8;
+}
+
+.top-text {
+	position: absolute;
+	top: 0;
+  bottom: 0;
+  left:0;
+  right:0;
+  margin: auto;
+  width:50%;
+  height: 50%;
+  text-align: center;
+
+	z-index: 2;
+
+}
+
+.top-resto-name {
+	font-size: 6em ;
+ 	font-family: 'Alice', serif;
+	color: #F7B733;
+  line-height: 1em;
+  text-shadow: 0 3px 6px #640002;
+  font-weight: 700;	
+}
+
+.top-modal {
+	z-index: 3;	
+}
+/* end of test */
+
+
+
+
+
+
+
 .homebg {
 	margin-top: 0px;
 	margin-bottom: 0;
@@ -45,6 +99,23 @@
 .add-contact-info {
 	padding-top: 0;
 	padding-left: 3%;
+}
+
+
+.btn-add-contact {
+	background-color: #F7B733;
+	color: #640002;
+  font-family: 'Playfair Display', serif;
+	font-size: 2em !important;
+	margin-bottom: 5%;
+	border: 1px solid #640002;
+}
+
+.btn-add-contact:hover {
+	background-color: #E9D460;
+	color: #22313F;
+  font-family: 'Playfair Display', serif;
+	font-size: 2.1em;
 }
 
 

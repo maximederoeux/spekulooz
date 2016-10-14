@@ -1,51 +1,14 @@
-<p id="notice"><%= notice %></p>
+<% @accounts.each do |account| %>
 
-<h1>Menus</h1>
+  <%= account.resto_name %><br>
 
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Description</th>
-      <th>Start date</th>
-      <th>End date</th>
-      <th>Active</th>
-      <th>Food</th>
-      <th>Drink</th>
-      <th>Period quantity</th>
-      <th>Period</th>
-      <th>Promote</th>
-      <th>Price</th>
-      <th>Status</th>
-      <th>Account</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
 
-  <tbody>
-    <% @menus.each do |menu| %>
-      <tr>
-        <td><%= menu.name %></td>
-        <td><%= menu.description %></td>
-        <td><%= menu.start_date %></td>
-        <td><%= menu.end_date %></td>
-        <td><%= menu.active %></td>
-        <td><%= menu.food %></td>
-        <td><%= menu.drink %></td>
-        <td><%= menu.period_quantity %></td>
-        <td><%= menu.period %></td>
-        <td><%= menu.promote %></td>
-        <td><%= menu.price %></td>
-        <td><%= menu.status %></td>
-        <td><%= menu.account_id %></td>
-        <td><%= link_to 'Show', menu %></td>
-        <td><%= link_to 'Edit', edit_menu_path(menu) %></td>
-        <td><%= link_to 'Destroy', menu, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+    <% account.menus.each do |menu| %>
+
+      <%= menu.name %>
+      <%= menu.menu_categories.count %><br>
+
     <% end %>
-  </tbody>
-</table>
 
-<br>
+<% end %>
 
-<%= link_to 'New Menu', new_menu_path %>

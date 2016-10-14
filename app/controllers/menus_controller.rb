@@ -1,10 +1,12 @@
 class MenusController < ApplicationController
   before_action :set_menu, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!
 
   # GET /menus
   # GET /menus.json
   def index
     @menus = Menu.all
+    @accounts = current_user.accounts
   end
 
   # GET /menus/1

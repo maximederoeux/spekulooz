@@ -2,6 +2,7 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
   before_action :set_sub_account
   before_action :set_locale
+  before_action :set_root_page
 
 
   def default_url_options
@@ -10,6 +11,14 @@ class ApplicationController < ActionController::Base
     else  
       {}
     end
+  end
+
+  def set_root_page
+    if Rails.env.development?
+      @root_page = "http://www.lvh.me:3000"
+    else
+      @root_page = "http://www.spekulooz.be"
+    end  
   end
 
   def set_sub_account

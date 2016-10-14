@@ -129,12 +129,28 @@ body {
 
 }
 
+.accounts-title {
+  font-size: 2em;
+  line-height: 1.1em;
+  position: relative;
+  font-family: 'Alegreya', serif;
+  display: block;
+  text-align: center;
+  margin-bottom: 3%;
+  margin-top: 5%;
+}
+
 .new-account {
   max-width: 100%;
-  margin-top: 10%;
-  display: block;
-  position: relative;
+  margin-top: 5%;
+  margin-bottom: 5%;
 
+}
+
+.your-accounts {
+  max-width: 100%;
+  margin-top: 5%;
+  margin-bottom: 5%;
 }
 
 .btn-new-account {
@@ -142,10 +158,11 @@ body {
   font-family: 'Alegreya', serif;
   text-align: center;
   color: #DADFE1;
-  font-size: 1.6em;
+  font-size: 1.4em;
   font-weight: 500;
-  max-width: 50%;
-  float:right;
+  max-width: 100%;
+  margin-top: 5%;
+  margin-bottom: 5%;
 }
 
 /* USER SHOW END */

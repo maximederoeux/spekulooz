@@ -2,7 +2,8 @@
 
   <nav>
     <ul class="spekulooz-page">
-      <li class="spekulooz-left"><%= link_to "Spekulooz", root_path %></li>
+
+      <li class="spekulooz-left"><%= link_to "Spekulooz", @root_page %></li>
       <li class="spekulooz-right"><%= link_to_unless_current "EN", locale: "en" %></li>
       <li class="spekulooz-right"><%= link_to_unless_current "FR", locale: "fr" %></li>
       <li class="spekulooz-right"><%= link_to_unless_current "NL", locale: "nl" %></li>
@@ -28,25 +29,6 @@
     <li class="pull-right"><%= link_to_unless_current "FR", locale: "fr" %></li>
     <li class="pull-right"><%= link_to_unless_current "NL", locale: "nl" %></li>
       <% if user_signed_in? %>
-
-        <% if user_signed_in? && current_user.id == @sub_account.user_id %>
-  
-          <% if @sub_account.address.blank? %>
-
-            <%= render 'visitors/contact_modify' %>
-
-          <% else %>
-
-            <% unless @sub_account.menus.is_main.first.active == true %>
-
-              <%= render 'visitors/menu_main_show' %>
-
-            <% end %>
-            
-          <% end %>
-          
-
-        <% end %>
 
 
         <li class="pull-right"><%= link_to "Réservation", root_path %></li>
