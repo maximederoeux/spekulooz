@@ -20,6 +20,16 @@
   font-variant: small-caps;		
 }
 
+.menu-description {
+	max-width: 100%;
+	text-align: center;
+ 	font-family: 'Alice';
+ 	font-size: 1.5em;
+ 	padding-top: 0;
+ 	color: #640002;
+  padding-bottom: 5%;
+}
+
 .category {
 	max-width: 100%;
 	text-align: center;
@@ -221,4 +231,64 @@ ul li.items-line-description {
 	position: absolute;
 	margin-top: 5%;
 	margin-left: 65%;
+}
+
+.hide-menu {
+	display: block;
+	position: absolute;
+	margin-left: 10%;
+}
+
+.modify-menu {
+	display: block;
+	position: absolute;
+	margin-left: 50%;
+}
+
+.btn-hide {
+	background-color: #A68053;
+	color: #000000;
+  font-family: 'Playfair Display', serif;
+	font-size: 1em;
+	margin-top:1em;
+	border: 1px solid #640002;
+}
+
+.btn-hide:hover {
+	background-color: #E9D460;
+	color: #22313F;
+  font-family: 'Playfair Display', serif;
+	font-size: 1.2em;
+}
+
+.btn-save-menu {
+	background-color: #F4C698;
+	color: #000000;
+  font-family: 'Playfair Display', serif;
+	font-size: 1em;
+	margin-top: 6em;
+
+}
+
+.btn-save-item:hover {
+	background-color: #E9D460;
+	color: #22313F;
+  font-family: 'Playfair Display', serif;
+	font-size: 1.2em;
+}
+
+.btn-item-category {
+	background-color: #A68053;
+	color: #000000;
+  font-family: 'Playfair Display', serif;
+	font-size: 1em;
+	margin-top:0;
+	border: 1px solid #640002;
+}
+
+.btn-item-category:hover {
+	background-color: #E9D460;
+	color: #22313F;
+  font-family: 'Playfair Display', serif;
+	font-size: 1.2em;
 }

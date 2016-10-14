@@ -1,0 +1,29 @@
+<!-- Large modal -->
+<button type="button" class="btn btn-hide" data-toggle="modal" data-target="#hide_main_menu">
+
+  Masquer le menu
+
+
+</button>
+
+<div class="modal fade" id="hide_main_menu" tabindex="-1" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      
+
+        <div class="modal-body">
+            <%= simple_form_for(@sub_account.menus.is_main.first) do |f| %>
+              <%= f.error_notification %>
+
+                    <%= f.hidden_field :active, :value => false %>
+
+                    <%= f.submit t('menu.hide'), class: "btn btn-block btn-save-item" %>
+
+					    
+      				<% end %>
+		
+			  </div>	
+  	</div>
+	</div>
+</div>

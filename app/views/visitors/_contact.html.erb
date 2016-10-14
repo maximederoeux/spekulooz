@@ -10,7 +10,7 @@
 			<div class="col-md-6">
 
 				<% if user_signed_in? && @sub_account.user_id == current_user.id %>
-					<%= render 'modify_contact' %>
+					<%= render 'contact_modify' %>
 				<% end %>
 				
 				<div class="address">
@@ -32,7 +32,7 @@
 		</div>
 
 		<% if user_signed_in? && @sub_account.user_id == current_user.id %>
-			<%= render 'social_networks' %>
+			<%= render 'contact_social_networks' %>
 		<% end %>
 
 		<div class="social-networks">

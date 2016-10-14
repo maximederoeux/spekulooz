@@ -35,10 +35,14 @@
 
             <%= render 'visitors/modify_contact' %>
 
-          <% elsif @sub_account.facebook.blank? %>
+          <% else %>
 
-            <%= render 'visitors/show_main_menu' %>
+            <% unless @sub_account.menus.is_main.first.active == true %>
 
+              <%= render 'visitors/menu_main_show' %>
+
+            <% end %>
+            
           <% end %>
           
 

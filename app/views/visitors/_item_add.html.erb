@@ -41,6 +41,8 @@
 
                     </div>
                     <div class="col-md-6">
+                      <%= f.hidden_field :account_id, :value => @sub_account.id %>
+                      <%= f.hidden_field :food, :value => true %>
                       <%= f.submit t('word.update'), class: "btn btn-save-item" %>
                     </div>
                   </div>   

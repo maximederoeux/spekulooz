@@ -1,0 +1,41 @@
+<!-- Large modal -->
+<button type="button" class="btn btn-hide" data-toggle="modal" data-target="#modify_main_menu">
+
+  Modifier le menu
+
+
+</button>
+
+<div class="modal fade" id="modify_main_menu" tabindex="-1" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      
+
+        <div class="modal-body">
+            <%= simple_form_for(@sub_account.menus.is_main.first) do |f| %>
+              <%= f.error_notification %>
+
+						    <%= f.input :name %>
+						    <%= f.input :description %>
+						    <div class="row">
+						    	<div class="col-md-8">
+						    		<%= f.input :start_date %>
+						    		<%= f.input :end_date %>
+						    	</div>
+						    	<div class="col-md-4">
+						    		<%= f.submit t('word.update'), class: "btn btn-block btn-item" %>
+						    	</div>						    	
+						    </div>
+						    
+						    
+
+                
+
+					    
+      				<% end %>
+		
+			  </div>	
+  	</div>
+	</div>
+</div>

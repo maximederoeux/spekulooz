@@ -44,5 +44,6 @@ en:
     vimeo: "Vimeo account"
   menu:
       show: "Show your menu"
+      hide: "Hide your menu"
 
 

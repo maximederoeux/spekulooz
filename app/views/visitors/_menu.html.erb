@@ -2,25 +2,58 @@
 
 <div class="main-menu">
 
+	<% if user_signed_in? && @sub_account.user_id == current_user.id %>
+		<div class="hide-menu">
+			<%= render 'menu_main_hide' %>
+		</div>
+	<% end %>
+
+	<% if user_signed_in? && @sub_account.user_id == current_user.id %>
+		<div class="modify-menu">
+			<%= render 'menu_main_modify' %>
+		</div>
+	<% end %>
+
+
 	<div class="menu-title">
 
-		<%= @sub_account.menus.is_main.last.name %> 
+		<%= @sub_account.menus.is_main.first.name %>
+
 	</div>
+
+	<% if @sub_account.menus.is_main.first.description.present? %>
+
+		<div class="menu-description">
+
+			<%= @sub_account.menus.is_main.first.description %>
+
+		</div>
+
+	<% end %>
+
+		
+
 
 <!-- IF USER SIGNED IN START -->
 
-	<% if user_signed_in? && @sub_account.user_id == current_user.id %>
+	<% if user_signed_in? && @sub_account.user_id == current_user.id %> 
 
 		<div class="new-item">
-			
-			<% if @sub_account.items.any? %>
 
-				<% if @sub_account.items.last.item_categories.any? %>
+<!-- IF ITEMS ANY? START -->		
+
+			<% if @sub_account.items.any? %> 
+
+<!-- IF ITEMS CATEGORIES ANY? START -->
+
+				<% if @sub_account.items.last.item_categories.any? %> 
 
 					<div class="row">
+
 						<div class="col-md-1">
-								<%= render 'add_item' %>
+								<%= render 'item_add' %>
 						</div>
+
 						<div class="col-md-3">
 							<div class="new-item-detail">
 								Dernier plat ajouté
@@ -33,18 +66,25 @@
 							</div>					
 						</div>
 
-						<div class="col-md-2">				
+						<div class="col-md-2">
+
 							<% @sub_account.items.last.item_categories.each do |item_category| %>
 
 								<div class="new-item-detail">
 									<%= item_category.category.name %><br> 
 								</div>
+
 							<% end %>
+
 						</div>		
-						<div class="col-md-2">				
-						<%= render 'add_item_category' %>
+						<div class="col-md-2">
+
+							<%= render 'itemcategory_add' %>
+
 						</div>							
 					</div>
+
+<!-- ELSE ITEMS CATEGORIES ANY? START -->
 
 				<% else %>
 
@@ -68,17 +108,48 @@
 									<%= f.hidden_field :item_id, :value => @sub_account.items.last.id %>
 									<%= f.hidden_field :food, :value => true %>
 
-									<%= f.submit t("word.update"), class: "btn btn-contact" %>
+									<%= f.submit t("word.update"), class: "btn btn-item-category" %>
 								</div>
 							<% end %>
 						</div>
-					<% end %>
-				<% end %>
+					<% end %> <!-- IF ITEMS CATEGORIES ANY? END -->
+
+<!-- IF ITEMS ANY? START -->
+
+				<% else %>
+
+					<div class="row">
+
+						<div class="col-md-1">
+								<%= render 'item_add' %>
+						</div>
+
+
+
+						<div class="col-md-3">
+							<div class="new-item-detail">
+								Ajouter un plat
+							</div>
+						</div>
+						
+						<div class="col-md-4">				
+				
+						</div>
+
+						<div class="col-md-2">
+
+
+						</div>		
+						<div class="col-md-2">
+
+						</div>							
+					</div>
+				<% end %> <!-- IF ITEMS ANY? END -->
 			</div>
 
 		<% end %>
 
-<!-- IF USER SIGNED IN START -->
+<!-- IF USER SIGNED IN END -->
 
 
 
@@ -105,10 +176,10 @@
 
 									<% if user_signed_in? && @sub_account.user_id == current_user.id %>
 										<div class="modify-item-picture">
-											<%= render 'modify_item_with_picture', item: item_category.item %>
+											<%= render 'item_with_picture_modify', item: item_category.item %>
 										</div>
 										<div class="modify-item-category-picture">
-											<%= render 'modify_item_category_with_picture', item_category: item_category %>
+											<%= render 'itemcategory_with_picture_modify', item_category: item_category %>
 										</div>										
 									<% end %>
 
@@ -180,7 +251,7 @@
 							<div class="row">								
 								<div class="col-md-2">
 								<% if user_signed_in? && @sub_account.user_id == current_user.id %>
-									<%= render 'modify_item', item: item_category.item %>
+									<%= render 'item_modify', item: item_category.item %>
 								<% end %>
 								</div>
 
@@ -200,7 +271,7 @@
 
 								<div class="col-md-2">
 									<% if user_signed_in? && @sub_account.user_id == current_user.id %>
-										<%= render 'modify_item_category', item_category: item_category %>
+										<%= render 'itemcategory_modify', item_category: item_category %>
 									<% end %>
 								</div>
 							</div>

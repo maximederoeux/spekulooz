@@ -43,3 +43,4 @@ fr:
     vimeo: "Vimeo"
   menu:
       show: "Afficher votre menu"
+      hide: "Masquer votre menu"
