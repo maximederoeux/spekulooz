@@ -1,6 +1,9 @@
+<% if @sub_accounts.menus.any? %>
+
 <div class="main-menu">
 
 	<div class="menu-title">
+
 		<%= @sub_account.menus.is_main.last.name %> 
 	</div>
 
@@ -226,3 +229,5 @@
 
 
 </div>
+
+<% end %>
