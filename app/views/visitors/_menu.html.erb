@@ -13,65 +13,66 @@
 
 		<div class="new-item">
 			
-		<% if @sub_accounts.items.any? %>
+			<% if @sub_accounts.items.any? %>
 
-			<% if @sub_account.items.last.item_categories.any? %>
+				<% if @sub_account.items.last.item_categories.any? %>
 
-				<div class="row">
-					<div class="col-md-1">
-							<%= render 'add_item' %>
-					</div>
-					<div class="col-md-3">
-						<div class="new-item-detail">
-							Dernier plat ajouté
+					<div class="row">
+						<div class="col-md-1">
+								<%= render 'add_item' %>
 						</div>
-					</div>
-					
-					<div class="col-md-4">				
-						<div class="new-item-detail">
-							<%= @sub_account.items.last.name %>
-						</div>					
-					</div>
-
-					<div class="col-md-2">				
-						<% @sub_account.items.last.item_categories.each do |item_category| %>
-
+						<div class="col-md-3">
 							<div class="new-item-detail">
-								<%= item_category.category.name %><br> 
+								Dernier plat ajouté
 							</div>
-						<% end %>
-					</div>		
-					<div class="col-md-2">				
-					<%= render 'add_item_category' %>
-					</div>							
-				</div>
+						</div>
+						
+						<div class="col-md-4">				
+							<div class="new-item-detail">
+								<%= @sub_account.items.last.name %>
+							</div>					
+						</div>
 
-			<% else %>
+						<div class="col-md-2">				
+							<% @sub_account.items.last.item_categories.each do |item_category| %>
 
-				<div class="row">
-					<div class="col-md-3">
-						<div class="new-item-detail">
-							<%= @sub_account.items.last.name %>
-						</div> 
+								<div class="new-item-detail">
+									<%= item_category.category.name %><br> 
+								</div>
+							<% end %>
+						</div>		
+						<div class="col-md-2">				
+						<%= render 'add_item_category' %>
+						</div>							
 					</div>
 
-						<%= simple_form_for(@new_item_category) do |f| %>
+				<% else %>
 
-							<div class="col-md-3">
-								<%= f.collection_select :category_id, @categories, :id, :name, {prompt: true, include_blank: false}, class: "form-control styled-select" %>
-							</div>
-							<div class="col-md-3">
-								<%= f.input :price, label: false %>
-							</div>
+					<div class="row">
+						<div class="col-md-3">
+							<div class="new-item-detail">
+								<%= @sub_account.items.last.name %>
+							</div> 
+						</div>
 
-							<div class="col-md-3">
-								<%= f.hidden_field :item_id, :value => @sub_account.items.last.id %>
-								<%= f.hidden_field :food, :value => true %>
+							<%= simple_form_for(@new_item_category) do |f| %>
 
-								<%= f.submit t("word.update"), class: "btn btn-contact" %>
-							</div>
-						<% end %>
-					</div>
+								<div class="col-md-3">
+									<%= f.collection_select :category_id, @categories, :id, :name, {prompt: true, include_blank: false}, class: "form-control styled-select" %>
+								</div>
+								<div class="col-md-3">
+									<%= f.input :price, label: false %>
+								</div>
+
+								<div class="col-md-3">
+									<%= f.hidden_field :item_id, :value => @sub_account.items.last.id %>
+									<%= f.hidden_field :food, :value => true %>
+
+									<%= f.submit t("word.update"), class: "btn btn-contact" %>
+								</div>
+							<% end %>
+						</div>
+					<% end %>
 				<% end %>
 			</div>
 
