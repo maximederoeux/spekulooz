@@ -13,8 +13,10 @@
 
 		<div class="new-item">
 			
+		<% if @sub_accounts.items.any? %>
 
 			<% if @sub_account.items.last.item_categories.any? %>
+
 				<div class="row">
 					<div class="col-md-1">
 							<%= render 'add_item' %>
