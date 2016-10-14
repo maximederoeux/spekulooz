@@ -1,4 +1,7 @@
-<div class="homebg">
+<% if @sub_account.bg_pict_number == 1 %>
+
+	<div 	class="homebg" 
+				style="background-image: url('/assets/bg-cheese.jpg');background-align: center;background-repeat: no-repeat;background-size: cover;text-align: center;opacity: 0.6;">
 
 	<div class="welcome">
 		<%= @sub_account.resto_name %>
@@ -6,8 +9,48 @@
 
 </div>
 
+<% elsif @sub_account.bg_pict_number == 2 %>
 
-<%= render 'menu' %>
+	<div 	class="homebg" 
+				style="background-image: url('/assets/bg-cocktails.jpg');background-align: center;background-repeat: no-repeat;background-size: cover;text-align: center;opacity: 0.6;">
+
+
+	<div class="welcome">
+		<%= @sub_account.resto_name %>
+	</div>
+
+</div>
+
+<% elsif @sub_account.bg_pict_number == 3 %>
+
+	<div class="homebg" style="background-image: url(image-path('assets/bg-spices.jpg'));
+	">
+
+	<div class="welcome">
+		<%= @sub_account.resto_name %>
+	</div>
+
+</div>
+
+<% elsif @sub_account.bg_pict_number == 4 %>
+
+	<div class="homebg" style="background-image: url('<%= @sub_account.bg_pict_one %>');
+	">
+
+	<div class="welcome">
+		<%= @sub_account.resto_name %>
+	</div>
+
+</div>
+
+<% end %>
+
+<% if @main_menu.active == true %>
+
+	<%= render 'menu' %>
+
+<% end %>
+
 <%= render 'contact' %>
 
 

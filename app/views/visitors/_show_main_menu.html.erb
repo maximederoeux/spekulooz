@@ -1,0 +1,29 @@
+<!-- Large modal -->
+<button type="button" class="btn btn-contact" data-toggle="modal" data-target="#show_main_menu">
+
+  Afficher le menu
+
+
+</button>
+
+<div class="modal fade" id="show_main_menu" tabindex="-1" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      
+
+        <div class="modal-body">
+            <%= simple_form_for(@sub_account.menus.is_main.first) do |f| %>
+              <%= f.error_notification %>
+
+                    <%= f.hidden_field :active, :value => true %>
+
+                    <%= f.submit t('menu.show'), class: "btn btn-block btn-save-item" %>
+
+					    
+      				<% end %>
+		
+			  </div>	
+  	</div>
+	</div>
+</div>

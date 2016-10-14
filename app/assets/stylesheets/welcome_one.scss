@@ -1,34 +1,27 @@
 .homebg {
 	margin-top: 0px;
 	margin-bottom: 0;
-	padding-top: 10%;
+	padding-top: 3%;
   padding-bottom: 370px;
 	color: #f8f8f8; 
-	background-image: url(image-path('bg-spices.jpg'));
 	height: 100vh;
-	background-align: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  text-align: center;
-  opacity: 0.6;
 	z-index: -1;
-	position: relative;
 	opacity: 1.5;
 }
 
 
 .welcome {
-	margin:0;
-	padding-top: 5%;
-	padding-left: 25%;
 	font-size: 6em ;
-	position: absolute;
  	font-family: 'Alice', serif;
 	color: #F7B733;
-  padding-top: 20px;
-  line-height: 60px;
+  padding-top: 10%;
+  line-height: 1em;
   text-shadow: 0 3px 6px #640002;
   font-weight: 700;
+  max-width: 100%  !important;
+  text-align: center;
+  position: relative;
+
 }
 
 
@@ -49,5 +42,9 @@
 	padding-right: 5px;
 }
 
+.add-contact-info {
+	padding-top: 0;
+	padding-left: 3%;
+}
 
 

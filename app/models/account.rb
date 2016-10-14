@@ -2,11 +2,14 @@ class Account < ApplicationRecord
 	belongs_to :user
 	has_many :menus
 	has_many :items
+	has_many :categories
 
 	after_create :generate_subdomain_1
 	after_create :generate_subdomain_2
 	after_create :generate_subdomain_3
 	after_create :update_subdomain
+
+	after_create :generate_main_menu
 
   has_attached_file :bg_pict_one, styles: { medium: "300x300>", thumb: "100x100>" }, default_url: "/images/:style/missing.png"
   validates_attachment_content_type :bg_pict_one, content_type: /\Aimage\/.*\z/
@@ -25,7 +28,11 @@ class Account < ApplicationRecord
 
 	def availability_subdomain_1
 		if Account.where(:subdomain => generate_subdomain_1).any?
-			true
+			if Account.where(:subdomain => generate_subdomain_1).first.id == id
+				false
+			else
+				true
+			end
 		else
 			false
 		end
@@ -33,7 +40,11 @@ class Account < ApplicationRecord
 
 	def availability_subdomain_2
 		if Account.where(:subdomain => generate_subdomain_2).any?
-			true
+			if Account.where(:subdomain => generate_subdomain_2).first.id == id
+				true
+			else
+				false
+			end
 		else
 			false
 		end
@@ -41,7 +52,11 @@ class Account < ApplicationRecord
 
 	def availability_subdomain_3
 		if Account.where(:subdomain => generate_subdomain_3).any?
-			true
+			if Account.where(:subdomain => generate_subdomain_3).first.id == id
+				true
+			else
+				false
+			end
 		else
 			false
 		end
@@ -88,13 +103,16 @@ class Account < ApplicationRecord
 	end
 
 	def ready_for_last_step
-		if ready_to_start_design == true && open_check == true && bg_pict_select == true
+		if ready_to_start_design == true && bg_pict_select == true
 			true
 		else
 			false
 		end
 	end
 
+	def generate_main_menu
+		Menu.create(:name => "Menu", :account_id => id, :food => true, :status => "main")
+	end
 
 	COUNTRIES = ["BE", "FR", "LU", "NL"]
 

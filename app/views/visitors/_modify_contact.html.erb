@@ -52,6 +52,14 @@
 	
 			    		<%= f.input :email, label: false, :placeholder => t('account.email') %>
 			    	</div>
+
+			    		<% if @sub_account.active == nil %>
+
+			    			<%= f.hidden_field :active, :value => true %>
+
+			    		<% end %>
+
+
 			    		<%= f.submit t('word.update'), class: "btn btn-save-contact" %>
       				<% end %>
 			    	</div>

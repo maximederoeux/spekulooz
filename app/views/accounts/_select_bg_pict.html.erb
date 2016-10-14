@@ -69,7 +69,8 @@
 				<div class="add-file">
 					<%= simple_form_for @account do |f| %>
 					  <%= f.input :bg_pict_one, as: :file, class: "show-for-sr", label: false %>
-					 <%= f.hidden_field :bg_pict_select, :value => true %>
+					<%= f.hidden_field :bg_pict_select, :value => true %>
+					<%= f.hidden_field :bg_pict_number, :value => 4 %>
 				</div>
 			</div>
 			<div class="col-md-2 col-less-padding">

@@ -42,5 +42,7 @@ en:
     snapchat: "Snapchat"
     youtube: "Youtube account"
     vimeo: "Vimeo account"
+  menu:
+      show: "Show your menu"
 
 

@@ -12,6 +12,7 @@
 				<% if user_signed_in? && @sub_account.user_id == current_user.id %>
 					<%= render 'modify_contact' %>
 				<% end %>
+				
 				<div class="address">
 				<span class="address-title"> Où nous trouver?</span><br>
 				<%= @sub_account.address %><br>

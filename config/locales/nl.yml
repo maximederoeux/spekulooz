@@ -41,3 +41,5 @@ nl:
     snapchat: "Snapchat"
     youtube: "Youtube"
     vimeo: "Vimeo"
+  menu:
+      show: "Toon uw menu"

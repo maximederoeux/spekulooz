@@ -41,3 +41,5 @@ fr:
     snapchat: "Snapchat"
     youtube: "Youtube"
     vimeo: "Vimeo"
+  menu:
+      show: "Afficher votre menu"

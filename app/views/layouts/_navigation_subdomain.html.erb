@@ -30,7 +30,16 @@
       <% if user_signed_in? %>
 
         <% if user_signed_in? && current_user.id == @sub_account.user_id %>
+  
+          <% if @sub_account.address.blank? %>
 
+            <%= render 'visitors/modify_contact' %>
+
+          <% elsif @sub_account.facebook.blank? %>
+
+            <%= render 'visitors/show_main_menu' %>
+
+          <% end %>
           
 
         <% end %>
