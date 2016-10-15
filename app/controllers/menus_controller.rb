@@ -53,8 +53,13 @@ class MenusController < ApplicationController
   def update
     respond_to do |format|
       if @menu.update(menu_params)
+        if @sub_accounts.any?
         format.html { redirect_to :back, notice: 'Menu was successfully updated.' }
         format.json { render :show, status: :ok, location: @menu }
+        else
+        format.html { redirect_to @menu, notice: 'Menu was successfully updated.' }
+        format.json { render :show, status: :ok, location: @menu }
+        end         
       else
         format.html { render :edit }
         format.json { render json: @menu.errors, status: :unprocessable_entity }
