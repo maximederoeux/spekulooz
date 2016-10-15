@@ -1,0 +1,328 @@
+/* line 1, /home/ferache/sites/spekulooz/app/assets/stylesheets/menu_one.scss */
+.main-menu {
+  max-width: 100%;
+  background-color: #F4C698;
+  display: block;
+  padding-bottom: 2%;
+  padding-left: 15%;
+  padding-right: 15%;
+}
+
+/* line 11, /home/ferache/sites/spekulooz/app/assets/stylesheets/menu_one.scss */
+.menu-title {
+  max-width: 100%;
+  text-align: center;
+  font-family: 'Alice';
+  font-size: 4em;
+  padding-top: 10%;
+  padding-bottom: 5%;
+  color: #F7B733;
+  text-shadow: 0 0 3px #640002;
+  font-variant: small-caps;
+}
+
+/* line 23, /home/ferache/sites/spekulooz/app/assets/stylesheets/menu_one.scss */
+.menu-description {
+  max-width: 100%;
+  text-align: center;
+  font-family: 'Alice';
+  font-size: 1.5em;
+  padding-top: 0;
+  color: #640002;
+  padding-bottom: 5%;
+}
+
+/* line 33, /home/ferache/sites/spekulooz/app/assets/stylesheets/menu_one.scss */
+.category {
+  max-width: 100%;
+  text-align: center;
+  font-family: 'Alice';
+  font-size: 2.5em;
+  padding-top: 7%;
+  color: #640002;
+  text-shadow: 0 0 3px #F7B733;
+  font-variant: small-caps;
+  padding-bottom: 5%;
+}
+
+/* line 45, /home/ferache/sites/spekulooz/app/assets/stylesheets/menu_one.scss */
+.new-item-detail {
+  padding-bottom: 5%;
+  max-width: 100%;
+  padding-top: 4%;
+  font-family: 'Playfair Display', serif;
+  font-size: 1em;
+  color: #000000;
+  font-size: 1.2em;
+  line-height: 1.2em;
+}
+
+/* line 56, /home/ferache/sites/spekulooz/app/assets/stylesheets/menu_one.scss */
+ul.items {
+  margin: 0;
+  max-width: 100%;
+  background-color: #F4C698;
+  list-style-type: none;
+  padding-left: 0;
+}
+
+/* line 64, /home/ferache/sites/spekulooz/app/assets/stylesheets/menu_one.scss */
+ul li.items-line-detail {
+  font-family: 'Playfair Display', serif;
+  color: #000000;
+  font-size: 1.2em;
+  line-height: 1.2em;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 0;
+  padding-right: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+/* line 77, /home/ferache/sites/spekulooz/app/assets/stylesheets/menu_one.scss */
+ul li.items-line-description {
+  font-family: 'Playfair Display', serif;
+  font-size: 1em;
+  color: #000000;
+  line-height: 1em;
+}
+
+/* line 84, /home/ferache/sites/spekulooz/app/assets/stylesheets/menu_one.scss */
+.item-detail {
+  padding-bottom: 5%;
+  max-width: 100%;
+  padding-top: 4%;
+}
+
+/* line 90, /home/ferache/sites/spekulooz/app/assets/stylesheets/menu_one.scss */
+.item-description {
+  padding-left: 3%;
+  font-size: 0.8em;
+  font-style: italic;
+  max-width: 100%;
+}
+
+/* line 98, /home/ferache/sites/spekulooz/app/assets/stylesheets/menu_one.scss */
+.btn-item {
+  background-color: #F4C698;
+  color: #000000;
+  font-family: 'Playfair Display', serif;
+  font-size: 1em;
+  margin-top: 0;
+  padding: 0;
+}
+
+/* line 107, /home/ferache/sites/spekulooz/app/assets/stylesheets/menu_one.scss */
+.btn-item:hover {
+  background-color: #E9D460;
+  color: #22313F;
+  font-family: 'Playfair Display', serif;
+  font-size: 1.2em;
+}
+
+/* line 114, /home/ferache/sites/spekulooz/app/assets/stylesheets/menu_one.scss */
+.btn-item-picture {
+  background-color: #F4C698;
+  color: #000000;
+  font-family: 'Playfair Display', serif;
+  font-size: 1em;
+  margin-top: 0;
+  padding: 0;
+  min-height: 200px;
+}
+
+/* line 125, /home/ferache/sites/spekulooz/app/assets/stylesheets/menu_one.scss */
+.add-item-file {
+  color: #DADFE1;
+  font-family: 'Playfair Display', sans-serif !important;
+  text-align: left;
+  padding-top: 1%;
+  padding-bottom: 5%;
+  font-size: 0.9em;
+  margin-top: 2%;
+  margin-bottom: 0;
+}
+
+/* line 136, /home/ferache/sites/spekulooz/app/assets/stylesheets/menu_one.scss */
+.btn-save-item {
+  background-color: #F4C698;
+  color: #000000;
+  font-family: 'Playfair Display', serif;
+  font-size: 1em;
+}
+
+/* line 144, /home/ferache/sites/spekulooz/app/assets/stylesheets/menu_one.scss */
+.btn-save-item:hover {
+  background-color: #E9D460;
+  color: #22313F;
+  font-family: 'Playfair Display', serif;
+  font-size: 1.2em;
+}
+
+/* line 151, /home/ferache/sites/spekulooz/app/assets/stylesheets/menu_one.scss */
+.btn-item-pict {
+  width: 100%;
+  border: 1px solid #640002 !important;
+  padding: 0.3em;
+}
+
+/* line 162, /home/ferache/sites/spekulooz/app/assets/stylesheets/menu_one.scss */
+.modal-item-header {
+  background-color: #640002;
+  color: #F5A630;
+  max-width: 100%;
+}
+
+/* line 168, /home/ferache/sites/spekulooz/app/assets/stylesheets/menu_one.scss */
+.modal-item-body {
+  min-width: 100%;
+  position: absolute;
+}
+
+/* line 173, /home/ferache/sites/spekulooz/app/assets/stylesheets/menu_one.scss */
+.modal-item-description {
+  font-family: 'Playfair Display', serif;
+  font-size: 0.8em;
+  color: #000000;
+  font-style: italic;
+  display: inline-block;
+  float: right;
+  position: relative;
+  max-width: 100%;
+  padding-left: 3%;
+}
+
+/* line 185, /home/ferache/sites/spekulooz/app/assets/stylesheets/menu_one.scss */
+.modal-item-picture {
+  display: inline-block;
+  position: relative;
+}
+
+/* line 191, /home/ferache/sites/spekulooz/app/assets/stylesheets/menu_one.scss */
+.modal-item-price {
+  font-family: 'Playfair Display', serif;
+  font-size: 1em;
+  float: right;
+  margin-right: 3%;
+  padding-top: 5%;
+}
+
+/* line 200, /home/ferache/sites/spekulooz/app/assets/stylesheets/menu_one.scss */
+.col-float-left {
+  float: right;
+}
+
+/* line 205, /home/ferache/sites/spekulooz/app/assets/stylesheets/menu_one.scss */
+.modify-item-picture {
+  display: block;
+  position: absolute;
+  margin-top: 5%;
+  margin-left: 5%;
+}
+
+/* line 212, /home/ferache/sites/spekulooz/app/assets/stylesheets/menu_one.scss */
+.btn-modify-item-picture {
+  background-color: transparent !important;
+  margin-top: 0;
+  padding: 0;
+}
+
+/* line 218, /home/ferache/sites/spekulooz/app/assets/stylesheets/menu_one.scss */
+.price-item-picture {
+  padding-top: 65%;
+  padding-left: 65%;
+}
+
+/* line 223, /home/ferache/sites/spekulooz/app/assets/stylesheets/menu_one.scss */
+.btn-modify-item-category-picture {
+  background-color: transparent !important;
+  margin-top: 0;
+  padding: 0;
+}
+
+/* line 229, /home/ferache/sites/spekulooz/app/assets/stylesheets/menu_one.scss */
+.modify-item-category-picture {
+  display: block;
+  position: absolute;
+  margin-top: 5%;
+  margin-left: 65%;
+}
+
+/* line 236, /home/ferache/sites/spekulooz/app/assets/stylesheets/menu_one.scss */
+.hide-menu {
+  display: inline-block;
+  position: relative;
+  margin-left: 5%;
+  float: left;
+}
+
+/* line 243, /home/ferache/sites/spekulooz/app/assets/stylesheets/menu_one.scss */
+.modify-menu {
+  display: inline-block;
+  position: relative;
+  float: left;
+  margin-left: 5%;
+}
+
+/* line 250, /home/ferache/sites/spekulooz/app/assets/stylesheets/menu_one.scss */
+.modify-menu-design {
+  display: inline-block;
+  position: relative;
+  float: left;
+  margin-left: 5%;
+}
+
+/* line 257, /home/ferache/sites/spekulooz/app/assets/stylesheets/menu_one.scss */
+.btn-hide {
+  background-color: #A68053;
+  color: #000000;
+  font-family: 'Playfair Display', serif;
+  font-size: 1em;
+  margin-top: 1em;
+  border: 1px solid #640002;
+  margin-right: 3%;
+}
+
+/* line 267, /home/ferache/sites/spekulooz/app/assets/stylesheets/menu_one.scss */
+.btn-hide:hover {
+  background-color: #E9D460;
+  color: #22313F;
+  font-family: 'Playfair Display', serif;
+  font-size: 1.2em;
+}
+
+/* line 274, /home/ferache/sites/spekulooz/app/assets/stylesheets/menu_one.scss */
+.btn-save-menu {
+  background-color: #F4C698;
+  color: #000000;
+  font-family: 'Playfair Display', serif;
+  font-size: 1em;
+  margin-top: 6em;
+}
+
+/* line 283, /home/ferache/sites/spekulooz/app/assets/stylesheets/menu_one.scss */
+.btn-save-item:hover {
+  background-color: #E9D460;
+  color: #22313F;
+  font-family: 'Playfair Display', serif;
+  font-size: 1.2em;
+}
+
+/* line 290, /home/ferache/sites/spekulooz/app/assets/stylesheets/menu_one.scss */
+.btn-item-category {
+  background-color: #A68053;
+  color: #000000;
+  font-family: 'Playfair Display', serif;
+  font-size: 1em;
+  margin-top: 0;
+  border: 1px solid #640002;
+}
+
+/* line 299, /home/ferache/sites/spekulooz/app/assets/stylesheets/menu_one.scss */
+.btn-item-category:hover {
+  background-color: #E9D460;
+  color: #22313F;
+  font-family: 'Playfair Display', serif;
+  font-size: 1.2em;
+}

@@ -167,24 +167,24 @@
 	line-height: 1.2em;
 }
 
-.modal {
+.modal-account {
 	margin-top:5%;
 }
 
-.modal-content {
+.modal-content-account {
 	border-style: solid;
 	border-color: #DADFE1;
 	border-width: 5px;
 
 }
-.modal-header {
+.modal-header-account {
 	background-color: #E9D460;
 	font-family: 'Alegreya', serif;
 	border-radius: 0.3rem;
 	font-size: 1.6em;
 }
 
-.modal-body {
+.modal-body-account {
 	background-color: #DADFE1;
 	color: #22313F;
 	font-family: 'Roboto', sans-serif;
@@ -192,11 +192,11 @@
 
 }
 
-.modal-footer {
+.modal-footer-account {
 	background-color: #DADFE1;
 }
 
-.modal-close {
+.modal-close-account {
 	font-family: 'Roboto Condensed', sans-serif;
 }
 

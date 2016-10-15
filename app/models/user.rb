@@ -67,7 +67,7 @@ class User < ApplicationRecord
     elsif name.present? && first_name.blank?
       name
     elsif name.blank? && first_name.blank?
-      "N'oubliez pas de compléter votre profil"
+      "Nom manquant"
     end
   end
 end

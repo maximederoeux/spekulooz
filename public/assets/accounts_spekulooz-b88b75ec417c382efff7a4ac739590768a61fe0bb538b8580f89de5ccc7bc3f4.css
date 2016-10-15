@@ -1,0 +1,274 @@
+/* line 1, /home/ferache/sites/spekulooz/app/assets/stylesheets/accounts_spekulooz.scss */
+.landing {
+  max-width: 100%;
+  background-color: #DADFE1;
+  display: block;
+  padding-bottom: 2%;
+  padding-left: 15%;
+  padding-right: 15%;
+  min-height: 100vh;
+}
+
+/* line 12, /home/ferache/sites/spekulooz/app/assets/stylesheets/accounts_spekulooz.scss */
+.landing img {
+  max-width: 100%;
+  display: block;
+  margin: auto;
+  position: relative;
+}
+
+/* line 20, /home/ferache/sites/spekulooz/app/assets/stylesheets/accounts_spekulooz.scss */
+.landing p {
+  margin: 0;
+  padding-top: 5%;
+  padding-left: 5%;
+  max-width: 40%;
+  font-size: 3.5em;
+  line-height: 1.1em;
+  position: absolute;
+  font-family: 'Alegreya', serif;
+}
+
+/* line 31, /home/ferache/sites/spekulooz/app/assets/stylesheets/accounts_spekulooz.scss */
+.sign-up {
+  max-width: 100%;
+  background-color: #E9D460;
+  display: block;
+  padding-bottom: 2%;
+  padding-left: 5%;
+  padding-right: 15%;
+}
+
+/* line 40, /home/ferache/sites/spekulooz/app/assets/stylesheets/accounts_spekulooz.scss */
+.sign-up h1 {
+  font-size: 2.5em;
+  line-height: 1.1em;
+  font-family: 'Alegreya', serif;
+  position: relative;
+  padding-top: 5%;
+  padding-left: 5%;
+  margin: 2%;
+  width: 100%;
+}
+
+/* line 51, /home/ferache/sites/spekulooz/app/assets/stylesheets/accounts_spekulooz.scss */
+.sign-up p {
+  font-size: 2em;
+  line-height: 1.1em;
+  font-family: 'Alegreya', serif;
+  position: relative;
+  padding-top: 5%;
+  padding-left: 5%;
+  letter-spacing: 0.1em;
+  margin: 2%;
+}
+
+/* line 62, /home/ferache/sites/spekulooz/app/assets/stylesheets/accounts_spekulooz.scss */
+.selling {
+  max-width: 100%;
+  background-color: #22313F;
+  display: block;
+  padding-bottom: 2%;
+  padding-left: 15%;
+  padding-right: 15%;
+}
+
+/* line 72, /home/ferache/sites/spekulooz/app/assets/stylesheets/accounts_spekulooz.scss */
+.selling h1 {
+  color: #DADFE1;
+  font-family: 'Alegreya', serif;
+  text-align: center;
+  padding-top: 5%;
+}
+
+/* line 79, /home/ferache/sites/spekulooz/app/assets/stylesheets/accounts_spekulooz.scss */
+.selling h3 {
+  color: #DADFE1;
+  font-family: 'Alegreya', serif;
+  text-align: left;
+  padding-top: 1.5em;
+  padding-bottom: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  line-height: 1.5em;
+}
+
+/* line 90, /home/ferache/sites/spekulooz/app/assets/stylesheets/accounts_spekulooz.scss */
+.selling p {
+  max-width: 100%;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.3em;
+  color: #DADFE1;
+  font-style: italic;
+  line-height: 1.2em;
+  padding-top: 1em;
+  padding-bottom: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  text-align: left;
+}
+
+/* line 105, /home/ferache/sites/spekulooz/app/assets/stylesheets/accounts_spekulooz.scss */
+.ingredients {
+  max-width: 100%;
+  background-color: #DADFE1;
+  display: block;
+  padding-bottom: 2%;
+  padding-left: 15%;
+  padding-right: 15%;
+}
+
+/* line 115, /home/ferache/sites/spekulooz/app/assets/stylesheets/accounts_spekulooz.scss */
+.ingredients h1 {
+  font-family: 'Alegreya', serif;
+  text-align: center;
+  padding-top: 1em;
+  padding-bottom: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  line-height: 1.5em;
+}
+
+/* line 125, /home/ferache/sites/spekulooz/app/assets/stylesheets/accounts_spekulooz.scss */
+.ingredients h2 {
+  font-family: 'Alegreya', serif;
+  text-align: left;
+  padding-top: 1em;
+  padding-bottom: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  line-height: 1.5em;
+}
+
+/* line 135, /home/ferache/sites/spekulooz/app/assets/stylesheets/accounts_spekulooz.scss */
+.ingredients p {
+  max-width: 100%;
+  font-size: 1.3em;
+  font-family: 'Roboto', sans-serif;
+  font-style: italic;
+  line-height: 1.2em;
+  padding-top: 1em;
+  padding-bottom: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+/* line 148, /home/ferache/sites/spekulooz/app/assets/stylesheets/accounts_spekulooz.scss */
+.btn-ingredients {
+  background-color: #E9D460;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  line-height: 2.2em;
+  font-family: 'Alegreya', serif;
+  text-align: center;
+  color: #22313F;
+  font-size: 2em;
+  font-weight: 500;
+}
+
+/* line 160, /home/ferache/sites/spekulooz/app/assets/stylesheets/accounts_spekulooz.scss */
+.btn-ingredients p {
+  margin: 0;
+  font-family: 'Alegreya', serif;
+  text-align: center;
+  color: #22313F;
+  font-size: 1em;
+  font-weight: 500;
+  line-height: 1.2em;
+}
+
+/* line 170, /home/ferache/sites/spekulooz/app/assets/stylesheets/accounts_spekulooz.scss */
+.modal {
+  margin-top: 5%;
+}
+
+/* line 174, /home/ferache/sites/spekulooz/app/assets/stylesheets/accounts_spekulooz.scss */
+.modal-content {
+  border-style: solid;
+  border-color: #DADFE1;
+  border-width: 5px;
+}
+
+/* line 180, /home/ferache/sites/spekulooz/app/assets/stylesheets/accounts_spekulooz.scss */
+.modal-header {
+  background-color: #E9D460;
+  font-family: 'Alegreya', serif;
+  border-radius: 0.3rem;
+  font-size: 1.6em;
+}
+
+/* line 187, /home/ferache/sites/spekulooz/app/assets/stylesheets/accounts_spekulooz.scss */
+.modal-body {
+  background-color: #DADFE1;
+  color: #22313F;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.4em;
+}
+
+/* line 195, /home/ferache/sites/spekulooz/app/assets/stylesheets/accounts_spekulooz.scss */
+.modal-footer {
+  background-color: #DADFE1;
+}
+
+/* line 199, /home/ferache/sites/spekulooz/app/assets/stylesheets/accounts_spekulooz.scss */
+.modal-close {
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+/* line 203, /home/ferache/sites/spekulooz/app/assets/stylesheets/accounts_spekulooz.scss */
+.btn-close {
+  background-color: #34495E;
+  font-family: 'Alegreya', serif;
+  text-align: center;
+  color: #DADFE1;
+  font-size: 1.6em;
+  font-weight: 500;
+}
+
+/* RESTO TOP SECTION START */
+/* line 214, /home/ferache/sites/spekulooz/app/assets/stylesheets/accounts_spekulooz.scss */
+.top-spices {
+  max-width: 100%;
+  background-color: #A68053;
+  display: block;
+  padding-bottom: 2%;
+  padding-left: 15%;
+  padding-right: 15%;
+}
+
+/* line 223, /home/ferache/sites/spekulooz/app/assets/stylesheets/accounts_spekulooz.scss */
+.top-spices img {
+  max-width: 100%;
+  display: block;
+  margin: auto;
+  position: relative;
+  opacity: 0.2;
+}
+
+/* line 232, /home/ferache/sites/spekulooz/app/assets/stylesheets/accounts_spekulooz.scss */
+.top-spices h1 {
+  text-align: center;
+  max-width: 100%;
+  font-size: 5em;
+  line-height: 1.1em;
+  position: absolute;
+  font-family: 'Alegreya', serif;
+  color: #FEFFF9;
+  display: flex-block;
+  padding: 20%;
+}
+
+/* line 245, /home/ferache/sites/spekulooz/app/assets/stylesheets/accounts_spekulooz.scss */
+.top-spices p {
+  margin: 0;
+  padding-top: 5%;
+  padding-left: 5%;
+  max-width: 40%;
+  font-size: 5em;
+  line-height: 1.1em;
+  position: absolute;
+  font-family: 'Alegreya', serif;
+  color: #FEFFF9;
+}
+
+/* RESTO TOP SECTION START */

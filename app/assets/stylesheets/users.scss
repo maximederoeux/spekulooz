@@ -129,7 +129,7 @@ body {
 
 }
 
-.accounts-title {
+.section-title {
   font-size: 2em;
   line-height: 1.1em;
   position: relative;
@@ -137,7 +137,7 @@ body {
   display: block;
   text-align: center;
   margin-bottom: 3%;
-  margin-top: 5%;
+  margin-top: 3%;
 }
 
 .new-account {
@@ -154,15 +154,70 @@ body {
 }
 
 .btn-new-account {
-  background-color: #34495E;
-  font-family: 'Alegreya', serif;
+  background-color: #E9D460;
+  font-family: 'Roboto Condensed', sans-serif;
   text-align: center;
-  color: #DADFE1;
+  color: #22313F;
   font-size: 1.4em;
   font-weight: 500;
   max-width: 100%;
   margin-top: 5%;
   margin-bottom: 5%;
+  border-radius: 0.3rem;
+  border: 1px solid #22313F;
+}
+
+.btn-new-account:hover {
+  background-color: #22313F;
+  color: #FEFFF9;
+  font-size: 1.5em;
+}
+
+.new-account-frame {
+  border: 2px solid #22313F;
+  padding: 2%;
+  border-radius: 0.3rem;
+}
+
+.contact-frame {
+  border: 2px solid #22313F;
+  padding: 2%;
+  border-radius: 0.3rem;
+  margin-top: 3%;
+}
+
+ul.contact {
+  margin:0;
+  max-width: 100%;
+  background-color: #DADFE1;
+  list-style-type: none;
+  padding-left:0;
+}
+
+ul li.contact-detail {
+  font-family: 'Roboto', sans-serif;
+  color:#22313F;
+  font-size: 1.2em;
+  line-height: 1.2em;
+  padding-top: 1%;
+  padding-bottom: 1%;
+  padding-left: 0;
+  padding-right: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.modal-body-contact {
+  background-color: #DADFE1 !important;
+  font-family: 'Roboto', sans-serif !important;
+  padding: 5%;
+  margin: 0.5%;
+  border: 2px solid #22313F;
+  border-radius: 0.3rem;
+}
+
+.menu-frame {
+  margin-top: 10%;
 }
 
 /* USER SHOW END */

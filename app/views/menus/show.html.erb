@@ -1,82 +1,293 @@
-<p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @menu.name %>
-</p>
+<div class="main-menu">
 
-<p>
-  <strong>Description:</strong>
-  <%= @menu.description %>
-</p>
+    <div class="hide-menu">
+    </div>
 
-<p>
-  <strong>Start date:</strong>
-  <%= @menu.start_date %>
-</p>
+    <div class="modify-menu">
+    </div>
 
-<p>
-  <strong>End date:</strong>
-  <%= @menu.end_date %>
-</p>
-
-<p>
-  <strong>Active:</strong>
-  <%= @menu.active %>
-</p>
-
-<p>
-  <strong>Food:</strong>
-  <%= @menu.food %>
-</p>
-
-<p>
-  <strong>Drink:</strong>
-  <%= @menu.drink %>
-</p>
-
-<p>
-  <strong>Period quantity:</strong>
-  <%= @menu.period_quantity %>
-</p>
-
-<p>
-  <strong>Period:</strong>
-  <%= @menu.period %>
-</p>
-
-<p>
-  <strong>Promote:</strong>
-  <%= @menu.promote %>
-</p>
-
-<p>
-  <strong>Price:</strong>
-  <%= @menu.price %>
-</p>
-
-<p>
-  <strong>Status:</strong>
-  <%= @menu.status %>
-</p>
-
-<p>
-  <strong>Account:</strong>
-  <%= @menu.account_id %>
-</p>
-
-<%= link_to 'Edit', edit_menu_path(@menu) %> |
-<%= link_to 'Back', menus_path %>
+    <div class="modify-menu-design">
+      <%= render 'visitors/menu_main_with_pictures' %>
+    </div>
 
 
-<hr>
+  <div class="menu-title">
 
-<% @menu_categories.each do |menu_category| %>
+    <%= @menu.name %>
 
-  <%= menu_category.category.name %><br>
+  </div>
 
-    <% menu_category.category.item_categories.each do |item_category| %>
-      <%= item_category.item.name %><br>
+  <% if @menu.description.present? %>
+
+    <div class="menu-description">
+
+      <%= @menu.description %>
+
+    </div>
+
+  <% end %>
+
+
+    <div class="new-item">
+
+<!-- IF ITEMS ANY? START -->    
+
+      <% if @menu.account.items.any? %> 
+
+<!-- IF ITEMS CATEGORIES ANY? START -->
+
+        <% if @menu.account.items.last.item_categories.any? %> 
+
+          <div class="row">
+
+            <div class="col-md-1">
+                <%= render 'visitors/item_add' %>
+            </div>
+
+            <div class="col-md-3">
+              <div class="new-item-detail">
+                Dernier plat ajouté
+              </div>
+            </div>
+            
+            <div class="col-md-4">        
+              <div class="new-item-detail">
+                <%= @menu.account.items.last.name %>
+              </div>          
+            </div>
+
+            <div class="col-md-2">
+
+              <% @menu.account.items.last.item_categories.each do |item_category| %>
+
+                <div class="new-item-detail">
+                  <%= item_category.category.name %><br> 
+                </div>
+
+              <% end %>
+
+            </div>    
+            <div class="col-md-2">
+
+              <%= render 'visitors/itemcategory_add' %>
+
+            </div>              
+          </div>
+
+<!-- ELSE ITEMS CATEGORIES ANY? START -->
+
+        <% else %>
+
+          <div class="row">
+            <div class="col-md-3">
+              <div class="new-item-detail">
+                <%= @menu.account.items.last.name %>
+              </div> 
+            </div>
+
+              <%= simple_form_for(@new_item_category) do |f| %>
+
+                <div class="col-md-3">
+                  <%= f.collection_select :category_id, @categories, :id, :name, {prompt: true, include_blank: false}, class: "form-control styled-select" %>
+                </div>
+                <div class="col-md-3">
+                  <%= f.input :price, label: false %>
+                </div>
+
+                <div class="col-md-3">
+                  <%= f.hidden_field :item_id, :value => @menu.account.items.last.id %>
+                  <%= f.hidden_field :food, :value => true %>
+
+                  <%= f.submit t("word.update"), class: "btn btn-item-category" %>
+                </div>
+              <% end %>
+            </div>
+          <% end %> <!-- IF ITEMS CATEGORIES ANY? END -->
+
+<!-- IF ITEMS ANY? START -->
+
+        <% else %>
+
+          <div class="row">
+
+            <div class="col-md-1">
+                <%= render 'visitors/item_add' %>
+            </div>
+
+
+
+            <div class="col-md-3">
+              <div class="new-item-detail">
+                Ajouter un plat
+              </div>
+            </div>
+            
+            <div class="col-md-4">        
+        
+            </div>
+
+            <div class="col-md-2">
+
+
+            </div>    
+            <div class="col-md-2">
+
+            </div>              
+          </div>
+        <% end %> <!-- IF ITEMS ANY? END -->
+      </div>
+
+
+
+<!-- MENU WITH PICTURES START -->
+
+  <% if @menu.account.menu_design == 1 %> 
+
+    <% @menu.categories.each do |category| %>
+
+      <div class="category">
+        
+        <%= category.name %> 
+
+      </div>
+
+        <div class="container">
+          
+            <div class="row">
+
+              <% category.item_categories.each do |item_category| %>
+
+                <div class="col-md-4 col-sm-6 col-xs-6">
+                  <div class="thumbnail">
+
+                  <% if user_signed_in? && @sub_account.user_id == current_user.id %>
+                    <div class="modify-item-picture">
+                      <%= render 'visitors/item_with_picture_modify', item: item_category.item %>
+                    </div>
+                    <div class="modify-item-category-picture">
+                      <%= render 'visitors/itemcategory_with_picture_modify', item_category: item_category %>
+                    </div>                    
+                  <% end %>
+
+                    <!-- Modal -->
+                    <button type="button" class="btn btn-block btn-item-picture" data-toggle="modal" data-target="#show_item_<%= item_category.id %>">
+
+                      <%= image_tag item_category.item.picture.url(:medium), class:"btn-item-pict" %>
+
+                    </button>
+
+                    <div class="modal fade" id="show_item_<%= item_category.id %>" tabindex="-1" role="dialog">
+                      <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+
+                          <div class="modal-header modal-item-header">
+                            <h4 class="modal-title"><%= item_category.item.name %></h4>
+                          </div>
+
+                          <div class="modal-body modal-item-body">
+                            <div class="row">
+                              <div class="col-md-6">
+                                <div class="modal-item-picture">
+                                  <%= image_tag item_category.item.picture.url(:medium) %>
+                                </div>                            
+                              </div>
+                              <div class="col-md-6">
+                                <div class="modal-item-description">
+                                  <%= item_category.item.description %><br>
+                                    <span class="modal-item-price">
+                                      <%= number_to_currency(item_category.price, :unit => "€", :precision => 2) %>
+                                    </span>       
+                                </div>                            
+                              </div>
+                            </div>                                                                    
+                          </div>
+                        </div><!-- /.modal-content -->
+                      </div><!-- /.modal-dialog -->
+                    </div><!-- /.modal -->
+
+                  </div>              
+                
+                </div>
+                
+              <% end %>
+            </div>
+        </div>
+      <% end %>
+
+<!-- MENU WITH PICTURES END -->
+
+
+  <!-- MENU WITHOUT PICTURES -->
+
+  <% else %>
+
+    <% @menu.categories.each do |category| %>
+
+      <div class="category">
+        
+        <%= category.name %> 
+
+      </div>
+
+        <ul class="items">
+
+          <% category.item_categories.each do |item_category| %>
+
+            <li class="items-line-detail">
+              <div class="row">               
+                <div class="col-md-2">
+                <% if user_signed_in? && @sub_account.user_id == current_user.id %>
+                  <%= render 'visitors/item_modify', item: item_category.item %>
+                <% end %>
+                </div>
+
+                <div class="col-md-4">
+                  <div class="item-detail"><%= item_category.item.name %></div>
+                </div>
+
+                <div class="col-md-2">
+                  
+                </div>
+
+                <div class="col-md-2">
+                  <div class="item-detail">                   
+                    <%= number_to_currency(item_category.price, :unit => "€", :precision => 2) %>
+                  </div>
+                </div>
+
+                <div class="col-md-2">
+                  <% if user_signed_in? && @sub_account.user_id == current_user.id %>
+                    <%= render 'visitors/itemcategory_modify', item_category: item_category %>
+                  <% end %>
+                </div>
+              </div>
+
+            </li>
+
+            <li class="items-line-detail">
+              <div class="row">
+
+                <div class="col-md-2">
+                </div>
+
+                <div class="col-md-6">
+                  <div class="item-description">
+                  <%= item_category.item.description %></div>
+                </div>
+
+                <div class="col-md-4">
+                </div>  
+
+              </div>
+            </li>     
+          <% end %>
+        </ul>
+
     <% end %>
+  
+  <% end %>
 
-<% end %>
+
+</div>
+

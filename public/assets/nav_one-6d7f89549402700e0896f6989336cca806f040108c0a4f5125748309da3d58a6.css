@@ -1,0 +1,167 @@
+/* line 1, /home/ferache/sites/spekulooz/app/assets/stylesheets/nav_one.scss */
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+/* SPICES START */
+/* line 9, /home/ferache/sites/spekulooz/app/assets/stylesheets/nav_one.scss */
+nav ul.main-page {
+  list-style-type: none;
+  margin: 0;
+  padding-left: 2em;
+  padding-right: 2em;
+  overflow: hidden;
+  background-color: #640002;
+}
+
+/* line 19, /home/ferache/sites/spekulooz/app/assets/stylesheets/nav_one.scss */
+nav ul li.pull-left {
+  float: left;
+  position: static;
+}
+
+/* line 24, /home/ferache/sites/spekulooz/app/assets/stylesheets/nav_one.scss */
+nav ul li.pull-right {
+  float: right;
+  position: static;
+}
+
+/* line 28, /home/ferache/sites/spekulooz/app/assets/stylesheets/nav_one.scss */
+nav ul li.pull-right a:link {
+  display: block;
+  font-family: 'Roboto Condensed', sans-serif;
+  color: #F4F4F4;
+  text-align: center;
+  padding: 1em;
+  text-decoration: none;
+  font-size: 1.5em;
+}
+
+/* line 38, /home/ferache/sites/spekulooz/app/assets/stylesheets/nav_one.scss */
+nav ul li.pull-left a:link {
+  display: block;
+  font-family: 'Roboto Condensed', sans-serif;
+  color: #DADFE1;
+  text-align: center;
+  padding: 1em;
+  text-decoration: none;
+  font-size: 1.5em;
+}
+
+/* line 48, /home/ferache/sites/spekulooz/app/assets/stylesheets/nav_one.scss */
+nav ul li.pull-right a:visited {
+  display: block;
+  color: #DADFE1;
+  text-align: center;
+  padding: 16px;
+  text-decoration: none;
+  font-size: 1em;
+}
+
+/* line 57, /home/ferache/sites/spekulooz/app/assets/stylesheets/nav_one.scss */
+nav ul li.pull-left a:visited {
+  display: block;
+  color: #DADFE1;
+  text-align: center;
+  padding: 16px;
+  text-decoration: none;
+  font-size: 1em;
+}
+
+/* line 66, /home/ferache/sites/spekulooz/app/assets/stylesheets/nav_one.scss */
+nav ul li.pull-right a:hover {
+  background-color: #A68053;
+  text-decoration: none;
+  font-size: 1.7em;
+  color: #640002;
+}
+
+/* line 74, /home/ferache/sites/spekulooz/app/assets/stylesheets/nav_one.scss */
+nav ul li.pull-left a:hover {
+  background-color: #A68053;
+  text-decoration: none;
+  font-size: 1.7em;
+  color: #640002;
+}
+
+/* SPEKULOOZ NAV START */
+/* line 86, /home/ferache/sites/spekulooz/app/assets/stylesheets/nav_one.scss */
+nav ul.spekulooz-page {
+  list-style-type: none;
+  margin: 0;
+  padding-left: 2em;
+  padding-right: 2em;
+  overflow: hidden;
+  background-color: #22313F;
+}
+
+/* line 96, /home/ferache/sites/spekulooz/app/assets/stylesheets/nav_one.scss */
+nav ul li.spekulooz-left {
+  float: left;
+  position: static;
+}
+
+/* line 101, /home/ferache/sites/spekulooz/app/assets/stylesheets/nav_one.scss */
+nav ul li.spekulooz-right {
+  float: right;
+  position: static;
+}
+
+/* line 105, /home/ferache/sites/spekulooz/app/assets/stylesheets/nav_one.scss */
+nav ul li.spekulooz-right a:link {
+  display: block;
+  font-family: 'Roboto Condensed', sans-serif;
+  color: #DADFE1;
+  text-align: center;
+  padding: 1em;
+  text-decoration: none;
+  font-size: 1.5em;
+}
+
+/* line 115, /home/ferache/sites/spekulooz/app/assets/stylesheets/nav_one.scss */
+nav ul li.spekulooz-left a:link {
+  display: block;
+  font-family: 'Roboto Condensed', sans-serif;
+  color: #DADFE1;
+  text-align: center;
+  padding: 1em;
+  text-decoration: none;
+  font-size: 1.5em;
+}
+
+/* line 125, /home/ferache/sites/spekulooz/app/assets/stylesheets/nav_one.scss */
+nav ul li.spekulooz-right a:visited {
+  display: block;
+  color: #DADFE1;
+  text-align: center;
+  padding: 16px;
+  text-decoration: none;
+  font-size: 1em;
+}
+
+/* line 134, /home/ferache/sites/spekulooz/app/assets/stylesheets/nav_one.scss */
+nav ul li.spekulooz-left a:visited {
+  display: block;
+  color: #DADFE1;
+  text-align: center;
+  padding: 16px;
+  text-decoration: none;
+  font-size: 1em;
+}
+
+/* line 143, /home/ferache/sites/spekulooz/app/assets/stylesheets/nav_one.scss */
+nav ul li.spekulooz-right a:hover {
+  background-color: #34495E;
+  text-decoration: none;
+  font-size: 1.7em;
+  color: #F89406;
+}
+
+/* line 151, /home/ferache/sites/spekulooz/app/assets/stylesheets/nav_one.scss */
+nav ul li.spekulooz-left a:hover {
+  background-color: #34495E;
+  text-decoration: none;
+  font-size: 1.7em;
+  color: #F89406;
+}

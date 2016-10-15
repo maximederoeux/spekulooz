@@ -1,0 +1,51 @@
+<!-- Large modal -->
+<button type="button" class="btn btn-block btn-new-account" data-toggle="modal" data-target="#edit_profile_<%= @user.id %>">
+<% if @user.name.blank? %>
+
+	Complétez votre profil
+
+<% else %>
+
+	Modifiez votre profil
+
+<% end %>
+
+</button>
+
+<div class="modal fade" id="edit_profile_<%= @user.id %>" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+
+
+
+        <div class="modal-body modal-body-contact">
+
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
+          </button>
+
+			    <div class="row">
+			    	      <%= simple_form_for(@user) do |f| %>
+        						<%= f.error_notification %>
+			    	<div class="col-md-6">
+			    		<%= f.input :name, label: false, :placeholder => t('user.name') %>
+					   	<%= f.input :first_name, label: false, :placeholder => t('user.first_name') %>
+					  </div>
+
+			    	<div class="col-md-6">
+			    		<%= f.submit t('word.update'), class: "btn btn-new-account" %>
+
+			    	</div>
+
+
+			    	</div>
+			    
+      				<% end %>
+
+			  </div>	
+
+
+
+
+  	</div>
+	</div>
+</div>

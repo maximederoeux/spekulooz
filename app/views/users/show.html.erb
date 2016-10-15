@@ -3,20 +3,68 @@
 <div class="landing">
 	<div class="row">
 		<div class="col-md-6">
-			<h1>Vos informations</h1>
-			<p><%= @user.full_name %><p>
-			<p><%= @user.email %><p>
+			<div class="contact-frame">
+				<div class="section-title">
+					Données de contact
+				</div>
 
+				<ul class="contact">
+					<li class="contact-detail">
+						<%= @user.full_name %>
+					</li>
+					<li class="contact-detail">
+						<%= @user.email.present? ? @user.email : "Email manquant" %>
+					</li>
+				</ul>
+			</div>
+				
+
+					<%= render 'edit_profile' %>
+
+			<div class="menu-frame">
+
+				<div class="section-title">Vos Menus</div>
+
+					<% @user.accounts.each do |account| %>
+							<% account.menus.each do |menu| %>
+
+								<%= link_to "#{menu.name} - #{account.resto_name}", menu_path(menu), class: "btn btn-block btn-new-account" %>
+
+							<% end %>
+					<% end %>
+
+				<div class="your-accounts">
+
+
+				</div>
+
+				<div class="new-account-frame">
+					<div class="section-title">Créer un nouveau site</div>
+
+					<div class="new-account">
+						<%= simple_form_for (@new_account) do |f| %>
+							<%= f.input :resto_name, label: false %>
+							<%= f.hidden_field :user_id, :value => current_user.id %>
+							<%= f.submit "Créer un nouveau site", class: "btn btn-block btn-new-account" %>
+						<% end %>
+					</div>					
+				</div>
+
+			
+			</div>
 
 		</div>
+				
+
+
 		<div class="col-md-6">
 
 			<% if @user.accounts.count == 0 %>
-				<div class="accounts-title">Vous n'avez pas encore créé de site pour votre restaurant</div>
+				<div class="section-title">Vous n'avez pas encore créé de site pour votre restaurant</div>
 			<% elsif @user.accounts.count == 1 %>
-				<div class="accounts-title">Votre site</div>
+				<div class="section-title">Votre site</div>
 			<% elsif @user.accounts.count > 1 %>
-				<div class="accounts-title">Vos sites</div>
+				<div class="section-title">Vos sites</div>
 			<% end %>
 
 			<div class="your-accounts">
@@ -38,15 +86,18 @@
 
 			</div>
 
-			<div class="accounts-title">Créer un nouveau site</div>
+			<div class="new-account-frame">
+				<div class="section-title">Créer un nouveau site</div>
 
-			<div class="new-account">
-				<%= simple_form_for (@new_account) do |f| %>
-					<%= f.input :resto_name, label: false %>
-					<%= f.hidden_field :user_id, :value => current_user.id %>
-					<%= f.submit "Créer", class: "btn btn-block btn-new-account" %>
-				<% end %>
-			</div>			
+				<div class="new-account">
+					<%= simple_form_for (@new_account) do |f| %>
+						<%= f.input :resto_name, label: false %>
+						<%= f.hidden_field :user_id, :value => current_user.id %>
+						<%= f.submit "Créer un nouveau site", class: "btn btn-block btn-new-account" %>
+					<% end %>
+				</div>					
+			</div>
+		
 
 
 

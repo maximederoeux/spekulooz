@@ -14,6 +14,8 @@ class MenusController < ApplicationController
   def show
     @menu = Menu.find(params[:id])
     @menu_categories = @menu.menu_categories
+    @new_item_category = ItemCategory.new
+    @new_item = Item.new
   end
 
   # GET /menus/new
