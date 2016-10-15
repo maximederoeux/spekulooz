@@ -33,11 +33,11 @@
 
 <!-- IF ITEMS ANY? START -->    
 
-      <% if @menu.account.items.any? %> 
+      <% if @account.items.any? %> 
 
 <!-- IF ITEMS CATEGORIES ANY? START -->
 
-        <% if @menu.account.items.last.item_categories.any? %> 
+        <% if @account.items.last.item_categories.any? %> 
 
           <div class="row">
 
@@ -59,7 +59,7 @@
 
             <div class="col-md-2">
 
-              <% @menu.account.items.last.item_categories.each do |item_category| %>
+              <% @account.items.last.item_categories.each do |item_category| %>
 
                 <div class="new-item-detail">
                   <%= item_category.category.name %><br> 
@@ -82,7 +82,7 @@
           <div class="row">
             <div class="col-md-3">
               <div class="new-item-detail">
-                <%= @menu.account.items.last.name %>
+                <%= @account.items.last.name %>
               </div> 
             </div>
 
@@ -142,7 +142,7 @@
 
 <!-- MENU WITH PICTURES START -->
 
-  <% if @menu.account.menu_design == 1 %> 
+  <% if @account.menu_design = 1 %> 
 
     <% @menu.categories.each do |category| %>
 
