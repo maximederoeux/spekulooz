@@ -1,0 +1,67 @@
+<% if @account.menu_design == 1 %>
+
+	<!-- Large modal -->
+	<button type="button" class="btn btn-hide" data-toggle="modal" data-target="#menu_without_pictures">
+
+	  Menu sans photos
+
+
+	</button>
+
+	<div class="modal fade" id="menu_without_pictures" tabindex="-1" role="dialog">
+	  <div class="modal-dialog">
+	    <div class="modal-content">
+
+	      
+
+	        <div class="modal-body">
+	            <%= simple_form_for(@account) do |f| %>
+	              <%= f.error_notification %>
+
+                  <%= f.hidden_field :menu_design, :value => 0 %>
+
+                  <%= f.submit t('menu.without_pictures'), class: "btn btn-block btn-save-item" %>
+
+						    
+	      				<% end %>
+			
+				  </div>	
+	  	</div>
+		</div>
+	</div>
+
+
+<% else %>
+
+
+	<!-- Large modal -->
+	<button type="button" class="btn btn-hide" data-toggle="modal" data-target="#menu_big_pictures">
+
+	  Menu avec grandes photos
+
+
+	</button>
+
+	<div class="modal fade" id="menu_big_pictures" tabindex="-1" role="dialog">
+	  <div class="modal-dialog">
+	    <div class="modal-content">
+
+	      
+
+	        <div class="modal-body">
+	            <%= simple_form_for(@menu.account) do |f| %>
+	              <%= f.error_notification %>
+
+                  <%= f.hidden_field :menu_design, :value => 1 %>
+
+                  <%= f.submit t('menu.big_pictures'), class: "btn btn-block btn-save-item" %>
+
+						    
+	      				<% end %>
+			
+				  </div>	
+	  	</div>
+		</div>
+	</div>
+
+<% end %>

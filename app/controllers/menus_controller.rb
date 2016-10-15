@@ -17,6 +17,7 @@ class MenusController < ApplicationController
     @menu_categories = @menu.menu_categories
     @new_item_category = ItemCategory.new
     @new_item = Item.new
+    @categories = @account.categories
   end
 
   # GET /menus/new

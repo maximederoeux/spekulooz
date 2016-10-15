@@ -1,0 +1,43 @@
+<!-- Large modal -->
+<button type="button" class="btn btn-modify-item-category-picture" data-toggle="modal" data-target="#modify_item_category_with_picture_<%= item_category.id %>">
+
+  <img src="/assets/price.png" style="max-width:50%;">
+
+
+</button>
+
+<div class="modal fade" id="modify_item_category_with_picture_<%= item_category.id %>" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+
+
+        <div class="modal-body">
+            <%= simple_form_for(item_category) do |f| %>
+              <%= f.error_notification %>
+                <div class="row">
+
+                  <div class="col-md-4">
+                    <%= f.collection_select :category_id, @categories, :id, :name, {prompt: true, include_blank: false}, class: "form-control styled-select" %>
+                    
+                  </div>
+                  <div class="col-md-4">
+                    <%= f.input :price, label: false, :placeholder => "Prix en €" %>
+                  </div>
+                  <div class="col-md-4">
+                    <%= f.hidden_field :food, :value => true %>
+                    <%= f.hidden_field :item_id, :value => @account.items.last.id %>
+
+                    <%= f.submit t('word.update'), class: "btn btn-save-item" %>
+                  </div>                        
+                </div>
+              
+              <% end %>
+    
+        </div>  	
+
+
+
+
+  	</div>
+	</div>
+</div>

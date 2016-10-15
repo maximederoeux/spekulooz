@@ -8,7 +8,7 @@
     </div>
 
     <div class="modify-menu-design">
-      <%= render 'visitors/menu_main_with_pictures' %>
+      <%= render 'menu_with_pictures' %>
     </div>
 
 
@@ -42,7 +42,7 @@
           <div class="row">
 
             <div class="col-md-1">
-                <%= render 'visitors/item_add' %>
+                <%= render 'item_add' %>
             </div>
 
             <div class="col-md-3">
@@ -70,7 +70,7 @@
             </div>    
             <div class="col-md-2">
 
-              <%= render 'visitors/itemcategory_add' %>
+              <%= render 'itemcategory_add' %>
 
             </div>              
           </div>
@@ -96,7 +96,7 @@
                 </div>
 
                 <div class="col-md-3">
-                  <%= f.hidden_field :item_id, :value => @menu.account.items.last.id %>
+                  <%= f.hidden_field :item_id, :value => @account.items.last.id %>
                   <%= f.hidden_field :food, :value => true %>
 
                   <%= f.submit t("word.update"), class: "btn btn-item-category" %>
@@ -112,7 +112,7 @@
           <div class="row">
 
             <div class="col-md-1">
-                <%= render 'visitors/item_add' %>
+                <%= render 'item_add' %>
             </div>
 
 
@@ -161,14 +161,12 @@
                 <div class="col-md-4 col-sm-6 col-xs-6">
                   <div class="thumbnail">
 
-                  <% if user_signed_in? && @sub_account.user_id == current_user.id %>
                     <div class="modify-item-picture">
-                      <%= render 'visitors/item_with_picture_modify', item: item_category.item %>
+                      <%= render 'item_with_picture_modify', item: item_category.item %>
                     </div>
                     <div class="modify-item-category-picture">
-                      <%= render 'visitors/itemcategory_with_picture_modify', item_category: item_category %>
+                      <%= render 'itemcategory_with_picture_modify', item_category: item_category %>
                     </div>                    
-                  <% end %>
 
                     <!-- Modal -->
                     <button type="button" class="btn btn-block btn-item-picture" data-toggle="modal" data-target="#show_item_<%= item_category.id %>">
@@ -237,9 +235,7 @@
             <li class="items-line-detail">
               <div class="row">               
                 <div class="col-md-2">
-                <% if user_signed_in? && @sub_account.user_id == current_user.id %>
-                  <%= render 'visitors/item_modify', item: item_category.item %>
-                <% end %>
+                  <%= render 'item_modify', item: item_category.item %>
                 </div>
 
                 <div class="col-md-4">
@@ -257,9 +253,7 @@
                 </div>
 
                 <div class="col-md-2">
-                  <% if user_signed_in? && @sub_account.user_id == current_user.id %>
-                    <%= render 'visitors/itemcategory_modify', item_category: item_category %>
-                  <% end %>
+                    <%= render 'itemcategory_modify', item_category: item_category %>
                 </div>
               </div>
 
