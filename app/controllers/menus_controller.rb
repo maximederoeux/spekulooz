@@ -13,11 +13,15 @@ class MenusController < ApplicationController
   # GET /menus/1.json
   def show
     @menu = Menu.find(params[:id])
+    @new_menu = Menu.new
     @account = @menu.account
     @menu_categories = @menu.menu_categories
     @new_item_category = ItemCategory.new
     @new_item = Item.new
     @categories = @account.categories
+    @new_category = Category.new
+    @statuses = Menu.statuses
+    @new_menu_category = MenuCategory.new
   end
 
   # GET /menus/new

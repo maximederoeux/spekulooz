@@ -1,0 +1,32 @@
+<!-- Large modal -->
+<button type="button" class="btn btn-hide" data-toggle="modal" data-target="#new_category">
+
+  Créer une nouvelle catégorie
+
+
+</button>
+
+<div class="modal fade" id="new_category" tabindex="-1" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      
+
+        <div class="modal-body">
+            <%= simple_form_for(@new_category) do |f| %>
+              <%= f.error_notification %>
+
+						    <%= f.input :name, label: false, :placeholder => t('category.new_name') %>
+						    <%= f.input :description, label: false, :placeholder => t('category.description') %>
+
+				    		<%= f.hidden_field :food, :value => true %>
+				    		<%= f.hidden_field :account_id, :value => @account.id %>
+
+				    		<%= f.submit t('word.update'), class: "btn btn-block btn-item" %>
+	
+      				<% end %>
+		
+			  </div>	
+  	</div>
+	</div>
+</div>

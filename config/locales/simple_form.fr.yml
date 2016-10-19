@@ -26,5 +26,10 @@ fr:
         select_sub_one: "J'aimerais le premier"
         select_sub_two: "J'aimerais le deuxième"
         select_sub_three: "J'aimerais le troisième"
+      menu:
+        name: "Le nom de votre nouveau menu"
+        description: "Décrivez-le en quelques mots"
+        start_date: "Date de mise en place"
+        end_date: "Date de fin"
 
   

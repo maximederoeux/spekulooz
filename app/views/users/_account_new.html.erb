@@ -1,0 +1,27 @@
+<!-- Large modal -->
+<button type="button" class="btn btn-block btn-new-account" data-toggle="modal" data-target="#new_account">
+
+  Créer un nouveau site
+
+
+</button>
+
+<div class="modal fade" id="new_account" tabindex="-1" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      
+
+        <div class="modal-body">
+	         <div class="new-account">
+						<%= simple_form_for (@new_account) do |f| %>
+							<%= f.input :resto_name, label: false, :placeholder => t('account.resto_name') %>
+							<%= f.hidden_field :user_id, :value => current_user.id %>
+							<%= f.submit "Créer un nouveau site", class: "btn btn-block btn-new-account" %>
+						<% end %>
+					</div>
+		
+			  </div>	
+  	</div>
+	</div>
+</div>

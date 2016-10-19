@@ -1,0 +1,32 @@
+<!-- Large modal -->
+<button type="button" class="btn btn-hide" data-toggle="modal" data-target="#new_menu_category">
+
+  Ajouter une catégorie au menu
+
+
+</button>
+
+<div class="modal fade" id="new_menu_category" tabindex="-1" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      
+
+        <div class="modal-body">
+            <%= simple_form_for(@new_menu_category) do |f| %>
+              <%= f.error_notification %>
+                <div class="row">
+
+                    <%= f.collection_select :category_id, @categories, :id, :name, {prompt: true, include_blank: false}, class: "form-control styled-select" %>
+                    <%= f.hidden_field :menu_id, :value => @menu.id %>
+
+                    <%= f.submit t('word.update'), class: "btn btn-save-item" %>
+                  </div>                        
+                </div>
+					    
+      				<% end %>
+		
+			  </div>	
+  	</div>
+	</div>
+</div>

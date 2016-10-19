@@ -1,6 +1,7 @@
 fr:
   word:
     update: "Enregistrer"
+    sign_up: "S'enregistrer"
 
   statuses:
     main: "Menu principal"
@@ -8,9 +9,11 @@ fr:
     season: "Menu saisonnier"
     tasting: "Menu dégustation"
 
-  user:
-    minimum: caractères minimum
+  category:
+    new_name: "Nom de la nouvelle catégorie"
+    description: "Décrivez cette catégorie en quelques mots"
   account:
+    choose_subdomain: "Choisissez votre sous-domaine Spekulooz"
     keep_subdomain: "Je garde celui-ci"
     prefer_first: "Je préfère le premier"
     prefer_second: "Je préfère le deuxième"
@@ -18,6 +21,9 @@ fr:
     prefer_mine: "Je l'ai modifié en respectant les règles"
     allowed_char: "Uniquement des minuscules sans accents, des chiffres, des tirets (-) ou des tirets bas (_). Pas d'espaces ou de majuscules."
     your_subdomain: "Votre sous-domaine"
+    recommanded: "Conseillé"
+    you_confirm: "Vos confirmez ?"
+    your_actual_url: "Pour l'instant, votre adresse Spekulooz est la suivante"
     back_subdomain: "Non, je veux revenir et changer"
     validate_subdomain: "Oui, je suis d'accord et je confirme"
     is_already_open: "Est-ce que votre restaurant est déjà en activité?"
@@ -25,7 +31,7 @@ fr:
     not_open: "Non, pas encore."
     open_on: "Ouverture prévue pour le "
     go_on: "Continuer"
-    resto_name: "Rue et numéro"
+    resto_name: "Nom de votre restaurant"
     address: "Adresse de votre restaurant"
     zipcode: "Code postal"
     city: "Ville"
@@ -42,7 +48,36 @@ fr:
     youtube: "Youtube"
     vimeo: "Vimeo"
   menu:
-      show: "Afficher votre menu"
-      hide: "Masquer votre menu"
-      without_pictures: "Retirer les photos"
-      big_pictures: "Afficher les photos"
+    show: "Afficher votre menu"
+    hide: "Masquer votre menu"
+    without_pictures: "Retirer les photos"
+    big_pictures: "Afficher les photos"
+    name: "Le nom de votre nouveau menu"
+    description: "Décrivez-le en quelques mots"
+    start_date: "Date de mise en place"
+    end_date: "Date de fin"
+  navbar:
+    your_account: "Votre compte"
+    sign_out: "Déconnexion"
+    sign_in: "Connexion"
+    sign_up: "Inscription"
+  user:
+    minimum: "caractères minimum"
+    name: "Votre nom"
+    first_name: "Votre prénom"
+
+  landing:
+    title_top: "Un site web et mobile qui vit et grandit au rythme de votre restaurant"
+    get_a_site: "Obtenez un site web et mobile qui grandit et vit au rythme de votre restaurant"
+    start_now: "Démarrez gratuitement!"
+    your_presence_title: "Votre présence web et mobile en quelques minutes"
+    your_presence_text: "Spekulooz vous assure une présence web et mobile qui facilite la communication entre vous et vos clients grâce à des interfaces utilisateurs adaptées à chaque type d’appareil. Et ça, en à peine quelques minutes."
+    not_during_service_title: "Pas en plein service"
+    not_during_service_text: "Tous les moments ne sont pas propices à la gestion de votre site internet. Et Spekulooz ne désire pas être dans vos jambes au mauvais moment. C’est pourquoi tous les changements sont planifiés. Insérez vos nouvelles suggestions quand vous avez le temps de le faire, et choisissez le moment auquel elles seront mises en avant sur votre site."
+    not_alone_title: "Vous n'êtes pas seul"
+    not_alone_text: "Spekulooz vous accompagne et vous conseille à chaque instant de la vie de votre site. Que ce soit pour vous aider à choisir vos couleurs, insérer pour vous des modifications ou encore une relecture orthographique de vos textes, Spekuloos est là pour vous."
+    communicate_for_you_title: "Votre site communique pour vous"
+    communicate_for_you_text: "Les informations qui sont sur votre site peuvent être mises à jour très régulièrement. Vous pouvez ainsi toujours renvoyer vos clients vers votre site où ils découvriront ce que votre établissement a à leur offrir."
+    
+
+

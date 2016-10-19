@@ -1,6 +1,7 @@
 en:
   word:
     update: "Save changes"
+    sign_up: "Sign up"
 
   statuses:
     main: "Main menu"
@@ -9,9 +10,11 @@ en:
     tasting: "Tasting menu"
 
 
-  user:
-    minimum: characters minimum
+  category:
+    new_name: "New category name"
+    description: "Describe this category in a few words"
   account:
+    choose_subdomain: "Choose your Spekulooz subdomain"
     keep_subdomain: "I keep this one"
     prefer_first: "I'd rather take the first one"
     prefer_second: "I'd rather take the second one"
@@ -19,6 +22,9 @@ en:
     prefer_mine: "I modified it and respected the rules"
     allowed_char: "Only small characters, numbers, underscore(_) or hyphen(-). No spaces or capital characters"
     your_subdomain: "Your subdomain"
+    recommanded: "Recommanded"
+    you_confirm: "Do you confirm ?"
+    your_actual_url: "At the momentt, your Spekulooz address is"
     back_subdomain: "No, I want to go back and change"
     validate_subdomain: "Yes, I agree and confirm my choice"
     is_already_open: "Is your restaurant already in activity?"
@@ -43,9 +49,33 @@ en:
     youtube: "Youtube account"
     vimeo: "Vimeo account"
   menu:
-      show: "Show your menu"
-      hide: "Hide your menu"
-      without_pictures: "Remove pictures"
-      big_pictures: "Show big pictures"
+    show: "Show your menu"
+    hide: "Hide your menu"
+    without_pictures: "Remove pictures"
+    big_pictures: "Show big pictures"
+    name: "Your new menu's name"
+    description: "Describe it in a few words"
+    start_date: "Menu's start date"
+    end_date: "End date"
+  navbar:
+    your_account: "Your account"
+    sign_out: "Sign out"
+    sign_in: "Sign in"
+    sign_up: "Sign up"
+  user:
+    minimum: characters minimum
+    name: "Your last name"
+    first_name: "Your first name"
 
-
+  landing:
+    title_top: "A web and mobile site that lives and grows at the beat of your restaurant"
+    get_a_site: "Get a web and mobile site that lives and grows at the beat of your restaurant"
+    start_now: "Start for free now!"
+    your_presence_title: "Your web and mobile presence in only a couple of minutes"
+    your_presence_text: "Spekulooz ensures you with a web and mobile presence that will facilitate communication between you and your clients thanks his users interfaces adapted to the different devices. And this only in a couple of minutes"
+    not_during_service_title: "Not right in the middle of the service!"
+    not_during_service_text: "All moments are not Tous les moments ne sont pas propices à la gestion de votre site internet. Et Spekulooz ne désire pas être dans vos jambes au mauvais moment. C’est pourquoi tous les changements sont planifiés. Insérez vos nouvelles suggestions quand vous avez le temps de le faire, et choisissez le moment auquel elles seront mises en avant sur votre site."
+    not_alone_title: "Vous n'êtes pas seul"
+    not_alone_text: "Spekulooz vous accompagne et vous conseille à chaque instant de la vie de votre site. Que ce soit pour vous aider à choisir vos couleurs, insérer pour vous des modifications ou encore une relecture orthographique de vos textes, Spekuloos est là pour vous."
+    communicate_for_you_title: "Votre site communique pour vous"
+    communicate_for_you_text: "Les informations qui sont sur votre site peuvent être mises à jour très régulièrement. Vous pouvez ainsi toujours renvoyer vos clients vers votre site où ils découvriront ce que votre établissement a à leur offrir."

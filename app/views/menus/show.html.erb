@@ -1,3 +1,19 @@
+<div class="menu-management">
+  <%= render 'menu_new' %>
+  <%= render 'category_new' %>
+  <%= render 'menu_category_new' %>
+
+  <% if @account.menus.count > 1 %>
+      <% @account.menus.each do |menu| %>
+
+          <%= link_to menu.name, menu_path(menu), class: "btn btn-hide pull-right" %>
+
+      <% end %>
+
+  <% end %>
+
+</div>
+
 
 <div class="main-menu">
 

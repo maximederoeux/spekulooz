@@ -9,12 +9,12 @@
       <li class="spekulooz-right"><%= link_to_unless_current "NL", locale: "nl" %></li>
 
         <% if user_signed_in? %>
-          <li class="spekulooz-left"><%= link_to "Mon profil", user_path(current_user) %></li>
+          <li class="spekulooz-left"><%= link_to t('navbar.your_account'), user_path(current_user) %></li>
           <li class="spekulooz-left"><%= link_to "Modifier", edit_user_path(current_user) %></li>
-          <li class="spekulooz-right"><%= link_to "Déconnexion", destroy_user_session_path, :method=>'delete' %></li>
+          <li class="spekulooz-right"><%= link_to t('navbar.sign_out'), destroy_user_session_path, :method=>'delete' %></li>
         <% else %>
-          <li class="spekulooz-right"><%= link_to "Inscription", new_user_registration_path %></li>
-          <li class="spekulooz-right"><%= link_to "Connexion", new_user_session_path %></li>
+          <li class="spekulooz-right"><%= link_to t('navbar.sign_up'), new_user_registration_path %></li>
+          <li class="spekulooz-right"><%= link_to t('navbar.sign_in'), new_user_session_path %></li>
         <% end %>
     </ul> 
   </nav>
@@ -30,19 +30,8 @@
     <li class="pull-right"><%= link_to_unless_current "NL", locale: "nl" %></li>
       <% if user_signed_in? %>
 
-
-        <li class="pull-right"><%= link_to "Réservation", root_path %></li>
-
-        <li class="pull-right"><%= link_to "Galerie", root_path %></li>
-        <li class="pull-right"><%= link_to "Suggestions", root_path %></li>
-        <li class="pull-right"><%= link_to "Menu", menus_path %></li>
-
       <% else %>
-        <li class="pull-right"><%= link_to "Menu", menus_path %></li>
-        <li class="pull-right"><%= link_to "Réservation", root_path %></li>
         <li class="pull-right"><%= link_to "Connexion", new_user_session_path %></li>
-        <li class="pull-right"><%= link_to "Suggestions", root_path %></li>
-        <li class="pull-right"><%= link_to "Galerie", root_path %></li>
       <% end %>
   </ul> 
 </nav>

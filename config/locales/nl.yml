@@ -1,16 +1,18 @@
 nl:
   word:
     update: "Opslaan"
+    sign_up: "Registreren"
 
   statuses:
     main: "Hoofdmenu"
     specials: "Suggesties"
     season: "Seizoensmenu"
     tasting: "Degustatiemenu"
-
-  user:
-    minimum: karakters minimum
+  category:
+    new_name: "Naam van de nieuwe categorie"
+    description: "Beschrijf deze categorie in een paar woorden"
   account:
+    choose_subdomain: "Kies uw Spekulooz subdomein"
     keep_subdomain: "Ik hou die subdomein"
     prefer_first: "Ik wil liever de eerste"
     prefer_second: "Ik wil liever de tweede"
@@ -18,6 +20,9 @@ nl:
     prefer_mine: "Ik heb die gewijzigd"
     allowed_char: "Alleen kleine letters, nummers, koppelteken (-) of onderstrepen (_). Geen spaties of hoofdletters."
     your_subdomain: "Uw subdomein"
+    recommanded: "Raadgepleegd"
+    you_confirm: "Bevestigt u dit ?"
+    your_actual_url: "Nu is uw Spekulooz adres het volgende"
     back_subdomain: "Nee ik wil teruggaan en veranderen"
     validate_subdomain: "Ja, ik ga ermee akkoord and bevistig"
     is_already_open: "Is uw restaurant al in activiteit?"
@@ -42,7 +47,33 @@ nl:
     youtube: "Youtube"
     vimeo: "Vimeo"
   menu:
-      show: "Toon uw menu"
-      hide: "Maskeer uw menu"
-      without_pictures: "Fotos verwijderen"
-      big_pictures: "Grote fotos tonen"
+    show: "Toon uw menu"
+    hide: "Maskeer uw menu"
+    without_pictures: "Fotos verwijderen"
+    big_pictures: "Grote fotos tonen"
+    name: "Naam van uw nieuwe menu"
+    description: "Beschrijf het maar"
+    start_date: "Begindatum van het menu"
+    end_date: "Einddatum"
+  navbar:
+    your_account: "Uw profiel"
+    sign_out: "Uitloggen"
+    sign_in: "Inloggen"
+    sign_up: "Inschrijven"
+  user:
+    minimum: karakters minimum
+    name: "Uw naam"
+    first_name: "Uw voornaam"
+
+  landing:
+    title_top: "Een web en mobiel site die leeft en groeit tot het rythme van uw restaurant"
+    get_a_site: "Krijg een web en mobiel sitedie leeft en groeit tot het rythme van uw restaurant"
+    start_now: "Start gratis nu!"
+    your_presence_title: "Uw web en mobile aanwezidheid in een paar minuten"
+    your_presence_text: "Spekulooz verzekert u een web en mobiele aanwezigheid die faciliteert communicatie tussen uw klanten en u dankzij gebruikers schermen die aangepast tot de verschillende toestellen. En dit, in amper een paar minuten"
+    not_during_service_title: "Niet in het midden van het dienst!"
+    not_during_service_text: "Alle momenten passen niet voor het aanpassing van uw website. En Spekulooz heeft geen zin in voor u op een slechte moment staan. Daarom zijn alle veranderingen planbaar. Voer uw nieuwe suggesties in als u tijd heeft, en meld wanneer u ze zichtbaar op uw site wilt."
+    not_alone_title: "U bent niet alleen"
+    not_alone_text: "Spekulooz accompagne en raadpleegt u op elke moment vant het leven van uw website. Hulp nodig om uw kleuren te kiezen, of om de veranderingen in te zetten? Spekulooz staat hier op uw dienst."
+    communicate_for_you_title: "Uw site communiceert voor u"
+    communicate_for_you_text: "De inlichtingen die op uw site zitten kunnen regelmatig en makkelijk aangepast worden. Zo is uw site constant à jour en kunt u altijd uw klanten naar hem sturen als ze praktische informatie nodig hebben."

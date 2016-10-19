@@ -28,7 +28,7 @@ class MenuCategoriesController < ApplicationController
 
     respond_to do |format|
       if @menu_category.save
-        format.html { redirect_to @menu_category, notice: 'Menu category was successfully created.' }
+        format.html { redirect_to :back, notice: 'Menu category was successfully created.' }
         format.json { render :show, status: :created, location: @menu_category }
       else
         format.html { render :new }
@@ -42,7 +42,7 @@ class MenuCategoriesController < ApplicationController
   def update
     respond_to do |format|
       if @menu_category.update(menu_category_params)
-        format.html { redirect_to @menu_category, notice: 'Menu category was successfully updated.' }
+        format.html { redirect_to :back, notice: 'Menu category was successfully updated.' }
         format.json { render :show, status: :ok, location: @menu_category }
       else
         format.html { render :edit }

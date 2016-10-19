@@ -26,3 +26,8 @@ en:
         select_sub_one: "I would like the first one"
         select_sub_two: "I would like the second one"
         select_sub_three: "I would like the third one"
+      menu:
+        name: "Naam van uw nieuwe menu"
+        description: "Beschrijf het maar"
+        start_date: "Begindatum van het menu"
+        end_date: "Einddatum"

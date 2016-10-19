@@ -1,0 +1,40 @@
+<!-- Large modal -->
+<button type="button" class="btn btn-hide" data-toggle="modal" data-target="#new_menu">
+
+  Créer un nouveau menu
+
+
+</button>
+
+<div class="modal fade" id="new_menu" tabindex="-1" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      
+
+        <div class="modal-body">
+            <%= simple_form_for(@new_menu) do |f| %>
+              <%= f.error_notification %>
+
+								<%= f.input :name, label: false, :placeholder => t('menu.name') %>
+						    <%= f.input :description, label: false, :placeholder => t('menu.description') %>
+
+						    <%= f.select :status, @statuses, {prompt: true, include_blank: false}, {class: "form-control"} %>
+						    <div class= "menu-label"><%= t('menu.start_date') %></div>
+						    	<%= f.input :start_date, label: false %>
+						    <div class= "menu-label"><%= t('menu.end_date') %></div>
+
+						    <%= f.input :end_date, label: false %>
+
+				    		<%= f.hidden_field :food, :value => true %>
+				    		<%= f.hidden_field :active, :value => true %>
+				    		<%= f.hidden_field :account_id, :value => @account.id %>	
+
+								<%= f.submit t('word.update'), class: "btn btn-block btn-item" %>
+					    
+      				<% end %>
+		
+			  </div>	
+  	</div>
+	</div>
+</div>

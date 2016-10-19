@@ -1,5 +1,5 @@
 <div class="landing">
-	<p>Un site web et mobile qui vit et grandit au rythme de votre restaurant</p>
+	<p><%= t("landing.title_top") %></p>
 	<img src="assets/grow.png">
 
 </div>
@@ -7,10 +7,10 @@
 <div class="sign-up">
 	<div class="row">
 		<div class="col-md-8">
-			<h1>Obtenez un site web et mobile qui grandit et vit au rythme de votre restaurant</h1>
+			<h1><%= t("landing.get_a_site") %></h1>
 		</div>
 		<div class="col-md-4">
-			<p>Démarrez maintenant gratuitement!</p>
+			<%= link_to t('landing.start_now'), new_user_registration_path, class: "btn btn-start-now" %>
 		</div>	
 	</div>
 </div>
@@ -20,9 +20,9 @@
 	<div class="row">
 		<div class="col-md-8">
 		
-			<h3>Votre présence web et mobile en quelques minutes</h3>
+			<h3><%= t("landing.your_presence_title") %></h3>
 
-			<p>Spekulooz vous assure une présence web et mobile qui facilite la communication entre vous et vos clients grâce à des interfaces utilisateurs adaptées à chaque type d’appareil. Et ça, en à peine quelques minutes.</p>
+			<p><%= t("landing.your_presence_text") %></p>
 		</div>
 
 		<div class="col-md-4">
@@ -36,9 +36,9 @@
 
 		</div>
 		<div class="col-md-8">
-			<h3>Pas en plein service !</h3>
+			<h3><%= t("landing.not_during_service_title") %></h3>
 
-			<p>Tous les moments ne sont pas propices à la gestion de votre site internet. Et Spekulooz ne désire pas être dans vos jambes au mauvais moment. C’est pourquoi tous les changements sont planifiés. Insérez vos nouvelles suggestions quand vous avez le temps de le faire, et choisissez le moment auquel elles seront mises en avant sur votre site. </p>
+			<p><%= t("landing.not_during_service_text") %></p>
 
 		</div>		
 	</div>		
@@ -46,9 +46,9 @@
 	<div class="row">
 		<div class="col-md-8">
 		
-			<h3>Vous n’êtes pas seul</h3>
+			<h3><%= t("landing.not_alone_title") %></h3>
 
-			<p>Spekulooz vous accompagne et vous conseille à chaque instant de la vie de votre site. Que ce soit pour vous aider à choisir vos couleurs, insérer pour vous des modifications ou encore une relecture orthographique de vos textes, Spekuloos est là pour vous.</p>
+			<p><%= t("landing.not_alone_text") %></p>
 		</div>
 
 		<div class="col-md-4">
@@ -62,9 +62,9 @@
 
 		</div>
 		<div class="col-md-8">
-			<h3>Votre site communique pour vous</h3>
+			<h3><%= t("landing.communicate_for_you_title") %></h3>
 
-			<p>Les informations qui sont sur votre site peuvent être mises à jour très régulièrement. Vous pouvez ainsi toujours renvoyer vos clients vers votre site où ils découvriront ce que votre établissement a à leur offrir. </p>
+			<p><%= t("landing.communicate_for_you_title") %></p>
 
 		</div>		
 	</div>	
@@ -75,10 +75,10 @@
 <div class="sign-up">
 	<div class="row">
 		<div class="col-md-8">
-			<h1>Obtenez un site web et mobile qui grandit et vit au rythme de votre restaurant</h1>
+			<h1><%= t("landing.get_a_site") %></h1>
 		</div>
 		<div class="col-md-4">
-			<p>Démarrez maintenant gratuitement!</p>
+			<p><%= link_to t('landing.start_now'), new_user_registration_path, class: "btn btn-start-now" %></p>
 		</div>	
 	</div>
 </div>

@@ -8,6 +8,9 @@ class UsersController < ApplicationController
   def show
   	@user = User.find(params[:id])
     @new_account = Account.new
+    @new_menu = Menu.new
+    @statuses = Menu.statuses
+    @accounts = @user.accounts
 
     unless @user == current_user
       redirect_to :back, :alert => "Access denied."

@@ -1,4 +1,4 @@
-<h1 class="prevalidate-sub-title">Choisissez votre sous-domaine Spekulooz</h1>
+<h1 class="prevalidate-sub-title"><%= t("account.choose_subdomain") %></h1>
 
 
 <ul class="prevalidate-sub-list">
@@ -15,7 +15,7 @@
 					</div>
 					<div class="col-md-4">
 						<%= @account.url_subdomain_1 %>
-							<span class="advised">Conseillé</span>
+							<span class="advised"><%= t("account.recommanded") %></span>
 					</div>
 					<div class="col-md-4">
 						<% if @account.subdomain == @account.generate_subdomain_1 %>

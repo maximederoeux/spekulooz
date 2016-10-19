@@ -18,44 +18,31 @@
   <div class="modal-dialog modal-lg">
     <div class="modal-content">
 
-      <%= simple_form_for(@sub_account) do |f| %>
-        <%= f.error_notification %>
-
-        <div class="modal-body less-padding">
-
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
-          </button>
-
-          <div class="row">
-          	<div class="col-md-2">
-          		
-          	</div>
-          	<div class="col-md-10">
-          		<%= f.input :facebook, label: false, :placeholder => t('account.facebook') %>
-			    		<%= f.input :twitter, label: false, :placeholder => t('account.twitter') %>
-			    		<%= f.input :instagram, label: false, :placeholder => t('account.instagram') %>
-			    		<%= f.input :google, label: false, :placeholder => t('account.google') %>
-			    		<%= f.input :snapchat, label: false, :placeholder => t('account.snapchat') %>
-			    		<%= f.input :youtube, label: false, :placeholder => t('account.youtube') %>
-			    		<%= f.input :vimeo, label: false, :placeholder => t('account.vimeo') %>
-              <%= f.submit t('word.update'), class: "btn btn-save-networks" %>
-              <% end %>
-
-          	</div>
 
 
+      <div class="modal-body modal-body-account">
 
+        <div class="row">
+
+        	<div class="col-md-10">
+            <%= simple_form_for(@sub_account) do |f| %>
+              <%= f.error_notification %>
+        		<%= f.input :facebook, label: false, :placeholder => t('account.facebook') %>
+		    		<%= f.input :twitter, label: false, :placeholder => t('account.twitter') %>
+		    		<%= f.input :instagram, label: false, :placeholder => t('account.instagram') %>
+		    		<%= f.input :google, label: false, :placeholder => t('account.google') %>
+		    		<%= f.input :snapchat, label: false, :placeholder => t('account.snapchat') %>
+		    		<%= f.input :youtube, label: false, :placeholder => t('account.youtube') %>
+		    		<%= f.input :vimeo, label: false, :placeholder => t('account.vimeo') %>
+            <%= f.submit t('word.update'), class: "btn btn-save-networks" %>
+            <% end %>
+
+        	</div>
+          <div class="col-md-2">
+            
           </div>
-							
-
-
-  
-
-			  </div>	
-
-
-
-
+        </div>
+		  </div>	
   	</div>
 	</div>
 </div>

@@ -3,9 +3,15 @@
 <div class="landing">
 	<div class="row">
 		<div class="col-md-6">
-			<div class="contact-frame">
 				<div class="section-title">
 					Données de contact
+				</div>
+
+				
+				<div class="contact-frame">
+
+					<%= render 'edit_profile' %>
+
 				</div>
 
 				<ul class="contact">
@@ -16,14 +22,18 @@
 						<%= @user.email.present? ? @user.email : "Email manquant" %>
 					</li>
 				</ul>
-			</div>
-				
-
-					<%= render 'edit_profile' %>
 
 			<div class="menu-frame">
 
 				<div class="section-title">Vos Menus</div>
+
+
+				<div class="new-account-frame">
+					<div class="new-account">
+						<%= render 'menu_new' %>
+					</div>					
+				</div>
+
 
 					<% @user.accounts.each do |account| %>
 							<% account.menus.each do |menu| %>
@@ -33,22 +43,7 @@
 							<% end %>
 					<% end %>
 
-				<div class="your-accounts">
 
-
-				</div>
-
-				<div class="new-account-frame">
-					<div class="section-title">Créer un nouveau site</div>
-
-					<div class="new-account">
-						<%= simple_form_for (@new_account) do |f| %>
-							<%= f.input :resto_name, label: false %>
-							<%= f.hidden_field :user_id, :value => current_user.id %>
-							<%= f.submit "Créer un nouveau site", class: "btn btn-block btn-new-account" %>
-						<% end %>
-					</div>					
-				</div>
 
 			
 			</div>
@@ -67,6 +62,12 @@
 				<div class="section-title">Vos sites</div>
 			<% end %>
 
+			<div class="new-account-frame">
+
+				<%= render 'account_new' %>
+					
+			</div>
+			
 			<div class="your-accounts">
 
 				<% if Rails.env.development? %>
@@ -86,17 +87,7 @@
 
 			</div>
 
-			<div class="new-account-frame">
-				<div class="section-title">Créer un nouveau site</div>
 
-				<div class="new-account">
-					<%= simple_form_for (@new_account) do |f| %>
-						<%= f.input :resto_name, label: false %>
-						<%= f.hidden_field :user_id, :value => current_user.id %>
-						<%= f.submit "Créer un nouveau site", class: "btn btn-block btn-new-account" %>
-					<% end %>
-				</div>					
-			</div>
 		
 
 
