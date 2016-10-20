@@ -9,7 +9,7 @@ class Account < ApplicationRecord
 	after_create :generate_subdomain_3
 	after_create :update_subdomain
 
-	after_create :generate_main_menu
+	after_create :generate_first_menus
 
   has_attached_file :bg_pict_one, styles: { medium: "300x300>", thumb: "100x100>" }, default_url: "/images/:style/missing.png"
   validates_attachment_content_type :bg_pict_one, content_type: /\Aimage\/.*\z/
