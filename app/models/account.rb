@@ -110,8 +110,9 @@ class Account < ApplicationRecord
 		end
 	end
 
-	def generate_main_menu
+	def generate_first_menus
 		Menu.create(:name => "Menu", :account_id => id, :food => true, :status => "main")
+		Menu.create(:name => "Suggestions", :account_id => id, :food => true, :status => "specials")
 	end
 
 	COUNTRIES = ["BE", "FR", "LU", "NL"]

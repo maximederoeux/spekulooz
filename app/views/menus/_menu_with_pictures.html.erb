@@ -1,4 +1,4 @@
-<% if @account.menu_design == 1 %>
+<% if @menu.menu_design == 1 %>
 
 	<!-- Large modal -->
 	<button type="button" class="btn btn-hide" data-toggle="modal" data-target="#menu_without_pictures">
@@ -15,7 +15,7 @@
 	      
 
 	        <div class="modal-body">
-	            <%= simple_form_for(@account) do |f| %>
+	            <%= simple_form_for(@menu) do |f| %>
 	              <%= f.error_notification %>
 
                   <%= f.hidden_field :menu_design, :value => 0 %>

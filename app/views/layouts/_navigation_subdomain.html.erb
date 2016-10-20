@@ -10,7 +10,7 @@
 
         <% if user_signed_in? %>
           <li class="spekulooz-left"><%= link_to t('navbar.your_account'), user_path(current_user) %></li>
-          <li class="spekulooz-left"><%= link_to "Modifier", edit_user_path(current_user) %></li>
+          <li class="pull-left"><%= link_to t('navbar.your_reservations'), reservations_path %></li>
           <li class="spekulooz-right"><%= link_to t('navbar.sign_out'), destroy_user_session_path, :method=>'delete' %></li>
         <% else %>
           <li class="spekulooz-right"><%= link_to t('navbar.sign_up'), new_user_registration_path %></li>

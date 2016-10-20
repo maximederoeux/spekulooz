@@ -11,13 +11,13 @@ class User < ApplicationRecord
 
 	def create_account
     if availability_subdomain_1 == false
-		  Account.create(:resto_name => resto_name, :user_id => id, :subdomain => generate_subdomain_1)
+		  Account.create(:resto_name => resto_name, :user_id => id, :subdomain => generate_subdomain_1, :free => true)
     elsif availability_subdomain_2 == false
-      Account.create(:resto_name => resto_name, :user_id => id, :subdomain => generate_subdomain_2)
+      Account.create(:resto_name => resto_name, :user_id => id, :subdomain => generate_subdomain_2, :free => true)
     elsif availability_subdomain_3 == false
-      Account.create(:resto_name => resto_name, :user_id => id, :subdomain => generate_subdomain_3)
+      Account.create(:resto_name => resto_name, :user_id => id, :subdomain => generate_subdomain_3, :free => true)
     else
-      Account.create(:resto_name => resto_name, :user_id => id)
+      Account.create(:resto_name => resto_name, :user_id => id, :free => true)
     end
 	end
 

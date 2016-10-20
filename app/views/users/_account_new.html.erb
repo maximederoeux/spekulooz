@@ -17,6 +17,7 @@
 						<%= simple_form_for (@new_account) do |f| %>
 							<%= f.input :resto_name, label: false, :placeholder => t('account.resto_name') %>
 							<%= f.hidden_field :user_id, :value => current_user.id %>
+							<%= f.hidden_field :free, :value => true %>
 							<%= f.submit "Créer un nouveau site", class: "btn btn-block btn-new-account" %>
 						<% end %>
 					</div>

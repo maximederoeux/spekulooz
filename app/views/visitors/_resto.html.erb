@@ -19,15 +19,32 @@
 
 	          <% else %>
 
-	            <% unless @sub_account.menus.is_main.first.active == true %>
+	          	<% if @sub_account.free %>
 
-	              <!-- Large modal -->
-								<button type="button" class="btn btn-add-contact" data-toggle="modal" data-target="#show_main_menu">
+								<% unless @sub_account.menus.is_specials.first.visible == true %>
 
-									Afficher le menu
+		              <!-- Large modal -->
+									<button type="button" class="btn btn-add-contact" data-toggle="modal" data-target="#show_specials_menu_<%= @sub_account.menus.is_specials.first.id %>">
 
-								</button>
-	            <% end %>            
+										Afficher vos suggestions
+
+									</button>
+	            	<% end %>    
+
+	          	<% else %>
+
+		            <% unless @sub_account.menus.is_main.first.visible == true %>
+
+		              <!-- Large modal -->
+									<button type="button" class="btn btn-add-contact" data-toggle="modal" data-target="#show_main_menu_<%= @sub_account.menus.is_main.first.id %>">
+
+										Afficher votre menu
+
+									</button>
+		            <% end %>
+
+	          	<% end %>
+          
 	          <% end %>         
 	        <% end %>					
 				</div>
@@ -63,15 +80,32 @@
 
 	          <% else %>
 
-	            <% unless @sub_account.menus.is_main.first.active == true %>
+	          	<% if @sub_account.free %>
 
-	              <!-- Large modal -->
-								<button type="button" class="btn btn-add-contact" data-toggle="modal" data-target="#show_main_menu">
+								<% unless @sub_account.menus.is_specials.first.visible == true %>
 
-									Afficher le menu
+		              <!-- Large modal -->
+									<button type="button" class="btn btn-add-contact" data-toggle="modal" data-target="#show_specials_menu_<%= @sub_account.menus.is_specials.first.id %>">
 
-								</button>
-	            <% end %>            
+										Afficher vos suggestions
+
+									</button>
+	            	<% end %>    
+
+	          	<% else %>
+
+		            <% unless @sub_account.menus.is_main.first.visible == true %>
+
+		              <!-- Large modal -->
+									<button type="button" class="btn btn-add-contact" data-toggle="modal" data-target="#show_main_menu_<%= @sub_account.menus.is_main.first.id %>">
+
+										Afficher votre menu
+
+									</button>
+		            <% end %>
+
+	          	<% end %>
+
 	          <% end %>         
 	        <% end %>					
 				</div>
@@ -107,15 +141,32 @@
 
 	          <% else %>
 
-	            <% unless @sub_account.menus.is_main.first.active == true %>
+	          	<% if @sub_account.free %>
 
-	              <!-- Large modal -->
-								<button type="button" class="btn btn-add-contact" data-toggle="modal" data-target="#show_main_menu">
+								<% unless @sub_account.menus.is_specials.first.visible == true %>
 
-									Afficher le menu
+		              <!-- Large modal -->
+									<button type="button" class="btn btn-add-contact" data-toggle="modal" data-target="#show_specials_menu_<%= @sub_account.menus.is_specials.first.id %>">
 
-								</button>
-	            <% end %>            
+										Afficher vos suggestions
+
+									</button>
+	            	<% end %>    
+
+	          	<% else %>
+
+		            <% unless @sub_account.menus.is_main.first.visible == true %>
+
+		              <!-- Large modal -->
+									<button type="button" class="btn btn-add-contact" data-toggle="modal" data-target="#show_main_menu_<%= @sub_account.menus.is_main.first.id %>">
+
+										Afficher votre menu
+
+									</button>
+		            <% end %>
+
+	          	<% end %>
+	          	           
 	          <% end %>         
 	        <% end %>					
 				</div>
@@ -152,15 +203,31 @@
 
 	          <% else %>
 
-	            <% unless @sub_account.menus.is_main.first.active == true %>
+	          	<% if @sub_account.free %>
 
-	              <!-- Large modal -->
-								<button type="button" class="btn btn-add-contact" data-toggle="modal" data-target="#show_main_menu">
+								<% unless @sub_account.menus.is_specials.first.visible == true %>
 
-									Afficher le menu
+		              <!-- Large modal -->
+									<button type="button" class="btn btn-add-contact" data-toggle="modal" data-target="#show_specials_menu_<%= @sub_account.menus.is_specials.first.id %>">
 
-								</button>
-	            <% end %>            
+										Afficher vos suggestions
+
+									</button>
+	            	<% end %>    
+
+	          	<% else %>
+
+		            <% unless @sub_account.menus.is_main.first.visible == true %>
+
+		              <!-- Large modal -->
+									<button type="button" class="btn btn-add-contact" data-toggle="modal" data-target="#show_main_menu_<%= @sub_account.menus.is_main.first.id %>">
+
+										Afficher votre menu
+
+									</button>
+		            <% end %>
+
+	          	<% end %>            
 	          <% end %>         
 	        <% end %>					
 				</div>
@@ -178,12 +245,18 @@
 
 <% end %>
 
-<% if @sub_account.menus.is_main.first.active == true %>
+<% if @sub_account.free %>
+
+	<%= render 'menu_free' %>
+
+<% else %>
 
 	<%= render 'menu' %>
 
 <% end %>
 
+
+	<%= render 'reservations' %>
 	<%= render 'contact' %>
 
 
@@ -247,9 +320,35 @@
 
 <!-- MODAL CONTACT END -->
 
-<!-- MODAL MENU START -->
+<!-- MODAL SPECIALS MENU START -->
 
-<div class="modal fade" id="show_main_menu" tabindex="-1" role="dialog">
+<div class="modal fade" style="margin-top:20%;" id="show_specials_menu_<%= @sub_account.menus.is_specials.first.id %>" tabindex="-1" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      
+
+        <div class="modal-body">
+            <%= simple_form_for(@sub_account.menus.is_specials.first) do |f| %>
+              <%= f.error_notification %>
+
+                    <%= f.hidden_field :visible, :value => true %>
+
+                    <%= f.submit t('menu.specials_show'), class: "btn btn-block btn-save-item" %>
+
+					    
+      				<% end %>
+		
+			  </div>	
+  	</div>
+	</div>
+</div>
+
+<!-- MODAL SPECIALS MENU END -->
+
+<!-- MODAL SPECIALS MENU START -->
+
+<div class="modal fade" style="margin-top:20%;" id="show_main_menu_<%= @sub_account.menus.is_main.first.id %>" tabindex="-1" role="dialog">
   <div class="modal-dialog">
     <div class="modal-content">
 
@@ -259,7 +358,7 @@
             <%= simple_form_for(@sub_account.menus.is_main.first) do |f| %>
               <%= f.error_notification %>
 
-                    <%= f.hidden_field :active, :value => true %>
+                    <%= f.hidden_field :visible, :value => true %>
 
                     <%= f.submit t('menu.show'), class: "btn btn-block btn-save-item" %>
 

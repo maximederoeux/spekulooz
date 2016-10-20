@@ -1,12 +1,12 @@
 <!-- Large modal -->
-<button type="button" class="btn btn-add-contact" data-toggle="modal" data-target="#show_main_menu_<%= menu.id %>">
+<button type="button" class="btn btn-add-contact" data-toggle="modal" data-target="#show_specials_menu_<%= menu.id %>">
 
   Afficher le menu
 
 
 </button>
 
-<div class="modal fade" id="show_main_menu_<%= menu.id %>" tabindex="-1" role="dialog">
+<div class="modal fade" id="show_specials_menu_<%= menu.id %>" tabindex="-1" role="dialog">
   <div class="modal-dialog">
     <div class="modal-content">
 
@@ -18,7 +18,7 @@
 
                     <%= f.hidden_field :visible, :value => true %>
 
-                    <%= f.submit t('menu.show'), class: "btn btn-block btn-save-item" %>
+                    <%= f.submit t('menu.specials_show'), class: "btn btn-block btn-save-item" %>
 
 					    
       				<% end %>

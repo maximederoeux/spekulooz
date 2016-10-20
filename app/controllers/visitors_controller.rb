@@ -6,8 +6,12 @@ class VisitorsController < ApplicationController
   	@new_item_category = ItemCategory.new
 
   	if @sub_accounts.any?
-  		@categories = @sub_account.categories.all
+  		@specials_categories = @sub_account.menus.is_specials.first.categories.all
+  		@main_categories = @sub_account.menus.is_main.first.categories.all
   	end
+
+  	@new_reservation = Reservation.new
+
 
   end
 end

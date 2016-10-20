@@ -7,6 +7,7 @@
 
       <% if user_signed_in? %>
         <li class="pull-left"><%= link_to t('navbar.your_account'), user_path(current_user) %></li>
+        <li class="pull-left"><%= link_to t('navbar.your_reservations'), reservations_path %></li>
         <li class="pull-left"></li>
         <li class="pull-right"><%= link_to t('navbar.sign_out'), destroy_user_session_path, :method=>'delete' %></li>
 

@@ -1,14 +1,16 @@
 <!-- Large modal -->
-<button type="button" class="btn btn-hide" data-toggle="modal" data-target="#hide_main_menu_<%= menu.id %>">
+<button type="button" class="btn btn-hide" data-toggle="modal" data-target="#hide_specials_menu_<%= menu.id %>">
 
-  Masquer le menu
+  Masquer vos suggestions
 
 
 </button>
 
-<div class="modal fade" id="hide_main_menu_<%= menu.id %>" tabindex="-1" role="dialog">
+<div class="modal fade" id="hide_specials_menu_<%= menu.id %>" tabindex="-1" role="dialog">
   <div class="modal-dialog">
     <div class="modal-content">
+
+      
 
         <div class="modal-body">
             <%= simple_form_for(menu) do |f| %>
@@ -16,7 +18,7 @@
 
                     <%= f.hidden_field :visible, :value => false %>
 
-                    <%= f.submit t('menu.hide'), class: "btn btn-block btn-save-item" %>
+                    <%= f.submit t('menu.specials_hide'), class: "btn btn-block btn-save-item" %>
 
 					    
       				<% end %>

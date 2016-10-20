@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :reservations
   resources :menu_categories
   resources :item_categories
   resources :categories

@@ -57,6 +57,8 @@ en:
     description: "Describe it in a few words"
     start_date: "Menu's start date"
     end_date: "End date"
+    specials_show: "Show your specials"
+    specials_hide: "Hide your specials"
   navbar:
     your_account: "Your account"
     sign_out: "Sign out"

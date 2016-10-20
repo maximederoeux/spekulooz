@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @reservation.name %>
+</p>
+
+<p>
+  <strong>Account:</strong>
+  <%= @reservation.account_id %>
+</p>
+
+<p>
+  <strong>Requested time:</strong>
+  <%= @reservation.requested_time %>
+</p>
+
+<p>
+  <strong>Pax:</strong>
+  <%= @reservation.pax %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @reservation.email %>
+</p>
+
+<p>
+  <strong>Mobile:</strong>
+  <%= @reservation.mobile %>
+</p>
+
+<p>
+  <strong>Comment:</strong>
+  <%= @reservation.comment %>
+</p>
+
+<%= link_to 'Edit', edit_reservation_path(@reservation) %> |
+<%= link_to 'Back', reservations_path %>

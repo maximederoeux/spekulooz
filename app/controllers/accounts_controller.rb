@@ -137,6 +137,7 @@ class AccountsController < ApplicationController
                                       :fri_am_start, :fri_am_end, :fri_pm_start, :fri_pm_end, :fri_am_closed, :fri_pm_closed,
                                       :sat_am_start, :sat_am_end, :sat_pm_start, :sat_pm_end, :sat_am_closed, :sat_pm_closed,
                                       :sun_am_start, :sun_am_end, :sun_pm_start, :sun_pm_end, :sun_am_closed, :sun_pm_closed,
-                                      :menu_design, :active)
+                                      :active,
+                                      :free, :pack_one, :pack_two)
     end
 end

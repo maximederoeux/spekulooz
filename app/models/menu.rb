@@ -8,6 +8,7 @@ class Menu < ApplicationRecord
 	scope :is_specials, lambda {where(:status => "specials")}
 	scope :is_season, lambda {where(:status => "season")}
 	scope :is_tasting, lambda {where(:status => "tasting")}
+	scope :is_tasting, lambda {where(:status => "tasting")}
 
 	after_create :generate_menu_categories
 

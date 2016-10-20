@@ -1,21 +1,21 @@
-<% if @sub_account.menu_design == 1 %>
+<% if menu.menu_design == 1 %>
 
 	<!-- Large modal -->
-	<button type="button" class="btn btn-hide" data-toggle="modal" data-target="#menu_without_pictures">
+	<button type="button" class="btn btn-hide" data-toggle="modal" data-target="#menu_without_pictures_<%= menu.id %>">
 
 	  Menu sans photos
 
 
 	</button>
 
-	<div class="modal fade" id="menu_without_pictures" tabindex="-1" role="dialog">
+	<div class="modal fade" id="menu_without_pictures_<%= menu.id %>" tabindex="-1" role="dialog">
 	  <div class="modal-dialog">
 	    <div class="modal-content">
 
 	      
 
 	        <div class="modal-body">
-	            <%= simple_form_for(@sub_account) do |f| %>
+	            <%= simple_form_for(menu) do |f| %>
 	              <%= f.error_notification %>
 
                   <%= f.hidden_field :menu_design, :value => 0 %>
@@ -35,21 +35,21 @@
 
 
 	<!-- Large modal -->
-	<button type="button" class="btn btn-hide" data-toggle="modal" data-target="#menu_big_pictures">
+	<button type="button" class="btn btn-hide" data-toggle="modal" data-target="#menu_big_pictures_<%= menu.id %>">
 
 	  Menu avec grandes photos
 
 
 	</button>
 
-	<div class="modal fade" id="menu_big_pictures" tabindex="-1" role="dialog">
+	<div class="modal fade" id="menu_big_pictures_<%= menu.id %>" tabindex="-1" role="dialog">
 	  <div class="modal-dialog">
 	    <div class="modal-content">
 
 	      
 
 	        <div class="modal-body">
-	            <%= simple_form_for(@sub_account) do |f| %>
+	            <%= simple_form_for(menu) do |f| %>
 	              <%= f.error_notification %>
 
                   <%= f.hidden_field :menu_design, :value => 1 %>

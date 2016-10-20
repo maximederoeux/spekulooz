@@ -1,0 +1,35 @@
+<div class="reservations">
+
+	<div class="resa-title">
+		Envoyez votre demande de réservation avec le formulaire suivant
+	</div>
+
+	<%= simple_form_for(@new_reservation) do |f| %>
+  <%= f.error_notification %>
+
+  	<div class="row">
+  		<div class="col-md-8">
+  			<%= f.input :requested_time, label: false %>
+  		</div>
+  		<div class="col-md-4">
+  			<%= f.input :pax, label: false, :placeholder => "Nombre de personnes" %>
+  		</div>  		
+  	</div>
+    
+    
+    Sans e-mail ou numéro de téléphone valide, nous ne pourrons confirmer votre réservation
+
+
+    <%= f.input :name, label: false, :placeholder => "Votre nom" %>
+    <%= f.hidden_field :account_id, :value => @sub_account.id %>
+    <%= f.input :email, label: false, :placeholder => "Votre email" %>
+    <%= f.input :mobile, label: false, :placeholder => "Votre GSM"%>
+    Une demande particulière, un commentaire?
+    <%= f.input :comment, label: false, :placeholder => "Un commentaire?" %>
+
+    <%= f.submit "Envoyer la demande", class: "btn btn-save-item pull-right" %>
+
+<% end %>
+
+
+</div>

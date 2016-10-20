@@ -55,6 +55,8 @@ nl:
     description: "Beschrijf het maar"
     start_date: "Begindatum van het menu"
     end_date: "Einddatum"
+    specials_show: "Toon uw suggesties"
+    specials_hide: "Maskeer uw suggesties"
   navbar:
     your_account: "Uw profiel"
     sign_out: "Uitloggen"

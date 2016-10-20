@@ -1,40 +1,31 @@
-<% if @sub_account.menus.is_main.first.visible %>
+<% if @sub_account.menus.is_specials.first.visible %>
 
 	<div class="main-menu">
 
 		<% if user_signed_in? && @sub_account.user_id == current_user.id %>
-
 			<div class="hide-menu">
-				<%= render 'menu_main_hide', menu: @sub_account.menus.is_main.first %>
-			</div>
-
-
-		<% end %>
-
-		<% if user_signed_in? && @sub_account.user_id == current_user.id %>
-			<div class="modify-menu">
-				<%= render 'menu_main_modify', menu: @sub_account.menus.is_main.first %>
+				<%= render 'menu_specials_hide', menu: @sub_account.menus.is_specials.first %>
 			</div>
 		<% end %>
 
 		<% if user_signed_in? && @sub_account.user_id == current_user.id %>
 			<div class="modify-menu-design">
-				<%= render 'menu_main_with_pictures', menu: @sub_account.menus.is_main.first %>
+				<%= render 'menu_main_with_pictures', menu: @sub_account.menus.is_specials.first %>
 			</div>
 		<% end %>
 
 
 		<div class="menu-title">
 
-			<%= @sub_account.menus.is_main.first.name %>
+			<%= @sub_account.menus.is_specials.first.name %>
 
 		</div>
 
-		<% if @sub_account.menus.is_main.first.description.present? %>
+		<% if @sub_account.menus.is_specials.first.description.present? %>
 
 			<div class="menu-description">
 
-				<%= @sub_account.menus.is_main.first.description %>
+				<%= @sub_account.menus.is_specials.first.description %>
 
 			</div>
 
@@ -107,7 +98,7 @@
 								<%= simple_form_for(@new_item_category) do |f| %>
 
 									<div class="col-md-3">
-										<%= f.collection_select :category_id, @main_categories, :id, :name, {prompt: true, include_blank: false}, class: "form-control styled-select" %>
+										<%= f.collection_select :category_id, @specials_categories, :id, :name, {prompt: true, include_blank: false}, class: "form-control styled-select" %>
 									</div>
 									<div class="col-md-3">
 										<%= f.input :price, label: false, :placeholder => "Prix en €" %>
@@ -164,9 +155,9 @@
 
 	<!-- MENU WITH PICTURES START -->
 
-		<% if @sub_account.menus.is_main.first.menu_design == 1 %> 
+		<% if @sub_account.menus.is_specials.first.menu_design == 1 %> 
 
-			<% @sub_account.menus.is_main.first.categories.each do |category| %>
+			<% @sub_account.menus.is_specials.last.categories.each do |category| %>
 
 				<div class="category">
 					
@@ -244,7 +235,7 @@
 
 		<% else %>
 
-			<% @sub_account.menus.is_main.first.categories.each do |category| %>
+			<% @sub_account.menus.is_specials.last.categories.each do |category| %>
 
 				<div class="category">
 					
@@ -313,4 +304,4 @@
 
 	</div> <!-- DIV MAIN-MENU END -->
 
-<% end %> <!-- IF MAIN MENU VISIBLE END -->
+<% end %> <!-- IF MENU VISIBLE END-->

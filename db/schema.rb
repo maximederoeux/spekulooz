@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161014070634) do
+ActiveRecord::Schema.define(version: 20161020101804) do
 
   create_table "accounts", force: :cascade do |t|
     t.string   "subdomain"
@@ -89,8 +89,10 @@ ActiveRecord::Schema.define(version: 20161014070634) do
     t.time     "sun_pm_end"
     t.boolean  "sun_am_closed"
     t.boolean  "sun_pm_closed"
-    t.integer  "menu_design"
     t.boolean  "active"
+    t.boolean  "free"
+    t.boolean  "pack_one"
+    t.boolean  "pack_two"
   end
 
   create_table "categories", force: :cascade do |t|
@@ -153,6 +155,20 @@ ActiveRecord::Schema.define(version: 20161014070634) do
     t.integer  "account_id"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
+    t.boolean  "visible"
+    t.integer  "menu_design"
+  end
+
+  create_table "reservations", force: :cascade do |t|
+    t.string   "name"
+    t.integer  "account_id"
+    t.datetime "requested_time"
+    t.integer  "pax"
+    t.string   "email"
+    t.string   "mobile"
+    t.string   "comment"
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
   end
 
   create_table "users", force: :cascade do |t|

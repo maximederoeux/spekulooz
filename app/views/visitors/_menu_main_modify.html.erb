@@ -1,19 +1,19 @@
 <!-- Large modal -->
-<button type="button" class="btn btn-hide" data-toggle="modal" data-target="#modify_main_menu">
+<button type="button" class="btn btn-hide" data-toggle="modal" data-target="#modify_main_menu_<%= menu.id %>">
 
   Modifier le menu
 
 
 </button>
 
-<div class="modal fade" id="modify_main_menu" tabindex="-1" role="dialog">
+<div class="modal fade" id="modify_main_menu_<%= menu.id %>" tabindex="-1" role="dialog">
   <div class="modal-dialog">
     <div class="modal-content">
 
       
 
         <div class="modal-body">
-            <%= simple_form_for(@sub_account.menus.is_main.first) do |f| %>
+            <%= simple_form_for(menu) do |f| %>
               <%= f.error_notification %>
 
 						    <%= f.input :name %>
