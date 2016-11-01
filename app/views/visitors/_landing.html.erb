@@ -85,36 +85,35 @@
 
 
 <div class="ingredients">
-	<h1>Les ingrédients de votre site</h1>
+	<h1><%= t("landing.ingredients") %></h1>
 
-		<h2>Votre histoire, votre philosophie</h2>
+		<h2><%= t("landing.your_story_title") %></h2>
 
-			<p>Votre restaurant est unique, votre parcours aussi. Présentez-les, racontez cette histoire en quelques paragraphes.</p>
+			<p><%= t("landing.your_story_text") %></p>
 
 		
-		<h2>Annoncez vos événements</h2>
+		<h2><%= t("landing.your_events_title") %></h2>
 
-			<p>Spekulooz se charge de promouvoir vos événements sur votre site et prépare tout pour les partager d’un seul clic sur vos réseaux sociaux.</p>
+			<p><%= t("landing.your_events_text") %></p>
 
-		<h2>Le menu de votre restaurantest un être vivant</h2>
+		<h2><%= t("landing.your_menu_title") %></h2>
 
-			<p>Votre menu évolue sûrement. Spekulooz gère la promotion de votre nouvelle carte et annonce son arrivée sur votre site, au moment que vous avez choisi, et vous permet de la partager sur vos réseaux sociaux.</p>
+			<p><%= t("landing.your_menu_text") %></p>
 
-		<h2>Plats du jour, suggestions et menus saisonniers</h2>
+		<h2><%= t("landing.specials_title") %></h2>
 
+			<p><%= t("landing.specials_text") %></p>
 
-			<p>Boostez vos ventes en mettant en avant vos plats du jour, suggestions ou menus saisonniers. Vos nouveautés sont sûrement alléchantes. Mais qui le sait ? Spekulooz fait leur promotion sur votre site et prépare tout pour les partager d’un seul clic sur vos réseaux sociaux.</p>
+		<h2><%= t("landing.reservations_title") %></h2>
 
-		<h2>Répondez aux demandes de réservation d’un simple clic</h2>
-
-			<p>Spekulooz vous prévient par email et/ou par sms. Vous confirmez ou infirmez directement sur votre smartphone, ou vous rappelez votre client, d’un simple clic.</p>
+			<p><%= t("landing.reservations_text") %></p>
 
 </div>
 
 <div class="sign-up">
 	<div class="row">
 		<div class="col-md-8">
-			<h1>Obtenez un site web et mobile qui grandit et vit au rythme de votre restaurant</h1>
+			<h1><%= t("landing.get_a_site") %></h1>
 		</div>
 		<div class="col-md-4">
 			<p><%= link_to t('landing.start_now'), new_user_registration_path, class: "btn btn-start-now" %></p>
@@ -124,12 +123,12 @@
 
 
 <div class="selling">
-	<h1>Nos services</h1>
+	<h1><%= t("landing.our_services") %></h1>
 
 	<div class="feature">
 		<div class="row">
 			<div class="col-md-6">
-				Votre présence web et mobile
+				<%= t("landing.your_presence") %>
 			</div>
 			<div class="col-md-2" style="text-align:center;">
 				<i class="fa fa-check" aria-hidden="true"></i>
@@ -146,7 +145,7 @@
 	<div class="feature">
 		<div class="row">
 			<div class="col-md-6">
-				Conseils pour votre design
+				<%= t("landing.advise_design") %>
 			</div>
 			<div class="col-md-2" style="text-align:center;">
 				<i class="fa fa-check" aria-hidden="true"></i>
@@ -163,7 +162,7 @@
 	<div class="feature">
 		<div class="row">
 			<div class="col-md-6">
-				Formulaire de réservation
+				<%= t("landing.reservation_form") %>
 			</div>
 			<div class="col-md-2" style="text-align:center;">
 				<i class="fa fa-check" aria-hidden="true"></i>
@@ -180,7 +179,7 @@
 	<div class="feature">
 		<div class="row">
 			<div class="col-md-6">
-				Texte de présentation
+				<%= t("landing.presentation_text") %>
 			</div>
 			<div class="col-md-2" style="text-align:center;">
 				<i class="fa fa-check" aria-hidden="true"></i>
@@ -197,7 +196,7 @@
 	<div class="feature">
 		<div class="row">
 			<div class="col-md-6">
-				Nom de domaine personnalisé
+				<%= t("landing.spekulooz_domain") %>
 			</div>
 			<div class="col-md-2" style="text-align:center;">
 			</div>
@@ -213,22 +212,7 @@
 	<div class="feature">
 		<div class="row">
 			<div class="col-md-6">
-				Menu limité (6 suggestions)
-			</div>
-			<div class="col-md-2" style="text-align:center;">
-				<i class="fa fa-check" aria-hidden="true"></i>
-			</div>
-			<div class="col-md-2" style="text-align:center;">
-			</div>
-			<div class="col-md-2" style="text-align:center;">
-			</div>			
-		</div>
-	</div>
-
-	<div class="feature">
-		<div class="row">
-			<div class="col-md-6">
-				Menu illimité
+				<%= t("landing.personnalized_domain") %>
 			</div>
 			<div class="col-md-2" style="text-align:center;">
 			</div>
@@ -244,7 +228,22 @@
 	<div class="feature">
 		<div class="row">
 			<div class="col-md-6">
-				Carte boissons
+				<%= t("landing.limited_menu") %>
+			</div>
+			<div class="col-md-2" style="text-align:center;">
+				<i class="fa fa-check" aria-hidden="true"></i>
+			</div>
+			<div class="col-md-2" style="text-align:center;">
+			</div>
+			<div class="col-md-2" style="text-align:center;">
+			</div>			
+		</div>
+	</div>
+
+	<div class="feature">
+		<div class="row">
+			<div class="col-md-6">
+				<%= t("landing.unlimited_menu") %>
 			</div>
 			<div class="col-md-2" style="text-align:center;">
 			</div>
@@ -260,7 +259,23 @@
 	<div class="feature">
 		<div class="row">
 			<div class="col-md-6">
-				Design limité
+				<%= t("landing.drinks_menu") %>
+			</div>
+			<div class="col-md-2" style="text-align:center;">
+			</div>
+			<div class="col-md-2" style="text-align:center;">
+				<i class="fa fa-check" aria-hidden="true"></i>
+			</div>
+			<div class="col-md-2" style="text-align:center;">
+				<i class="fa fa-check" aria-hidden="true"></i>
+			</div>			
+		</div>
+	</div>
+
+	<div class="feature">
+		<div class="row">
+			<div class="col-md-6">
+				<%= t("landing.limited_design") %>
 			</div>
 			<div class="col-md-2" style="text-align:center;">
 				<i class="fa fa-check" aria-hidden="true"></i>
@@ -277,7 +292,7 @@
 	<div class="feature">
 		<div class="row">
 			<div class="col-md-6">
-				Design personnalisé
+				<%= t("landing.personnalized_menu") %>
 			</div>
 			<div class="col-md-2" style="text-align:center;">
 			</div>
@@ -293,56 +308,7 @@
 	<div class="feature">
 		<div class="row">
 			<div class="col-md-6">
-				Mise à jour du contenu par l’utilisateur
-			</div>
-			<div class="col-md-2" style="text-align:center;">
-				<i class="fa fa-check" aria-hidden="true"></i>
-			</div>
-			<div class="col-md-2" style="text-align:center;">
-				<i class="fa fa-check" aria-hidden="true"></i>
-			</div>
-			<div class="col-md-2" style="text-align:center;">
-				<i class="fa fa-check" aria-hidden="true"></i>
-			</div>			
-		</div>
-	</div>
-
-	<div class="feature">
-		<div class="row">
-			<div class="col-md-6">
-				Mise à jour du contenu par Spekulooz
-			</div>
-			<div class="col-md-2" style="text-align:center;">
-			</div>
-			<div class="col-md-2" style="text-align:center;">
-				<i class="fa fa-check" aria-hidden="true"></i>
-			</div>
-			<div class="col-md-2" style="text-align:center;">
-				<i class="fa fa-check" aria-hidden="true"></i>
-			</div>			
-		</div>
-	</div>
-
-	<div class="feature">
-		<div class="row">
-			<div class="col-md-6">
-				Correction orthographique des textes
-			</div>
-			<div class="col-md-2" style="text-align:center;">
-			</div>
-			<div class="col-md-2" style="text-align:center;">
-				<i class="fa fa-check" aria-hidden="true"></i>
-			</div>
-			<div class="col-md-2" style="text-align:center;">
-				<i class="fa fa-check" aria-hidden="true"></i>
-			</div>			
-		</div>
-	</div>
-
-	<div class="feature">
-		<div class="row">
-			<div class="col-md-6">
-				Assistance par e-mail lu – ve / 8h - 18h
+				<%= t("landing.user_update_content") %>
 			</div>
 			<div class="col-md-2" style="text-align:center;">
 				<i class="fa fa-check" aria-hidden="true"></i>
@@ -359,7 +325,72 @@
 	<div class="feature">
 		<div class="row">
 			<div class="col-md-6">
-				Assistance par e-mail 7j/7 / 24h/24
+				<%= t("landing.spekulooz_update_content") %>
+			</div>
+			<div class="col-md-2" style="text-align:center;">
+			</div>
+			<div class="col-md-2" style="text-align:center;">
+				<i class="fa fa-check" aria-hidden="true"></i>
+			</div>
+			<div class="col-md-2" style="text-align:center;">
+				<i class="fa fa-check" aria-hidden="true"></i>
+			</div>			
+		</div>
+	</div>
+
+	<div class="feature">
+		<div class="row">
+			<div class="col-md-6">
+				<%= t("landing.spelling") %>
+			</div>
+			<div class="col-md-2" style="text-align:center;">
+			</div>
+			<div class="col-md-2" style="text-align:center;">
+				<i class="fa fa-check" aria-hidden="true"></i>
+			</div>
+			<div class="col-md-2" style="text-align:center;">
+				<i class="fa fa-check" aria-hidden="true"></i>
+			</div>			
+		</div>
+	</div>
+
+	<div class="feature">
+		<div class="row">
+			<div class="col-md-6">
+				<%= t("landing.free_support") %>
+			</div>
+			<div class="col-md-2" style="text-align:center;">
+				<i class="fa fa-check" aria-hidden="true"></i>
+			</div>
+			<div class="col-md-2" style="text-align:center;">
+				<i class="fa fa-check" aria-hidden="true"></i>
+			</div>
+			<div class="col-md-2" style="text-align:center;">
+				<i class="fa fa-check" aria-hidden="true"></i>
+			</div>			
+		</div>
+	</div>
+
+	<div class="feature">
+		<div class="row">
+			<div class="col-md-6">
+				<%= t("landing.full_support") %>
+			</div>
+			<div class="col-md-2" style="text-align:center;">
+			</div>
+			<div class="col-md-2" style="text-align:center;">
+				<i class="fa fa-check" aria-hidden="true"></i>
+			</div>
+			<div class="col-md-2" style="text-align:center;">
+				<i class="fa fa-check" aria-hidden="true"></i>
+			</div>			
+		</div>
+	</div>
+
+	<div class="feature">
+		<div class="row">
+			<div class="col-md-6">
+				<%= t("landing.multilingual") %>
 			</div>
 			<div class="col-md-2" style="text-align:center;">
 			</div>
@@ -378,7 +409,7 @@
 				
 			</div>
 			<div class="col-md-2" style="text-align:center;">
-				Gratuit
+				<%= t("landing.free") %>
 			</div>
 			<div class="col-md-2" style="text-align:center;">
 				<%= number_to_currency(39, :unit => "€", :precision => 2) %>
