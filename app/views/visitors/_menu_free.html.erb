@@ -46,43 +46,53 @@
 
 	<!-- IF ITEMS CATEGORIES ANY? START -->
 
-					<% if @sub_account.items.last.item_categories.any? %> 
+					<% if @sub_account.items.last.item_categories.any? %>
 
-						<div class="row">
+						<% if @sub_account.items.count > 5 %>
 
-							<div class="col-md-1">
-									<%= render 'item_add' %>
-							</div>
+							Désolé, maximum 6 plats dans la version gratuite
 
-							<div class="col-md-3">
-								<div class="new-item-detail">
-									Dernier plat ajouté
+						<% else %>
+
+							<div class="row">
+
+								<div class="col-md-1">
+
+										<%= render 'item_add' %>
+										
 								</div>
-							</div>
-							
-							<div class="col-md-4">				
-								<div class="new-item-detail">
-									<%= @sub_account.items.last.name %>
-								</div>					
-							</div>
 
-							<div class="col-md-2">
-
-								<% @sub_account.items.last.item_categories.each do |item_category| %>
-
+								<div class="col-md-3">
 									<div class="new-item-detail">
-										<%= item_category.category.name %><br> 
+										Dernier plat ajouté
 									</div>
+								</div>
+								
+								<div class="col-md-4">				
+									<div class="new-item-detail">
+										<%= @sub_account.items.last.name %>
+									</div>					
+								</div>
 
-								<% end %>
+								<div class="col-md-2">
 
-							</div>		
-							<div class="col-md-2">
+									<% @sub_account.items.last.item_categories.each do |item_category| %>
 
-								<%= render 'itemcategory_add' %>
+										<div class="new-item-detail">
+											<%= item_category.category.name %><br> 
+										</div>
 
-							</div>							
-						</div>
+									<% end %>
+
+								</div>		
+								<div class="col-md-2">
+
+									<%= render 'itemcategory_add' %>
+
+								</div>							
+							</div>
+
+						<% end %>
 
 	<!-- ELSE ITEMS CATEGORIES ANY? START -->
 
@@ -114,7 +124,7 @@
 							</div>
 						<% end %> <!-- IF ITEMS CATEGORIES ANY? END -->
 
-	<!-- IF ITEMS ANY? START -->
+	<!-- ELSE ITEMS ANY? -->
 
 					<% else %>
 

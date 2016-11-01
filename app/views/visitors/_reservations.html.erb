@@ -1,8 +1,12 @@
 <div class="reservations">
 
-	<div class="resa-title">
+  <div class="resa-title"><%= notice %></div>
+
+	<div class="resa-title" id="notice">
 		Envoyez votre demande de réservation avec le formulaire suivant
 	</div>
+
+
 
 	<%= simple_form_for(@new_reservation) do |f| %>
   <%= f.error_notification %>
@@ -17,14 +21,14 @@
   	</div>
     
     
-    Sans e-mail ou numéro de téléphone valide, nous ne pourrons confirmer votre réservation
+    <div class="resa-helper"> Sans e-mail ou numéro de téléphone valide, nous ne pourrons confirmer votre réservation</div>
 
 
     <%= f.input :name, label: false, :placeholder => "Votre nom" %>
     <%= f.hidden_field :account_id, :value => @sub_account.id %>
     <%= f.input :email, label: false, :placeholder => "Votre email" %>
     <%= f.input :mobile, label: false, :placeholder => "Votre GSM"%>
-    Une demande particulière, un commentaire?
+      <div class="resa-helper">Une demande particulière, un commentaire?</div>
     <%= f.input :comment, label: false, :placeholder => "Un commentaire?" %>
 
     <%= f.submit "Envoyer la demande", class: "btn btn-save-item pull-right" %>

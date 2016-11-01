@@ -28,7 +28,15 @@ class ReservationsController < ApplicationController
 
     respond_to do |format|
       if @reservation.save
-        format.html { redirect_to @reservation, notice: 'Reservation was successfully created.' }
+        UserMailer.resa_resto_email(@reservation).deliver_later
+        
+        if @reservation.email.present?
+          UserMailer.resa_client_email(@reservation).deliver_later
+        end
+
+        env["HTTP_REFERER"] += '#notice'
+
+        format.html { redirect_to :back, notice: 'Reservation was successfully created.' }
         format.json { render :show, status: :created, location: @reservation }
       else
         format.html { render :new }
