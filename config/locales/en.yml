@@ -64,6 +64,7 @@ en:
     sign_out: "Sign out"
     sign_in: "Sign in"
     sign_up: "Sign up"
+    your_reservations: "Your Reservations"
   user:
     minimum: characters minimum
     name: "Your last name"

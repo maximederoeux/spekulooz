@@ -43,7 +43,7 @@ class MenusController < ApplicationController
 
     respond_to do |format|
       if @menu.save
-        format.html { redirect_to @menu, notice: 'Menu was successfully created.' }
+        format.html { redirect_to @menu }
         format.json { render :show, status: :created, location: @menu }
       else
         format.html { render :new }
@@ -58,10 +58,10 @@ class MenusController < ApplicationController
     respond_to do |format|
       if @menu.update(menu_params)
         if @sub_accounts.any?
-        format.html { redirect_to :back, notice: 'Menu was successfully updated.' }
+        format.html { redirect_to :back }
         format.json { render :show, status: :ok, location: @menu }
         else
-        format.html { redirect_to @menu, notice: 'Menu was successfully updated.' }
+        format.html { redirect_to @menu }
         format.json { render :show, status: :ok, location: @menu }
         end         
       else

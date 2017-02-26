@@ -4,9 +4,25 @@
 	position: relative;
 }
 
-.top-bg {
-	z-index: 0;
-	height: 100vh;
+@media (min-width: 487px) {
+	.top-bg {
+		z-index: 0;
+		height: 100vh;
+	}
+}
+@media (min-width: 900px) {
+	.top-bg {
+		z-index: 0;
+		height: 100vh;
+	}
+}
+
+@media (min-width: 1200px) {
+	.top-bg {
+		z-index: 0;
+		height: 100vh;
+	}
+
 }
 
 .top-filter {

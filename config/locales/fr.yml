@@ -63,6 +63,7 @@ fr:
     sign_out: "Déconnexion"
     sign_in: "Connexion"
     sign_up: "Inscription"
+    your_reservations: "Vos Réservations"
   user:
     minimum: "caractères minimum"
     name: "Votre nom"

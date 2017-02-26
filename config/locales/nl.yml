@@ -62,6 +62,7 @@ nl:
     sign_out: "Uitloggen"
     sign_in: "Inloggen"
     sign_up: "Inschrijven"
+    your_reservations: "Uw Reservaties"
   user:
     minimum: karakters minimum
     name: "Uw naam"

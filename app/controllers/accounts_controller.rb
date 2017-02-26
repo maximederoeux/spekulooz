@@ -52,7 +52,7 @@ class AccountsController < ApplicationController
 
     respond_to do |format|
       if @account.save
-        format.html { redirect_to edit_account_path(@account), notice: 'Account was successfully created.' }
+        format.html { redirect_to edit_account_path(@account) }
         format.json { render :show, status: :created, location: @account }
       else
         format.html { render :new }
@@ -73,22 +73,22 @@ class AccountsController < ApplicationController
     respond_to do |format|
       if @account.update(account_params)
         if @account.prevalidate_sub == false && @account.validate_sub == nil
-          format.html { redirect_to edit_account_path(@account), notice: 'Account was successfully updated.' }
+          format.html { redirect_to edit_account_path(@account) }
           format.json { render :show, status: :ok, location: @account }
         elsif @account.prevalidate_sub == true && @account.validate_sub == nil
-          format.html { redirect_to edit_account_path(@account), notice: 'Account was successfully updated.' }
+          format.html { redirect_to edit_account_path(@account) }
           format.json { render :show, status: :ok, location: @account }
         elsif @account.prevalidate_sub == true && @account.validate_sub == true && @account.open_check.blank?
-          format.html { redirect_to edit_account_path(@account), notice: 'Account was successfully updated.' }
+          format.html { redirect_to edit_account_path(@account) }
           format.json { render :show, status: :ok, location: @account }
         elsif @account.ready_to_start_design == true && @account.active == nil
-          format.html { redirect_to edit_account_path(@account), notice: 'Account was successfully updated.' }
+          format.html { redirect_to edit_account_path(@account) }
           format.json { render :show, status: :ok, location: @account }
         elsif @account.active == true
-          format.html { redirect_to :back, notice: 'Account was successfully updated.' }
+          format.html { redirect_to :back }
           format.json { render :show, status: :ok, location: @account }          
         else 
-          format.html { redirect_to :back, notice: 'Account was successfully updated.' }
+          format.html { redirect_to :back }
           format.json { render :show, status: :ok, location: @account }
         end        
       else
